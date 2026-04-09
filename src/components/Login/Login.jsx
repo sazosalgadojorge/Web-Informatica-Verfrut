@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.scss'
 import Input from '../Input/Input'
-import logotipos from '/src/assets/logotipos-verfrut.svg'
+const logotipos = '/logotipo.svg'
 
 /**
  * Componente de formulario de login
@@ -35,7 +35,7 @@ function Login({
     <div className={noBackground ? "login-container no-background" : "login-container"}>
       <div className="login-form">
         <div className="login-form-header p-3 d-flex justify-content-center align-items-center">
-          <img src={logotipos} alt="Logo Verfrut" style={{width: '7.5rem', paddingLeft: '0.5rem'}} />
+          <img src={logotipos} alt="Logo Verfrut" style={{height: '8rem', width: 'auto'}} />
         </div>
 
         <div className="login-form-description d-flex justify-content-center align-items-center">
@@ -72,9 +72,6 @@ function Login({
             />
             </div>
           </div>
-
-
-
 
           <div className="pt-3">
             <button type="submit" className="btn btn-primary btn-xl align-items-center justify-content-center w-100" style={{ fontSize: "0.9rem", height: "50px" }}>

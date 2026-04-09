@@ -20,7 +20,7 @@ function IncidenciaModal() {
                     </div>
                     <div className="modal-body">
                         <div className="logo-container">
-                            <img src="./src/assets/logotipos-verfrut.svg" alt="Logo Verfrut" />
+                            <img src="/logotipo.svg" alt="Logo Verfrut" style={{height: '70px', width: 'auto'}} />
                         </div>
                         <h5 className="modal-title">Seleccione su ubicación</h5>
                         <div className="d-grid gap-2">

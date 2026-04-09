@@ -62,7 +62,7 @@ function HeaderPhone() {
           <div className="col-4 d-flex align-items-center justify-content-end">
             <a href="/" className="d-flex align-items-center justify-content-end" onClick={handleHomeClick}>
               <img 
-                src="/src/assets/logotipos-verfrut.svg" 
+                src="/logotipo.svg" 
                 alt="Logo Verfrut" 
                 className="img-fluid"
                 style={{

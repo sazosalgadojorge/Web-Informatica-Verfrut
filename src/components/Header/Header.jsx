@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import '@flaticon/flaticon-uicons/css/all/all.css';
 import { useNavigate } from 'react-router-dom';
 import Badge from '../Badge/Badge';
-import logotipos from '/src/assets/Logo-Tagline.svg';
+const logotipos = '/logotipo.svg';
 
 
 function Header() {
@@ -44,7 +44,7 @@ function Header() {
                 alt="Logo Verfrut" 
                 className="img-fluid"
                 style={{
-                  height: "45px",
+                  height: "55px",
                   transition: "transform 0.2s ease-in-out"
                 }}
                 onMouseOver={(e) => e.target.style.transform = "scale(1.05)"}

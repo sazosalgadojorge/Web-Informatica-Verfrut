@@ -4,7 +4,7 @@ import Input from '../components/Input/Input'
 import Btn from '../components/Btn/Btn'
 import { login } from '../services/auth'
 import './login.scss'
-import logotipos from '/src/assets/Logo-Tagline.svg'
+const logotipos = '/logotipo.svg'
 
 const BACKGROUND_IMAGES = [
   '/fruits/img-1.jpeg',
