@@ -1,0 +1,70 @@
+.frutapp-promo {
+  background: #f7f8fa;
+  border-radius: 24px;
+  margin: 2rem 1rem;
+  padding: 3rem 1rem;
+
+  @media (min-width: 768px) {
+    margin: 3rem 2rem;
+    padding: 4rem 2rem;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  &__tag {
+    display: inline-block;
+    color: #184288;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #080e1c;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @media (min-width: 992px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    color: #5b6478;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  &__stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  &__store {
+    display: inline-block;
+    transition: transform 0.2s ease;
+
+    img {
+      height: 48px;
+      width: auto;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}

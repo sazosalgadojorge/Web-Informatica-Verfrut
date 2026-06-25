@@ -1,92 +1,70 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useState, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { useState, useEffect, lazy, Suspense } from 'react'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Header from './components/Header/Header'
 import HeaderPhone from './components/Header-Phone/Header-Phone'
-import Footer from './components/Footer/Footer'
-import Banner from './components/Banner/Banner'
-import Marcas from './components/Marcas/Marcas'
-import Info from './components/Info/Info'
-import Info2 from './components/Info-2/Info2'
-import Acordion from './components/Acordion'
-import Turnos from './components/Turnos/Turnos'
-import Anexos from './components/Anexos/Anexos'
-import Videos from './components/Videos/Videos'
 import HomePage from './components/HomePage/HomePage'
-import LoginPage from './pages/LoginPage'
-import Blog from './components/Blog/Blog'
+import { Button } from './components/ui'
+
+const Turnos = lazy(() => import('./components/Turnos/Turnos'))
+const Anexos = lazy(() => import('./components/Anexos/Anexos'))
+const Videos = lazy(() => import('./components/Videos/Videos'))
+const BlogList = lazy(() => import('./components/Blog/BlogList'))
+const BlogPost = lazy(() => import('./components/Blog/BlogPost'))
+
+function PageLoader() {
+  return (
+    <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
+      <div className="spinner-border text-primary" role="status">
+        <span className="visually-hidden">Cargando…</span>
+      </div>
+    </div>
+  )
+}
+
+function NotFound() {
+  const navigate = useNavigate()
+  return (
+    <div className="container py-5 text-center">
+      <h1 className="display-4 mb-3">404</h1>
+      <p className="lead mb-4">La página que buscas no existe.</p>
+      <Button variant="primary" onClick={() => navigate('/')}>Volver al inicio</Button>
+    </div>
+  )
+}
 
 function App() {
   const location = useLocation()
   const [isMobile, setIsMobile] = useState(false)
 
-  // Detectar si es móvil
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
-    // Verificar al cargar
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 768)
     checkIsMobile()
-    
-    // Verificar al cambiar tamaño de ventana
     window.addEventListener('resize', checkIsMobile)
-    
-    // Limpiar event listener
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
 
-  // Scroll to top cuando cambia la ruta
   useEffect(() => {
-    // Para la página de blog, usar scroll instantáneo sin animación
-    if (location.pathname === '/blog') {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-      })
-    } else {
-      // Para otras páginas, usar scroll suave
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      })
-    }
+    const behavior = location.pathname === '/blog' ? 'instant' : 'smooth'
+    window.scrollTo({ top: 0, left: 0, behavior })
   }, [location.pathname])
-
-  // Si estamos en la página de login, renderizar solo la página de login
-  if (location.pathname === '/login') {
-    return <LoginPage />
-  }
-
-  // Dashboard (post-login): reemplazar con tu página real
-  if (location.pathname === '/dashboard') {
-    return (
-      <div className="container py-5 text-center">
-        <h1>Dashboard</h1>
-        <p>Bienvenido al portal de productores.</p>
-      </div>
-    )
-  }
 
   return (
     <>
-      {/* Header responsive */}
-      {isMobile ? (
-        <HeaderPhone />
-      ) : (
-        <Header />
-      )}
-      
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/turnos" element={<Turnos />} />
-        <Route path="/anexos" element={<Anexos />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
+      {isMobile ? <HeaderPhone /> : <Header />}
+
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/turnos" element={<Turnos />} />
+          <Route path="/anexos" element={<Anexos />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

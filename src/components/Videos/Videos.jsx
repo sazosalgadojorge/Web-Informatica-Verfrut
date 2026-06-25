@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./Videos.scss";
 import Footer from "../Footer/Footer";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
+import { Input, Button } from "../ui";
 import Fuse from "fuse.js";
 
 // ========= Normalización y Sinónimos =========
@@ -325,26 +326,17 @@ const Videos = () => {
           ? "/api/qa_inicio/videos/" 
           : "https://api.verfrut.cl/qa_inicio/videos/";
         
-        console.log("Intentando cargar videos desde la API:", apiUrl);
-        const apiRes = await fetch(apiUrl, { 
+        const apiRes = await fetch(apiUrl, {
           cache: "no-store",
           mode: 'cors'
         });
-        
-        console.log("Respuesta de la API:", {
-          ok: apiRes.ok,
-          status: apiRes.status,
-          statusText: apiRes.statusText,
-          contentType: apiRes.headers.get('content-type')
-        });
-        
+
         let videoFiles = [];
         
         if (apiRes.ok) {
           const contentType = apiRes.headers.get('content-type') || '';
-          const text = await apiRes.text(); // Leer el body una sola vez
-          console.log("Contenido recibido (primeros 500 caracteres):", text.substring(0, 500));
-          
+          const text = await apiRes.text();
+
           // Intentar parsear como JSON primero
           if (contentType.includes('application/json')) {
             try {
@@ -362,7 +354,7 @@ const Videos = () => {
                 );
               }
             } catch (jsonError) {
-              console.warn("No se pudo parsear como JSON, intentando como HTML/texto");
+              // Si no es JSON válido, intentar como HTML/texto más abajo
             }
           }
           
@@ -453,14 +445,10 @@ const Videos = () => {
             }
           }
           
-          console.log(`Archivos de video encontrados: ${videoFiles.length}`, videoFiles);
-        } else {
-          console.error("La API no respondió correctamente:", apiRes.status, apiRes.statusText);
         }
-        
+
         // Si la API no funciona o no devuelve videos, usar JSON como fallback
         if (videoFiles.length === 0) {
-          console.warn("No se encontraron videos en la API, usando JSON local como fallback");
           const jsonRes = await fetch("/json/videos.json", { cache: "no-store" });
           if (jsonRes.ok) {
             const data = await jsonRes.json();
@@ -489,11 +477,8 @@ const Videos = () => {
           };
         });
 
-        console.log(`Cargados ${videosData.length} videos desde la API`);
         setVideos(videosData);
       } catch (e) {
-        console.error("Error cargando videos desde API:", e);
-        
         // Fallback a JSON local si la API falla
         try {
           const jsonRes = await fetch("/json/videos.json", { cache: "no-store" });
@@ -507,12 +492,10 @@ const Videos = () => {
               _tags: (v.tags || []).map(normalize),
             }));
             setVideos(enriched);
-            console.log("Videos cargados desde JSON local (fallback)");
           } else {
             setErr("Error cargando videos. Por favor, recarga la página.");
           }
         } catch (fallbackError) {
-          console.error("Error en fallback:", fallbackError);
           setErr("Error cargando videos. Por favor, recarga la página.");
         }
       } finally {
@@ -623,9 +606,8 @@ const Videos = () => {
               <div className="row">
                 <div className="col-12 mb-4">
                   <div className="search-container d-flex gap-2">
-                    <input
+                    <Input
                       type="search"
-                      className="form-control"
                       placeholder="Buscar"
                       value={q}
                       onChange={(e) => setQ(e.target.value)}
@@ -633,15 +615,6 @@ const Videos = () => {
                       autoComplete="off"
                       name="search"
                       id="video-search-input"
-                      data-form-type="other"
-                      data-lpignore="true"
-                      style={{
-                        fontFamily: "Montserrat, sans-serif",
-                        padding: "0.75rem",
-                        borderRadius: "8px",
-                        border: "1px solid #ddd",
-                        boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
-                      }}
                     />
                     {/* {q && (
                       <button
@@ -761,9 +734,9 @@ const Videos = () => {
             />
             <div className="p-3 bg-dark text-white d-flex align-items-center justify-content-between gap-2">
               <strong className="me-3">{current.title}</strong>
-              <button className="btn btn-light btn-sm" onClick={closePlayer}>
+              <Button variant="light" size="sm" onClick={closePlayer}>
                 Cerrar
-              </button>
+              </Button>
             </div>
           </div>
         </div>

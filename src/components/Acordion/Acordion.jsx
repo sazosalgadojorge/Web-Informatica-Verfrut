@@ -1,5 +1,4 @@
 import './Acordion.scss'
-import Btn from '../../components/Btn/Btn.jsx'
 
 export default function Acordion({ className, title, description, imageSrc, imageAlt, title2, title3, title4, title5, bodyText, bodyText2, bodyText3, bodyText4 }) {
     return (

@@ -1,4 +1,5 @@
 import './Footer.scss'
+import { Input, Button } from '../ui'
 
 function Footer() {
     return (
@@ -18,22 +19,18 @@ function Footer() {
                             </div>
                             <div className="col-lg-6">
                                 <form className="newsletter-form">
-                                    <div className="row g-3">
+                                    <div className="row g-3 align-items-end">
                                         <div className="col-sm-9">
-                                            <input 
-                                                type="email" 
-                                                className="form-control form-control-lg" 
-                                                placeholder="Email" 
-                                                required 
+                                            <Input
+                                                type="email"
+                                                placeholder="Email"
+                                                required
                                             />
                                         </div>
                                         <div className="col-sm-3">
-                                            <button 
-                                                type="submit" 
-                                                className="btn btn-primary w-100 btn-lg"
-                                            >
+                                            <Button type="submit" variant="primary" fullWidth>
                                                 Enviar
-                                            </button>
+                                            </Button>
                                         </div>
                                     </div>
                                 </form>

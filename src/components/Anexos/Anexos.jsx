@@ -1,13 +1,27 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import './Anexos.scss'
 import Footer from '../Footer/Footer'
-import Select from '../Select/Select'
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
-import Input from '../Input/Input'
-import { DataGrid, GridToolbar } from '@mui/x-data-grid'
-import { esES } from '@mui/x-data-grid/locales'
+import { Input, Select, Table, Pagination } from '../ui'
 
-// No axios in deps; use fetch
+const COLUMNS = [
+  { key: 'empresa', label: 'Empresa', sortable: true, align: 'left' },
+  { key: 'departamento', label: 'Departamento', sortable: true, align: 'left' },
+  { key: 'trabajador', label: 'Trabajador', sortable: true, align: 'left' },
+  { key: 'nroAnexo', label: 'Anexo', sortable: true, width: 120, align: 'left' },
+  { key: 'mail', label: 'Mail', sortable: true, align: 'left' },
+]
+
+const PAGE_SIZES = [10, 25, 50]
+
+const capitalizeWords = (text) => {
+  if (!text) return ''
+  return String(text)
+    .toLowerCase()
+    .split(' ')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+}
 
 const Anexos = () => {
   const [anexos, setAnexos] = useState([])
@@ -16,6 +30,9 @@ const Anexos = () => {
   const [empresa, setEmpresa] = useState('todas')
   const [departamento, setDepartamento] = useState('todos')
   const [query, setQuery] = useState('')
+  const [page, setPage] = useState(1)
+  const [pageSize, setPageSize] = useState(10)
+  const [loading, setLoading] = useState(true)
   const inputRef = useRef(null)
 
   useEffect(() => {
@@ -37,28 +54,28 @@ const Anexos = () => {
         const data = json.result ?? []
         setAnexos(Array.isArray(data) ? data : [])
       } catch (e) {
-        console.error('Error al obtener los anexos:', e)
+        // silenciar; la tabla mostrará empty-text
+      } finally {
+        setLoading(false)
       }
     }
     fetchAnexos()
   }, [])
 
-  // Build select options from data
   useEffect(() => {
-    const empresas = Array.from(new Set(anexos.map(a => a.empresa))).sort()
-    const departamentos = Array.from(new Set(anexos.map(a => a.departamento))).sort()
-    setEmpresaOptions(empresas.map(e => ({ value: e, label: e })))
-    setDepartamentoOptions(departamentos.map(d => ({ value: d, label: d })))
+    const empresas = Array.from(new Set(anexos.map((a) => a.empresa))).sort()
+    const departamentos = Array.from(new Set(anexos.map((a) => a.departamento))).sort()
+    setEmpresaOptions(empresas.map((e) => ({ value: e, label: e })))
+    setDepartamentoOptions(departamentos.map((d) => ({ value: d, label: d })))
   }, [anexos])
 
-  // Filtered dataset
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     let list = anexos
-    if (empresa !== 'todas' && empresa !== '') list = list.filter(a => a.empresa === empresa)
-    if (departamento !== 'todos' && departamento !== '') list = list.filter(a => a.departamento === departamento)
+    if (empresa !== 'todas' && empresa !== '') list = list.filter((a) => a.empresa === empresa)
+    if (departamento !== 'todos' && departamento !== '') list = list.filter((a) => a.departamento === departamento)
     if (q) {
-      list = list.filter(a => {
+      list = list.filter((a) => {
         const mail = a.mail ? String(a.mail).toLowerCase() : ''
         return (
           String(a.empresa).toLowerCase().includes(q) ||
@@ -69,124 +86,95 @@ const Anexos = () => {
         )
       })
     }
-    return list
-  }, [anexos, empresa, departamento, query])
-
-  // Reset page when filters change
-  useEffect(() => {
-    // DataGrid maneja su propia paginación; no necesitamos estado local de página
-  }, [empresa, departamento, query])
-
-  const capitalizeWords = (text) => {
-    if (!text) return ''
-    return String(text)
-      .toLowerCase()
-      .split(' ')
-      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(' ')
-  }
-
-  // Definir columnas para DataGrid
-  const columns = useMemo(() => ([
-    { field: 'empresa', headerName: 'Empresa', flex: 1.5, minWidth: 220 },
-    { field: 'departamento', headerName: 'Departamento', flex: 1, minWidth: 160 },
-    { field: 'trabajador', headerName: 'Trabajador', flex: 1.4, minWidth: 200 },
-    { field: 'nroAnexo', headerName: 'Anexo', width: 120 },
-    { field: 'mail', headerName: 'Mail', flex: 1, minWidth: 220 },
-  ]), [])
-
-  const gridRows = useMemo(() => (
-    (filtered ?? []).map((a, i) => ({
-      id: a.nroAnexo ? `${a.nroAnexo}-${i}` : i,
+    return list.map((a) => ({
       empresa: a.empresa ?? '',
       departamento: capitalizeWords(a.departamento ?? ''),
       trabajador: capitalizeWords(a.trabajador ?? ''),
       nroAnexo: a.nroAnexo ?? '',
       mail: a.mail ? String(a.mail).toLowerCase() : 'Sin mail',
     }))
-  ), [filtered])
+  }, [anexos, empresa, departamento, query])
+
+  // Reset a página 1 cuando cambian filtros
+  useEffect(() => {
+    setPage(1)
+  }, [empresa, departamento, query, pageSize])
+
+  const pageRows = useMemo(() => {
+    const start = (page - 1) * pageSize
+    return filtered.slice(start, start + pageSize)
+  }, [filtered, page, pageSize])
+
+  const handlePageChange = ({ page: nextPage, pageSize: nextSize }) => {
+    if (nextSize !== pageSize) setPageSize(nextSize)
+    setPage(nextPage)
+  }
 
   return (
     <>
-  {/* Breadcrumb */}
-  <div className="container-large">
-    <Breadcrumb title="Anexos"/>
-  </div>
-<div className='anexos-container'>  
-  {/* Selects */}
+      <div className="container-large">
+        <Breadcrumb title="Anexos" />
+      </div>
 
-  <div className="container">
-    <div className="row justify-content-center align-items-center g-2">
+      <div className="anexos-container">
+        <div className="container">
+          <div className="row justify-content-center align-items-center g-2">
+            <div className="col-md-5 col-sm-12">
+              <Select
+                id="selectempresa"
+                value={empresa}
+                onChange={(e) => setEmpresa(e.target.value || 'todas')}
+                options={[{ value: 'todas', label: 'Todas las empresas' }, ...empresaOptions]}
+              />
+            </div>
 
-      <div className="col-md-5 col-sm-12">
-        <div>
-          <Select
-            id="selectempresa"
-            value={empresa}
-            onChange={(e) => setEmpresa(e.target.value || 'todas')}
-            options={[{ value: 'todas', label: 'Todas las empresas' }, ...empresaOptions]}
+            <div className="col-md-5 col-sm-12">
+              <Select
+                id="selectdepartamento"
+                value={departamento}
+                onChange={(e) => setDepartamento(e.target.value || 'todos')}
+                options={[{ value: 'todos', label: 'Seleccione Departamento (Todos)' }, ...departamentoOptions]}
+              />
+            </div>
+
+            <div className="col-md-2 col-sm-12">
+              <Input
+                id="floatingInput"
+                ref={inputRef}
+                placeholder="Buscar"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="container mt-4 data-grid-container">
+          <Table
+            columns={COLUMNS}
+            data={pageRows}
+            loading={loading}
+            striped
+            resizable
+            emptyText="No hay anexos que coincidan con los filtros"
           />
+
+          {filtered.length > pageSize && (
+            <div className="d-flex justify-content-end mt-3">
+              <Pagination
+                page={page}
+                total={filtered.length}
+                pageSize={pageSize}
+                pageSizes={PAGE_SIZES}
+                onChange={handlePageChange}
+              />
+            </div>
+          )}
         </div>
-      </div>
 
-      <div className="col-md-5 col-sm-12">
-        <div>
-          <Select
-            id="selectdepartamento"
-            value={departamento}
-            onChange={(e) => setDepartamento(e.target.value || 'todos')}
-            options={[{ value: 'todos', label: 'Seleccione Departamento (Todos)' }, ...departamentoOptions]}
-          />
-        </div>
+        <Footer />
       </div>
-
-      <div className="col-md-2 col-sm-12">
-        <div>
-          <Input id="floatingInput" ref={inputRef} placeholder="Buscar" value={query} onChange={(e) => setQuery(e.target.value)} />
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  {/* Tabla (DataGrid) */}
-  <div className="container mt-4 data-grid-container">
-    <div className="table-responsive">
-      <div style={{ width: '100%'}}>
-        <DataGrid
-          sx={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: 14,
-            '& .MuiDataGrid-columnHeaders': { fontWeight: 600, fontSize: 13 },
-            '& .MuiDataGrid-cell': { fontSize: 14 },
-          }}
-          rows={gridRows}
-          columns={columns}
-          density="standard"
-          rowHeight={45}
-          columnHeaderHeight={56}
-          pageSizeOptions={[10, 25, 50]}
-          initialState={{
-            pagination: { paginationModel: { pageSize: 10, page: 0 } },
-            sorting: { sortModel: [{ field: 'empresa', sort: 'asc' }] },
-          }}
-          disableRowSelectionOnClick
-          slots={{ toolbar: GridToolbar }}
-          slotProps={{
-            toolbar: {
-              showQuickFilter: true,
-              quickFilterProps: { debounceMs: 300 },
-            },
-          }}
-          localeText={esES.components.MuiDataGrid.defaultProps.localeText}
-        />
-      </div>
-    </div>
-  </div>
-  {/* Footer */}
-  <Footer/>
-</div>
-</>
+    </>
   )
 }
 

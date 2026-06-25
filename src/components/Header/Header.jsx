@@ -1,35 +1,42 @@
 import '../../styles/main.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import '@flaticon/flaticon-uicons/css/all/all.css';
-import { useNavigate } from 'react-router-dom';
-import Badge from '../Badge/Badge';
-const logotipos = '/logotipo.svg';
+import '@flaticon/flaticon-uicons/css/all/all.css'
+import { useNavigate } from 'react-router-dom'
+import { Badge, Button } from '../ui'
+import GestionUsuariosModal, { GESTION_USUARIOS_MODAL_ID } from '../GestionUsuariosModal/GestionUsuariosModal'
+import IncidenciasModal, { reportIncident } from '../IncidenciasModal/IncidenciasModal'
+import chileIcon from '../../assets/chile.svg'
+import peruIcon from '../../assets/peru.svg'
+import solicitudIcon from '../../assets/solicitud.svg'
+import glpiIcon from '../../assets/glpi.svg'
 
+const logotipos = '/logotipo.svg'
+const MANUALES_URL = 'https://verfrutsa-my.sharepoint.com/:f:/g/personal/jsazo_verfrut_cl/EoIKH1AvVABCvzypHMh2HxkBJFHPcLw6Pj_6LIY_TzsKYQ?e=1D6gra'
 
 function Header() {
   const navigate = useNavigate()
-  const handleLogin = () => {
-    // Abrir Login en una nueva pestaña
-    window.open('/login', '_blank');
-  }
 
   const handleHomeClick = (e) => {
-    e.preventDefault();
-    navigate('/');
+    e.preventDefault()
+    navigate('/')
   }
 
   const handleTurnosClick = (e) => {
-    e.preventDefault();
-    navigate('/turnos');
+    e.preventDefault()
+    navigate('/turnos')
   }
   const handleAnexosClick = (e) => {
-    e.preventDefault();
-    navigate('/anexos');
+    e.preventDefault()
+    navigate('/anexos')
   }
   const handleVideosClick = (e) => {
-    e.preventDefault();
-    navigate('/videos');
+    e.preventDefault()
+    navigate('/videos')
+  }
+  const handleBlogClick = (e) => {
+    e.preventDefault()
+    navigate('/blog')
   }
 
   return (
@@ -39,9 +46,9 @@ function Header() {
         <div className="row align-items-center">
           <div className="col-3">
             <a href="/" className="d-flex align-items-center" onClick={handleHomeClick}>
-              <img 
-                src={logotipos} 
-                alt="Logo Verfrut" 
+              <img
+                src={logotipos}
+                alt="Logo Verfrut"
                 className="img-fluid"
                 style={{
                   height: "55px",
@@ -57,7 +64,7 @@ function Header() {
               <button
                 className="navbar-toggler"
                 type="button"
-                data-bs-toggle="collapse" 
+                data-bs-toggle="collapse"
                 data-bs-target="#mainNav"
                 aria-controls="mainNav"
                 aria-expanded="false"
@@ -89,23 +96,23 @@ function Header() {
                       <li className="dropdown-submenu">
                         <a className="dropdown-item dropdown-toggle-sub" href="#">Operacionales<i className="fi fi-rr-angle-right"></i></a>
                         <ul className="submenu">
-                          <li><a className="dropdown-item" href="https://api.verfrut.cl/ctacteenvases" target="_blank"><i className="fi fi-rr-truck-check"></i>Sistema Cuenta Corriente Envases</a></li>
+                          <li><a className="dropdown-item" href="https://api.verfrut.cl/ctacteenvases" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-truck-check"></i>Sistema Cuenta Corriente Envases</a></li>
                           <div className="d-flex align-items-center justify-content-start">
                             <li>
-                              <a className="dropdown-item text-muted" href="javascript:void(0)" target="_blank" data-bs-toggle="tooltip" title="Próximamente disponible" style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}><i className="fi fi-rr-chart-line-up"></i>Sistema Estimaciones Productivas</a>
+                              <a className="dropdown-item text-muted" href="javascript:void(0)" data-bs-toggle="tooltip" title="Próximamente disponible" style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}><i className="fi fi-rr-chart-line-up"></i>Sistema Estimaciones Productivas</a>
                             </li>
                             <Badge variant="warning" size="sm" className="ms-0">Pronto</Badge>
                           </div>
                           <div className="d-flex align-items-center justify-content-start">
                             <li>
-                              <a className="dropdown-item text-muted" href="javascript:void(0)" target="_blank" data-bs-toggle="tooltip" title="Próximamente disponible" style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}><i className="fi fi-rr-snowflake"></i>Sistema Frío Packing</a>
+                              <a className="dropdown-item text-muted" href="javascript:void(0)" data-bs-toggle="tooltip" title="Próximamente disponible" style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}><i className="fi fi-rr-snowflake"></i>Sistema Frío Packing</a>
                             </li>
                             <Badge variant="warning" size="sm" className="ms-0">Pronto</Badge>
                           </div>
                           <div className="d-flex align-items-center justify-content-start">
                             <li>
-                              <a className="dropdown-item text-muted" href="javascript:void(0)" target="_blank" data-bs-toggle="tooltip" title="Próximamente disponible" style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}><i className="fi fi-rr-boxes"></i>Sistema Materiales</a>
-                            </li> 
+                              <a className="dropdown-item text-muted" href="javascript:void(0)" data-bs-toggle="tooltip" title="Próximamente disponible" style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}><i className="fi fi-rr-boxes"></i>Sistema Materiales</a>
+                            </li>
                             <Badge variant="warning" size="sm" className="ms-0">Pronto</Badge>
                           </div>
                         </ul>
@@ -116,14 +123,13 @@ function Header() {
                           <i className="fi fi-rr-angle-right"></i>
                         </a>
                         <ul className="submenu">
-                          <li><a className="dropdown-item" href="https://facturacion.verfrut.cl/Account/Login?ReturnUrl=%2f" target="_blank"><i className="fi fi-rr-file"></i>Sistema Documentos Electrónicos (DTE)</a></li>
-                          <li><a className="dropdown-item" href="https://rendiciones.verfrut.cl" target="_blank"><i className="fi fi-rr-usd-circle"></i>Sistema Rendiciones</a></li>
-                          <li><a className="dropdown-item" href="https://api.verfrut.cl/vacaciones" target="_blank"><i className="fi fi-rr-umbrella-beach"></i>Sistema Vacaciones y Permisos</a></li>
+                          <li><a className="dropdown-item" href="https://facturacion.verfrut.cl/Account/Login?ReturnUrl=%2f" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-file"></i>Sistema Documentos Electrónicos (DTE)</a></li>
+                          <li><a className="dropdown-item" href="https://rendiciones.verfrut.cl" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-usd-circle"></i>Sistema Rendiciones</a></li>
+                          <li><a className="dropdown-item" href="https://api.verfrut.cl/vacaciones" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-umbrella-beach"></i>Sistema Vacaciones y Permisos</a></li>
                           <div className="d-flex align-items-center justify-content-start">
                             <li>
                               <a className="dropdown-item"
                                 href="javascript:void(0)"
-                                target="_blank" 
                                 data-bs-toggle="tooltip"
                                 title="Próximamente disponible"
                                 style={{cursor: "not-allowed", pointerEvents: "none", opacity: "0.3"}}>
@@ -136,7 +142,6 @@ function Header() {
                             <li>
                               <a className="dropdown-item"
                                 href="javascript:void(0)"
-                                target="_blank" 
                                 data-bs-toggle="tooltip"
                                 title="Próximamente disponible"
                                 style={{cursor: "not-allowed", pointerEvents: "none", opacity: "0.3"}}>
@@ -149,7 +154,6 @@ function Header() {
                             <li>
                               <a className="dropdown-item"
                                 href="javascript:void(0)"
-                                target="_blank" 
                                 data-bs-toggle="tooltip"
                                 title="Próximamente disponible"
                                 style={{cursor: "not-allowed", pointerEvents: "none", opacity: "0.3"}}>
@@ -162,7 +166,6 @@ function Header() {
                             <li>
                                   <a className="dropdown-item"
                                     href="javascript:void(0)"
-                                    target="_blank" 
                                     data-bs-toggle="tooltip"
                                     title="Próximamente disponible"
                                     style={{cursor: "not-allowed", pointerEvents: "none", opacity: "0.3"}}>
@@ -181,11 +184,10 @@ function Header() {
                         <ul className="submenu">
                           <div className="d-flex align-items-center justify-content-start">
                             <li>
-                              <a className="dropdown-item text-muted" 
-                                href="javascript:void(0)" 
-                                target="_blank" 
-                                data-bs-toggle="tooltip" 
-                                title="Próximamente disponible" 
+                              <a className="dropdown-item text-muted"
+                                href="javascript:void(0)"
+                                data-bs-toggle="tooltip"
+                                title="Próximamente disponible"
                                 style={{cursor: "not-allowed", pointerEvents: "none", color: "#6c757d", opacity: "0.55"}}>
                                 <i className="fi fi-rr-users"></i>Perfiles
                               </a>
@@ -209,11 +211,18 @@ function Header() {
                           <i className="fi fi-rr-angle-right"></i>
                         </a>
                         <ul className="submenu">
-                          <li><a className="dropdown-item" href="#"><img src="./src/assets/chile.svg" alt="Incidencias Chile" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de Incidencias Chile</a></li>
-                          <li><a className="dropdown-item" href="#"><img src="./src/assets/peru.svg" alt="Incidencias Perú" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de Incidencias Perú</a></li>
-                          <li><a className="dropdown-item" href="#"><img src="./src/assets/solicitud.svg" alt="Solicitudes" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de Solicitudes</a></li>
-                          <li><a className="dropdown-item" href="#"><img src="./src/assets/glpi.svg" alt="GLPI" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de GLPI (Chile)</a></li>
-                          <li><a className="dropdown-item" href="#"><img src="./src/assets/glpi.svg" alt="GLPI" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de GLPI (Perú)</a></li>
+                          <li>
+                            <a
+                              className="dropdown-item"
+                              href="#"
+                              onClick={(e) => { e.preventDefault(); reportIncident() }}
+                            >
+                              <i className="fi fi-rr-bug"></i>Reportar Incidencia
+                            </a>
+                          </li>
+                          <li><a className="dropdown-item" href="https://solicitudes.verfrut.cl" target="_blank" rel="noopener noreferrer"><img src={solicitudIcon} alt="Solicitudes" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de Solicitudes</a></li>
+                          <li><a className="dropdown-item" href="https://glpi.verfrut.cl" target="_blank" rel="noopener noreferrer"><img src={glpiIcon} alt="GLPI Chile" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de GLPI (Chile)</a></li>
+                          <li><a className="dropdown-item" href="https://glpi.verfrut.pe" target="_blank" rel="noopener noreferrer"><img src={glpiIcon} alt="GLPI Perú" style={{width: "20px", height: "20px", marginRight: "15px"}}/>Portal de GLPI (Perú)</a></li>
                         </ul>
                       </li>
                       <li className="dropdown-submenu">
@@ -222,7 +231,7 @@ function Header() {
                           <i className="fi fi-rr-angle-right"></i>
                         </a>
                         <ul className="submenu">
-                          <li><a className="dropdown-item" href="#"><i className="fi fi-rr-shield-check"></i>Portal de concientización</a></li>
+                          <li><a className="dropdown-item" href="https://verfrutsa.sharepoint.com/sites/Ciberseguridadconcientizacion" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-shield-check"></i>Portal de concientización</a></li>
                         </ul>
                       </li>
                       <li className="dropdown-submenu">
@@ -235,7 +244,7 @@ function Header() {
                           <li><a className="dropdown-item" href="mailto:soporte@verfrut.cl"><i className="fi fi-rr-envelope"></i>Correo de Soporte</a></li>
                         </ul>
                       </li>
-                      
+
                     </ul>
                   </li>
 
@@ -246,16 +255,16 @@ function Header() {
                     </a>
                     <ul className="dropdown-menu animate slideIn">
                       <li className="dropdown-submenu">
-                        <a className="dropdown-item dropdown-toggle-sub" href="#">
+                        <a className="dropdown-item dropdown-toggle-sub" href="https://verfrutsa.sharepoint.com/sites/Ciberseguridadconcientizacion" target="_blank" rel="noopener noreferrer">
                           Concientización
                         </a>
                       </li>
                       <li className="dropdown-submenu">
                         <a className="dropdown-item dropdown-toggle-sub" href="#">
-                          Protocolos de  Seguridad
+                          Protocolos de Seguridad
                         </a>
                       </li>
-                      
+
                     </ul>
                   </li>
 
@@ -270,9 +279,9 @@ function Header() {
                           Documentación<i className="fi fi-rr-angle-right"></i>
                         </a>
                         <ul className="submenu">
-
-                          <li><a className="dropdown-item" href="http://localhost:3000/docs/introduccion-general" target="_blank"><i className="fi fi-rr-document"></i>Ver documentación</a></li>
-                          <li><a className="dropdown-item" href="#" onClick={handleVideosClick}><i className="fi fi-rr-play-alt"></i>Video Tutoriales</a></li>
+                          <li><a className="dropdown-item" href={MANUALES_URL} target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-book-open-reader"></i>Manuales</a></li>
+                          <li><a className="dropdown-item" href="#" onClick={handleBlogClick}><i className="fi fi-rr-newspaper"></i>Blog</a></li>
+                          <li><a className="dropdown-item" href="#" onClick={handleVideosClick}><i className="fi fi-rr-video-camera-alt"></i>Video Tutoriales</a></li>
                         </ul>
                       </li>
                       <li className="dropdown-submenu">
@@ -280,14 +289,14 @@ function Header() {
                           Herramientas<i className="fi fi-rr-angle-right"></i>
                         </a>
                         <ul className="submenu">
-                          <li><a className="dropdown-item" href="#"><i className="fi fi-rr-envelope"></i>Generar Firmas<Badge variant="success" size="sm" className="ms-2">Nuevo</Badge></a></li>
-                          <li><a className="dropdown-item" href="https://sugerencias.verfrut.cl/" target="_blank"><i className="fi fi-rr-comment-alt"></i>Sugerencias<Badge variant="primary" size="sm" className="ms-2">Actualizada</Badge></a></li>
+                          <li><a className="dropdown-item" href="https://api.verfrut.cl/Home/GeneradorFirma" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-file-signature"></i>Generar Firmas<Badge variant="success" size="sm" className="ms-2">Nuevo</Badge></a></li>
+                          <li><a className="dropdown-item" href="https://sugerencias.verfrut.cl/" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-feedback"></i>Sugerencias<Badge variant="primary" size="sm" className="ms-2">Actualizada</Badge></a></li>
                         </ul>
                       </li>
                     </ul>
                   </li>
 
-                  {/* Turnos - Nueva sección */}
+                  {/* Turnos */}
                   <li className="nav-item">
                     <a className="nav-link" href="#" onClick={handleTurnosClick}> Turnos
                     </a>
@@ -296,22 +305,27 @@ function Header() {
               </div>
             </nav>
           </div>
-          <div className="col-3 text-end d-flex justify-content-end">
-            <div className='btn btn-primary btn-sm d-flex align-items-center' onClick={handleLogin}><i className="fi fi-rr-user" style={{color: "#ffffff"}}></i>Iniciar Sesión</div>
+          <div className="col-3 d-flex justify-content-end align-items-center">
+            <Button
+              variant="primary"
+              size="lg"
+              data-bs-toggle="modal"
+              data-bs-target={`#${GESTION_USUARIOS_MODAL_ID}`}
+            >
+              <span className="d-inline-flex align-items-center gap-1" style={{ fontWeight: 400, fontSize: '0.9rem', padding: '0.4rem 1rem' }}>
+                <i className="fi fi-rr-apps-add" style={{ fontSize: '1.1rem', color: '#a6c0e6' }}></i>
+                Gestión Usuarios
+              </span>
+            </Button>
           </div>
         </div>
       </div>
     </header>
+
+    <GestionUsuariosModal />
+    <IncidenciasModal />
     </>
   )
 }
 
 export default Header
-
-// Ejemplo de como se puede usar la API de Figma para obtener los colores de la marca
-// const getColors = async () => {
-//   const response = await fetch('https://api.figma.com/v1/files/1234567890/colors');
-//   const data = await response.json();
-//   console.log(data);
-// }
-// getColors();

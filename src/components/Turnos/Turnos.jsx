@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Turnos.scss'
 import Footer from '../Footer/Footer'
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
-import Input from '../Input/Input'
+import { Input } from '../ui'
 
 
 const Turnos = () => {

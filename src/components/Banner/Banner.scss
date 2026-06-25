@@ -105,6 +105,8 @@
 }
 
 .box-info {
+    text-align: left;
+
     // Solo aplicar estilos específicos en mobile
     @media (max-width: 767px) {
         display: flex;

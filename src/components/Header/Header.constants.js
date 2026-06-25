@@ -35,7 +35,7 @@ export const DEFAULT_MENU_ITEMS = [
     label: 'Recursos',
     url: '#',
     subItems: [
-      { label: 'Ver documentación', url: '#' },
+      { label: 'Ver documentación', url: '/docs/index.html' },
       { label: 'Video Tutoriales', url: '#' },
       { label: 'Generar Firmas', url: 'https://api.verfrut.cl/Home/GeneradorFirma' },
       { label: 'Sugerencias', url: 'https://sugerencias.verfrut.cl' }

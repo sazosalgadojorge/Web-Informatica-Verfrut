@@ -7,38 +7,8 @@ import P1 from '/svg/P1.svg'
 import P2 from '/svg/P2.svg'
 import USER from '/svg/USER.svg'
 import { motion } from "framer-motion";
-
-function IncidenciaModal() {
-    return (
-        <>
-        <div className="container">
-        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered modal-sm modal-incidencias">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="btn-close-incidencia" data-bs-dismiss="modal" aria-label="Close">✕</button>
-                    </div>
-                    <div className="modal-body">
-                        <div className="logo-container">
-                            <img src="/logotipo.svg" alt="Logo Verfrut" style={{height: '70px', width: 'auto'}} />
-                        </div>
-                        <h5 className="modal-title">Seleccione su ubicación</h5>
-                        <div className="d-grid gap-2">
-                            <a href="https://incidencias.verfrut.cl/login" target="_blank" className="btn btn-primary btn-xl" style={{fontSize: '16px', padding: '15px 20px'}}>
-                                <img src="./src/assets/chile.svg" alt="Chile" style={{width: '20px', marginRight: '8px'}} />Incidencias Chile
-                            </a>
-                            <a href="https://incidencias.verfrut.pe/login" target="_blank" className="btn btn-primary btn-xl" style={{fontSize: '16px', padding: '15px 20px'}}>
-                                <img src="./src/assets/peru.svg" alt="Peru" style={{width: '20px', marginRight: '8px'}} />Incidencias Perú
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </>
-    )
-}
+import { reportIncident } from '../IncidenciasModal/IncidenciasModal'
+import { Button } from '../ui'
 
 function Banner() {
   return (
@@ -69,20 +39,21 @@ function Banner() {
                                 y el crecimiento continuo.
                             </motion.p>
 
-                            <motion.button
-                                className="btn btn-primary btn-xl d-flex align-items-center gap-2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                                style={{ fontSize: "16px", padding: "15px 20px" }}
+                            <motion.div
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                style={{ display: "inline-block", marginTop: "1rem" }}
                             >
-                                <i className="fi fi-rr-arrow-right"></i>
-                                Incidencias
-                            </motion.button>
+                                <Button variant="primary" size="lg" onClick={reportIncident}>
+                                    <span className="d-inline-flex align-items-center gap-2">
+                                        <i className="fi fi-rr-arrow-right"></i>
+                                        Incidencias
+                                    </span>
+                                </Button>
+                            </motion.div>
                             </div>
                             
                         <div className="col-12 col-md-4 hero-anidado" > 
@@ -130,7 +101,6 @@ function Banner() {
                 </div>
             </div>
 
-            <IncidenciaModal />
     </>
   )
 }

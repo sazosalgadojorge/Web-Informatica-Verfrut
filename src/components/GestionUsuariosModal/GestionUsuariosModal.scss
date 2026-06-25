@@ -1,0 +1,142 @@
+.gestion-usuarios-modal {
+  padding-top: 100px;
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+
+  .gestion-usuarios-body {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .gestion-usuarios-close {
+    position: relative;
+    padding: 30px 0 0;
+    width: auto;
+    height: auto;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      opacity: 1;
+      outline: none;
+    }
+  }
+}
+
+body.gestion-usuarios-modal-open .modal-backdrop {
+  background-color: #000;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: opacity 0.45s ease;
+}
+
+body.gestion-usuarios-modal-open .modal-backdrop.fade {
+  opacity: 0 !important;
+}
+
+body.gestion-usuarios-modal-open .modal-backdrop.show {
+  opacity: 0.5 !important;
+}
+
+.gestion-usuarios-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.gestion-usuarios-card {
+  min-width: 18rem;
+  max-width: 18rem;
+  max-height: 450px;
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.8s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 0 15px rgb(162, 202, 255);
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    min-height: 90px;
+    padding-top: 20px;
+    margin: 0 auto 15px;
+    object-fit: contain;
+  }
+
+  .card-body {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .card-title {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 500;
+    min-height: 53px;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    color: #666;
+    font-size: 0.95rem;
+    min-height: 70px;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 7.5rem;
+  }
+}
+
+@media (max-width: 1398px) {
+  .gestion-usuarios-cards {
+    flex-wrap: wrap;
+  }
+
+  .gestion-usuarios-modal .gestion-usuarios-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gestion-usuarios-modal {
+    padding-top: 40px;
+  }
+
+  .gestion-usuarios-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gestion-usuarios-card {
+    min-width: min(18rem, calc(100vw - 2rem));
+    max-width: min(18rem, calc(100vw - 2rem));
+  }
+}
