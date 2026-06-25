@@ -56,8 +56,8 @@ function Banner() {
                             </motion.div>
                             </div>
                             
-                        <div className="col-12 col-md-4 hero-anidado" > 
-                            <div className="hero-image-container" style={{position: 'relative', width: '100%', height: '400px'}}>
+                        <div className="col-12 col-md-4 hero-anidado" >
+                            <div className="hero-image-container">
                                 <img src={background} alt="Fondo" className='hero-bg' style={{
                                     position: 'absolute',
                                     top: 0,

@@ -1,0 +1,323 @@
+/* ──────────────────────────────────────────────────────────────────────
+   Header-Phone menú — look replicado de @unifrutti/ui u-sidebar
+   ────────────────────────────────────────────────────────────────────── */
+
+.hp-menu {
+  --hp-blue: #184288;
+  --hp-bg-hover: rgba(0, 0, 0, 0.04);
+  --hp-bg-active: rgba(24, 66, 136, 0.08);
+  --hp-text: #374151;
+  --hp-text-strong: #111827;
+  --hp-text-muted: #6b7280;
+  --hp-chevron: #9ca3af;
+  --hp-sep: rgba(0, 0, 0, 0.07);
+
+  margin: -1rem -1rem;
+  padding: 0.5rem 0.5rem 1rem;
+  font-family: inherit;
+  color: var(--hp-text);
+}
+
+/* ── Bloque sticky de acciones rápidas ────────────────────────────── */
+.hp-menu-actions {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.75rem 0.5rem 0.5rem;
+  margin: -0.5rem -0.5rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--hp-sep);
+}
+
+.hp-menu-kicker {
+  display: block;
+  padding: 0 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--hp-text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hp-menu-action {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--hp-text);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: var(--hp-bg-hover);
+    color: var(--hp-text-strong);
+  }
+
+  &:active {
+    background: var(--hp-bg-active);
+  }
+
+  &--primary {
+    background: var(--hp-blue);
+    color: #ffffff;
+
+    &:hover {
+      background: #1a4ba0;
+      color: #ffffff;
+    }
+  }
+}
+
+.hp-menu-action__icon {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.hp-menu-action__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+/* ── Navegación principal ─────────────────────────────────────────── */
+.hp-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0.5rem 0;
+}
+
+/* ── Section (grupo expandible) ───────────────────────────────────── */
+.hp-menu-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-menu-section__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 0.75rem;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--hp-text);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: var(--hp-bg-hover);
+    color: var(--hp-text-strong);
+
+    .hp-menu-section__icon {
+      color: var(--hp-text);
+    }
+  }
+}
+
+.hp-menu-section__icon {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: var(--hp-text-muted);
+  font-size: 1rem;
+  transition: color 0.15s ease;
+}
+
+.hp-menu-section__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.hp-menu-section__chevron {
+  flex: 0 0 auto;
+  display: inline-flex;
+  color: var(--hp-chevron);
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.hp-menu-section--open > .hp-menu-section__toggle .hp-menu-section__chevron {
+  transform: rotate(180deg);
+}
+
+.hp-menu-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 0 6px 28px; // indentación tipo subitem
+  overflow: hidden;
+  animation: hp-menu-expand 0.18s ease-out;
+}
+
+@keyframes hp-menu-expand {
+  from { opacity: 0; transform: translateY(-2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Subsection (segundo nivel: Operacionales / Administrativos) ──── */
+.hp-menu-subsection {
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-menu-subsection__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 36px;
+  padding: 0 0.75rem;
+  margin-left: -28px; // alinear con el icono del padre
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--hp-text-muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: var(--hp-bg-hover);
+    color: var(--hp-text);
+  }
+}
+
+.hp-menu-subsection--open .hp-menu-section__chevron {
+  transform: rotate(180deg);
+}
+
+.hp-menu-subsection__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 0 4px;
+  animation: hp-menu-expand 0.18s ease-out;
+}
+
+/* ── Item del menú (estilo subitem del sidebar) ──────────────────── */
+.hp-menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 36px;
+  width: 100%;
+  padding: 0 0.75rem;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--hp-text-muted);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover:not(.hp-menu-item--disabled) {
+    background: var(--hp-bg-hover);
+    color: var(--hp-text);
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    color: inherit;
+    font-size: 0.95rem;
+
+    &--img {
+      object-fit: contain;
+    }
+  }
+
+  &__label {
+    flex: 1 1 auto;
+    min-width: 0;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+  }
+
+  &--active {
+    color: var(--hp-blue);
+    font-weight: 500;
+    background: var(--hp-bg-active);
+
+    .hp-menu-item__icon {
+      color: var(--hp-blue);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3px;
+      border-radius: 0 3px 3px 0;
+      background: var(--hp-blue);
+    }
+  }
+
+  &--disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+
+    .hp-menu-item__icon {
+      opacity: 0.6;
+    }
+  }
+}
+
+/* ── Separator ────────────────────────────────────────────────────── */
+.hp-menu-sep {
+  height: 1px;
+  background: var(--hp-sep);
+  margin: 0.5rem 0.5rem;
+  flex-shrink: 0;
+}

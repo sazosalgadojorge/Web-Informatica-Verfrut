@@ -1,0 +1,17 @@
+// Mixins responsive — Bootstrap standard breakpoints
+// Valores hardcoded para evitar dependencias circulares con _variables.scss
+// (también disponibles como $breakpoint-* en variables).
+//
+// Uso: @include sm-down { ... } / @include md-up { ... }
+
+@mixin sm-down  { @media (max-width: 575.98px)  { @content; } }
+@mixin md-down  { @media (max-width: 767.98px)  { @content; } }
+@mixin lg-down  { @media (max-width: 991.98px)  { @content; } }
+@mixin xl-down  { @media (max-width: 1199.98px) { @content; } }
+@mixin xxl-down { @media (max-width: 1399.98px) { @content; } }
+
+@mixin sm-up  { @media (min-width: 576px)  { @content; } }
+@mixin md-up  { @media (min-width: 768px)  { @content; } }
+@mixin lg-up  { @media (min-width: 992px)  { @content; } }
+@mixin xl-up  { @media (min-width: 1200px) { @content; } }
+@mixin xxl-up { @media (min-width: 1400px) { @content; } }

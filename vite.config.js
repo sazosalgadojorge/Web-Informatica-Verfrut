@@ -2,8 +2,29 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
+// Componentes de @unifrutti/ui que importamos (incluyendo los usados en rutas lazy
+// como Turnos, Videos, Anexos). Declarados explícitamente para que Vite los
+// pre-bundlee al arrancar y no fallen con MIME vacío al navegar.
+const UNIFRUTTI_COMPONENTS = [
+  '@unifrutti/ui/components/alert',
+  '@unifrutti/ui/components/badge',
+  '@unifrutti/ui/components/button',
+  '@unifrutti/ui/components/card',
+  '@unifrutti/ui/components/divider',
+  '@unifrutti/ui/components/drawer',
+  '@unifrutti/ui/components/input',
+  '@unifrutti/ui/components/modal',
+  '@unifrutti/ui/components/pagination',
+  '@unifrutti/ui/components/select',
+  '@unifrutti/ui/components/table',
+  '@unifrutti/ui/components/tag',
+]
+
 export default defineConfig({
   plugins: [react()],
+  optimizeDeps: {
+    include: UNIFRUTTI_COMPONENTS,
+  },
   server: {
     proxy: {
       '/api': {

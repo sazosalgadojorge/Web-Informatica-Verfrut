@@ -221,17 +221,10 @@ const Turnos = () => {
         <section className="turnos-hero">
           <div>
             <span className="turnos-kicker">Turnos fuera de horario</span>
-            <h2 className="section-title">Responsables disponibles esta semana</h2>
+            <h2 className="section-title">🛠️ Responsables disponibles esta semana</h2>
             <p className="section-description">
               Consulta a quién contactar cuando una incidencia crítica afecte la operación fuera del horario laboral.
             </p>
-          </div>
-          <div className="turnos-current-week">
-            <span>Turno vigente</span>
-            <u-tag variant="primary" size="md" outline>
-              Semana {weekInfo.currentWeek}
-            </u-tag>
-            <span>{weekInfo.range}</span>
           </div>
         </section>
 
@@ -258,6 +251,58 @@ const Turnos = () => {
         <u-alert class="turnos-summary" variant="info" title="Uso fuera de horario">
           Contacta al turno disponible solo cuando exista una incidencia crítica. Ten a mano el sistema afectado, usuario, captura del error y hora aproximada.
         </u-alert>
+
+        <section className="turnos-guide" aria-labelledby="turnos-guide-title">
+          <header className="turnos-guide__header">
+            <span className="turnos-guide__kicker">Guía rápida</span>
+            <h3 id="turnos-guide-title" className="turnos-guide__title">¿A quién contactar?</h3>
+            <p className="turnos-guide__lead">
+              Sigue estos pasos para asegurar una atención rápida y efectiva fuera del horario laboral.
+            </p>
+          </header>
+
+          <ol className="turnos-guide__steps">
+            <li>
+              <div className="turnos-guide__step-body">
+                <strong>Identifica el área.</strong>
+                <span>
+                  Si el problema es de un <em>sistema interno, aplicación o integración</em> (DTE, Vacaciones, Rendiciones, FrutApp, Verfrut Cloud, etc.) contacta a
+                  <strong> Desarrollo</strong>. Si es de <em>accesos, equipos, correo, red, impresoras</em> o conectividad, contacta a <strong>Soporte Técnico</strong>.
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="turnos-guide__step-body">
+                <strong>Llama o escribe por WhatsApp.</strong>
+                <span>
+                  Usa el teléfono del responsable vigente que aparece arriba. Prefiere <strong>llamada</strong> si la incidencia bloquea la operación; usa
+                  <strong> WhatsApp</strong> para casos menos urgentes o cuando puedas adjuntar capturas.
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="turnos-guide__step-body">
+                <strong>Ten lista la información.</strong>
+                <span>
+                  Sistema afectado, usuario que reporta, captura del error o pantalla con el problema, hora aproximada y pasos para reproducirlo.
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="turnos-guide__step-body">
+                <strong>Registra la incidencia.</strong>
+                <span>
+                  Al volver al horario laboral, ingresa el caso en el portal de Incidencias para que quede documentado y se haga el seguimiento correspondiente.
+                </span>
+              </div>
+            </li>
+          </ol>
+
+          <div className="turnos-guide__fallback">
+            <strong>¿Sin respuesta?</strong> Intenta primero por llamada y luego WhatsApp. Si pasados 15 minutos no hay respuesta, contacta al responsable del próximo turno indicado en la card o escribe a
+            <a href="mailto:soporte@verfrut.cl"> soporte@verfrut.cl</a>.
+          </div>
+        </section>
       </div>
     </div>
     <div className="pt-5 mt-5">

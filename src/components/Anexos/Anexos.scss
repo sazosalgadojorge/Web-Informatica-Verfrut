@@ -1,16 +1,32 @@
+@import '../../styles/breakpoints';
+
 .anexos-container {
-  padding-top: 2rem;
+  padding: 2rem 1rem 0;
+
+  @include md-up {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .data-grid-container {
-  height: 85vh;
+  min-height: 60vh;
+  max-height: calc(100vh - 200px);
   text-align: start;
 
   u-table {
     text-align: start;
   }
-}
 
+  @include md-down {
+    min-height: auto;
+    max-height: none;
+
+    u-table {
+      display: none;
+    }
+  }
+}
 
 .table {
   border-collapse: collapse;
@@ -23,5 +39,108 @@
 .table-hover {
   tbody tr:hover {
     background-color: #f5f5f5;
+  }
+}
+
+/* ─── Mobile list ────────────────────────────────────────────────────── */
+.anexos-mobile-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include md-down {
+    display: grid;
+    gap: 0.75rem;
+  }
+}
+
+.anexos-mobile-card {
+  background: #fafbfc;
+  border: 1px solid #e4eaf2;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  text-align: left;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #edf2f7;
+  }
+
+  &__name {
+    margin: 0;
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &__empresa {
+    color: #667085;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.4rem 0.85rem;
+    margin: 0;
+    font-size: 0.88rem;
+
+    dt {
+      color: #98a2b3;
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      align-self: center;
+    }
+
+    dd {
+      margin: 0;
+      color: #1f2937;
+      word-break: break-word;
+
+      a {
+        color: #184289;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+  &--skeleton {
+    .skeleton-line {
+      height: 0.85rem;
+      background: #e7edf5;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+
+      &--title { width: 60%; height: 1rem; }
+      &--sub   { width: 40%; height: 0.75rem; }
+    }
+  }
+}
+
+.anexos-mobile-empty {
+  display: none;
+  margin: 1rem 0;
+  padding: 1.25rem;
+  background: #fafbfc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  color: #667085;
+  font-size: 0.9rem;
+  text-align: center;
+
+  @include md-down {
+    display: block;
   }
 }

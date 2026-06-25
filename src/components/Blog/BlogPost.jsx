@@ -54,7 +54,7 @@ function BlogPost() {
         <Breadcrumb title="Blog" />
       </div>
 
-      <section className="th-blog-wrapper blog-details p-5 space-extra-bottom">
+      <section className="th-blog-wrapper blog-details p-3 p-md-5 space-extra-bottom">
         <div className="container">
           <div className="row">
             <div className="col-xxl-12 col-lg-12">

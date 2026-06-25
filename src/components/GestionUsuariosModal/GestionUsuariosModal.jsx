@@ -1,8 +1,14 @@
 import { useEffect } from 'react'
+import { Modal as BsModal } from 'bootstrap'
 import { Button } from '../ui'
 import './GestionUsuariosModal.scss'
 
 export const GESTION_USUARIOS_MODAL_ID = 'gestionUsuariosModal'
+export const GESTION_USUARIOS_MODAL_EVENT = 'verfrut:open-gestion-usuarios-modal'
+
+export function openGestionUsuariosModal() {
+  window.dispatchEvent(new CustomEvent(GESTION_USUARIOS_MODAL_EVENT))
+}
 
 function GestionUsuariosModal() {
   useEffect(() => {
@@ -15,9 +21,16 @@ function GestionUsuariosModal() {
     modal.addEventListener('show.bs.modal', addModalClass)
     modal.addEventListener('hidden.bs.modal', removeModalClass)
 
+    const openHandler = () => {
+      const instance = BsModal.getOrCreateInstance(modal)
+      instance.show()
+    }
+    window.addEventListener(GESTION_USUARIOS_MODAL_EVENT, openHandler)
+
     return () => {
       modal.removeEventListener('show.bs.modal', addModalClass)
       modal.removeEventListener('hidden.bs.modal', removeModalClass)
+      window.removeEventListener(GESTION_USUARIOS_MODAL_EVENT, openHandler)
       removeModalClass()
     }
   }, [])

@@ -3,6 +3,7 @@ import './Anexos.scss'
 import Footer from '../Footer/Footer'
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
 import { Input, Select, Table, Pagination } from '../ui'
+import AnexosMobileList from './AnexosMobileList'
 
 const COLUMNS = [
   { key: 'empresa', label: 'Empresa', sortable: true, align: 'left' },
@@ -158,6 +159,8 @@ const Anexos = () => {
             resizable
             emptyText="No hay anexos que coincidan con los filtros"
           />
+
+          <AnexosMobileList rows={pageRows} loading={loading} />
 
           {filtered.length > pageSize && (
             <div className="d-flex justify-content-end mt-3">

@@ -1,6 +1,6 @@
 .blog-container {
-  padding: 4rem;
-  border-radius: 30px;
+  padding: clamp(1.25rem, 5vw, 4rem);
+  border-radius: clamp(16px, 3vw, 30px);
   overflow: hidden;
   box-shadow: 0 4px 30px rgba(13, 95, 195, 0.079);
 }

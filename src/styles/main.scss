@@ -1,5 +1,6 @@
 // Importar archivos parciales
 @import 'variables';
+@import 'breakpoints';
 @import 'mixins';
 
 // Importar Bootstrap con nuestras variables personalizadas
@@ -19,6 +20,29 @@ body {
   font-family: $font-family-primary;
   line-height: 1.5;
   color: $text-color;
+  // Compensación por header fijo (.th-header position: fixed)
+  padding-top: 95px;
+  scroll-padding-top: 95px;
+
+  @include md-down {
+    padding-top: 60px;
+    scroll-padding-top: 60px;
+  }
+}
+
+// Wrapper genérico para páginas internas con padding responsivo
+.container-large {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  @include sm-down {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 // Header

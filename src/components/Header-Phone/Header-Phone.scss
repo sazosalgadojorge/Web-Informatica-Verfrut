@@ -1,111 +1,55 @@
-// Estilos para el Header Phone
-.th-header {
-  .offcanvas {
-    .accordion {
-      .accordion-item {
-        .accordion-header {
-          .accordion-button {
-            // Estilo base para todos los botones del acordeón
-            font-size: 1rem !important; // Cambiado a 1rem para ser más visible
-            padding: 0.75rem 1rem !important;
-            min-height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: none;
-            background-color: #f8f9fa;
-            color: #495057;
-            transition: all 0.2s ease-in-out;
-            
-            &:not(.collapsed) {
-              background-color: #e9ecef;
-              color: #212529;
-              box-shadow: none;
-            }
-            
-            &:focus {
-              box-shadow: none;
-              border-color: #80bdff;
-            }
-            
-            &::after {
-              margin-left: auto;
-              transition: transform 0.2s ease-in-out;
-            }
-          }
-        }
-        
-        // Estilos para sub-acordeones
-        .accordion-collapse {
-          .accordion-body {
-            .accordion {
-              .accordion-item {
-                .accordion-header {
-                  .accordion-button {
-                    font-size: 0.9rem !important; // Cambiado a 0.9rem
-                    padding: 0.6rem 1rem !important;
-                    min-height: 44px;
-                    background-color: #ffffff;
-                    border-left: 3px solid #dee2e6;
-                    
-                    &:not(.collapsed) {
-                      background-color: #f8f9fa;
-                      border-left-color: #184289;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    
-    // Estilos para los elementos de lista
-    .list-unstyled {
-      li {
-        a {
-          display: flex;
-          align-items: center;
-          padding: 0.5rem 0;
-          font-size: 0.85rem !important; // Cambiado a 0.85rem
-          line-height: 1.2;
-          
-          i, img {
-            flex-shrink: 0;
-            width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      }
-    }
+.hp-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.875rem;
+  background: #fff;
+  box-shadow: 0 1px 0 #edf2f7;
+}
+
+.hp-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: #1f2937;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: #fafbfc;
+    outline: none;
+  }
+
+  &:active {
+    background: #eaf0fb;
   }
 }
 
-// Estilos para botones especiales al final
-.th-header .offcanvas .row-12 {
-  .col-12 {
-    a {
-      display: flex;
-      align-items: center;
-      padding: 0.80rem 1rem;
-      min-height: 44px;
-      font-size: 0.85rem !important; // Cambiado a 0.85rem
-      color: #000000;
-      border-radius: 0.375rem;
-      transition: all 0.2s ease-in-out;
-      
-      &:hover {
-        background-color: #e9ecef;
-        text-decoration: none;
-      }
-      
-      i {
-        font-size: 0.8rem !important; // Cambiado a 0.8rem
-      }
-    }
+.hp-logo {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+
+  img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.15s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
   }
 }
