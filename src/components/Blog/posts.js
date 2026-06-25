@@ -1,5 +1,6 @@
 import IncidenciasContent from './posts/IncidenciasContent'
 import VerfrutCloudContent from './posts/VerfrutCloudContent'
+import { publicPath } from '../../utils/publicPath'
 
 export const POSTS = [
   {
@@ -8,7 +9,7 @@ export const POSTS = [
     excerpt:
       'Verfrut Cloud es nuestra solución tecnológica que moderniza un antiguo ERP, transformándolo en una plataforma web para optimizar procesos, simplificar su uso y mejorar la gestión de la fruta.',
     date: '2025-05-01',
-    image: '/blog/verfrut-cloud-cover.png',
+    image: publicPath('blog/verfrut-cloud-cover.png'),
     tag: 'Innovación',
     Content: VerfrutCloudContent,
   },
@@ -18,7 +19,7 @@ export const POSTS = [
     excerpt:
       'Aprende cómo reportar de forma clara y efectiva cualquier incidencia técnica. Sigue estos pasos y ayuda a que nuestro equipo de soporte te atienda rápidamente.',
     date: '2024-12-15',
-    image: '/laptop-glpi.png',
+    image: publicPath('laptop-glpi.png'),
     tag: 'Guía',
     Content: IncidenciasContent,
   },

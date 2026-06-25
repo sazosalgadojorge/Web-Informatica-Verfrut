@@ -1,10 +1,13 @@
 import { useEffect } from 'react'
 import { Modal as BsModal } from 'bootstrap'
 import { Button } from '../ui'
+import { publicPath } from '../../utils/publicPath'
 import './GestionUsuariosModal.scss'
 
 export const GESTION_USUARIOS_MODAL_ID = 'gestionUsuariosModal'
 export const GESTION_USUARIOS_MODAL_EVENT = 'verfrut:open-gestion-usuarios-modal'
+const recoverPassIcon = publicPath('svg/IconRecoverPass.svg')
+const unlockIcon = publicPath('svg/Unlock.svg')
 
 export function openGestionUsuariosModal() {
   window.dispatchEvent(new CustomEvent(GESTION_USUARIOS_MODAL_EVENT))
@@ -58,7 +61,7 @@ function GestionUsuariosModal() {
 
             <div className="gestion-usuarios-cards" id="cardContainer">
               <div className="card gestion-usuarios-card p-3">
-                <img src="/svg/IconRecoverPass.svg" className="card-img-top mx-auto" alt="Contraseña" loading="lazy" />
+                <img src={recoverPassIcon} className="card-img-top mx-auto" alt="Contraseña" loading="lazy" />
                 <div className="card-body text-center">
                   <h5 className="card-title">¿Olvidaste tu Contraseña?</h5>
                   <p className="card-text">Gestiona tus credenciales en simples pasos.</p>
@@ -74,7 +77,7 @@ function GestionUsuariosModal() {
               </div>
 
               <div className="card gestion-usuarios-card p-3">
-                <img src="/svg/Unlock.svg" className="card-img-top mx-auto" alt="Desbloqueo" loading="lazy" />
+                <img src={unlockIcon} className="card-img-top mx-auto" alt="Desbloqueo" loading="lazy" />
                 <div className="card-body text-center">
                   <h5 className="card-title">Desbloqueo de Usuario</h5>
                   <p className="card-text">Desbloquea tu cuenta de forma rápida y segura.</p>

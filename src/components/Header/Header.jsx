@@ -10,8 +10,10 @@ import chileIcon from '../../assets/chile.svg'
 import peruIcon from '../../assets/peru.svg'
 import solicitudIcon from '../../assets/solicitud.svg'
 import glpiIcon from '../../assets/glpi.svg'
+import { publicPath } from '../../utils/publicPath'
 
-const logotipos = '/logotipo.svg'
+const logotipos = publicPath('logotipo.svg')
+const homeHref = publicPath('')
 const MANUALES_URL = 'https://verfrutsa-my.sharepoint.com/:f:/g/personal/jsazo_verfrut_cl/EoIKH1AvVABCvzypHMh2HxkBJFHPcLw6Pj_6LIY_TzsKYQ?e=1D6gra'
 
 function Header() {
@@ -45,7 +47,7 @@ function Header() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-3">
-            <a href="/" className="d-flex align-items-center" onClick={handleHomeClick}>
+            <a href={homeHref} className="d-flex align-items-center" onClick={handleHomeClick}>
               <img
                 src={logotipos}
                 alt="Logo Verfrut"

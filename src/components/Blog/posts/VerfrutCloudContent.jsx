@@ -1,3 +1,8 @@
+import { publicPath } from '../../../utils/publicPath'
+
+const operationImage = publicPath('blog/blog_inner_1.jpg')
+const logisticsImage = publicPath('blog/blog_inner_2.jpg')
+
 function VerfrutCloudContent() {
   return (
     <div className="verfrut-cloud-post">
@@ -38,10 +43,10 @@ function VerfrutCloudContent() {
 
       <div className="blog-image-grid" aria-label="Imágenes de Verfrut Cloud">
         <figure className="blog-image-card">
-          <img src="/blog/blog_inner_1.jpg" alt="Operación agrícola gestionada con Verfrut Cloud" loading="lazy" />
+          <img src={operationImage} alt="Operación agrícola gestionada con Verfrut Cloud" loading="lazy" />
         </figure>
         <figure className="blog-image-card">
-          <img src="/blog/blog_inner_2.jpg" alt="Proceso logístico conectado a Verfrut Cloud" loading="lazy" />
+          <img src={logisticsImage} alt="Proceso logístico conectado a Verfrut Cloud" loading="lazy" />
         </figure>
       </div>
 

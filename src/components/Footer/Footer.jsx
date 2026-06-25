@@ -1,5 +1,9 @@
 import './Footer.scss'
 import { Input, Button } from '../ui'
+import { publicPath } from '../../utils/publicPath'
+
+const googlePlayBadge = publicPath('google-play.svg')
+const appStoreBadge = publicPath('app-store.svg')
 
 function Footer() {
     return (
@@ -88,12 +92,12 @@ function Footer() {
                                 <div className="download-btn-wrap">
                                     <div className="mb-10">
                                         <a href="https://play.google.com/store/apps/details?id=com.mobil.verfrut&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="download-btn">
-                                            <img src="public/google-play.svg" alt="Google Play" />
+                                            <img src={googlePlayBadge} alt="Google Play" />
                                         </a>
                                     </div>
                                     <div>
                                         <a href="https://apps.apple.com/cl/app/frutapp/id6478648879?l=en-GB" target="_blank" rel="noopener noreferrer" className="download-btn">
-                                            <img src="public/app-store.svg" alt="App Store" />
+                                            <img src={appStoreBadge} alt="App Store" />
                                         </a>
                                     </div>
                                 </div>

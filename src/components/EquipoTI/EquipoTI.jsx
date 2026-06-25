@@ -4,19 +4,28 @@ import { Navigation, Pagination, A11y } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { publicPath, withPublicBase } from '../../utils/publicPath'
 import './EquipoTI.scss'
+
+const equipoUrl = publicPath('json/equipo-ti.json')
 
 function EquipoTI() {
   const [miembros, setMiembros] = useState([])
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    fetch('/json/equipo-ti.json', { cache: 'no-store' })
+    fetch(equipoUrl, { cache: 'no-store' })
       .then((res) => {
         if (!res.ok) throw new Error('No se pudo cargar el equipo')
         return res.json()
       })
-      .then((data) => setMiembros(Array.isArray(data) ? data : []))
+      .then((data) => {
+        const miembros = Array.isArray(data)
+          ? data.map((miembro) => ({ ...miembro, foto: withPublicBase(miembro.foto) }))
+          : []
+
+        setMiembros(miembros)
+      })
       .catch(() => setError(true))
   }, [])
 

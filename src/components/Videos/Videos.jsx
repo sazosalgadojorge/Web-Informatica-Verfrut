@@ -4,6 +4,12 @@ import Footer from "../Footer/Footer";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { Input, Button } from "../ui";
 import Fuse from "fuse.js";
+import loadImg from "../../assets/load.png";
+import laptopImg from "../../assets/laptop.png";
+import { publicPath, withPublicBase } from "../../utils/publicPath";
+
+const genericVideoThumbnail = publicPath('videos/intro.png');
+const videosJsonUrl = publicPath('json/videos.json');
 
 // ========= Normalización y Sinónimos =========
 function normalize(text) {
@@ -50,12 +56,12 @@ function highlight(text, query) {
 // Genera thumbnail dinámico basado en el ID del video
 function getDynamicThumbnail(video) {
   // Si ya tiene thumbnail específico, lo usa
-  if (video.thumbnail && video.thumbnail !== "/videos/intro.png") {
-    return video.thumbnail;
+  if (video.thumbnail && video.thumbnail !== "/videos/intro.png" && video.thumbnail !== genericVideoThumbnail) {
+    return withPublicBase(video.thumbnail);
   }
   
   // Genera thumbnail basado en el ID del video
-  const thumbnailPath = `/videos/thumbnails/${video.id}.png`;
+  const thumbnailPath = publicPath(`videos/thumbnails/${video.id}.png`);
   
   // Fallback a thumbnail genérico si no existe el específico
   return thumbnailPath;
@@ -202,8 +208,8 @@ const Videos = () => {
   // Función para obtener thumbnail dinámico con generación automática
   const getDynamicThumbnailWithGeneration = (video) => {
     // Si ya tiene thumbnail específico, lo usa
-    if (video.thumbnail && video.thumbnail !== "/videos/intro.png") {
-      return video.thumbnail;
+    if (video.thumbnail && video.thumbnail !== "/videos/intro.png" && video.thumbnail !== genericVideoThumbnail) {
+      return withPublicBase(video.thumbnail);
     }
     
     // Si ya generamos el thumbnail para este video, lo usa
@@ -234,7 +240,7 @@ const Videos = () => {
     });
     
     // Mientras se genera, usa el fallback
-    return "/src/assets/load.png";
+    return loadImg;
   };
 
   // Debounce 250ms
@@ -306,7 +312,7 @@ const Videos = () => {
       src: import.meta.env.DEV 
         ? `/api/qa_inicio/videos/${encodeURIComponent(fileName)}`
         : `https://api.verfrut.cl/qa_inicio/videos/${encodeURIComponent(fileName)}`,
-      thumbnail: "/videos/intro.png",
+      thumbnail: genericVideoThumbnail,
       tags,
       date: new Date().toISOString().split('T')[0], // Fecha actual como fallback
     };
@@ -449,12 +455,14 @@ const Videos = () => {
 
         // Si la API no funciona o no devuelve videos, usar JSON como fallback
         if (videoFiles.length === 0) {
-          const jsonRes = await fetch("/json/videos.json", { cache: "no-store" });
+          const jsonRes = await fetch(videosJsonUrl, { cache: "no-store" });
           if (jsonRes.ok) {
             const data = await jsonRes.json();
             const enriched = (Array.isArray(data) ? data : []).map((v, i) => ({
               id: v.id ?? v.src ?? String(i),
               ...v,
+              src: withPublicBase(v.src),
+              thumbnail: withPublicBase(v.thumbnail),
               _title: normalize(v.title),
               _description: normalize(v.description),
               _tags: (v.tags || []).map(normalize),
@@ -481,12 +489,14 @@ const Videos = () => {
       } catch (e) {
         // Fallback a JSON local si la API falla
         try {
-          const jsonRes = await fetch("/json/videos.json", { cache: "no-store" });
+          const jsonRes = await fetch(videosJsonUrl, { cache: "no-store" });
           if (jsonRes.ok) {
             const data = await jsonRes.json();
             const enriched = (Array.isArray(data) ? data : []).map((v, i) => ({
               id: v.id ?? v.src ?? String(i),
               ...v,
+              src: withPublicBase(v.src),
+              thumbnail: withPublicBase(v.thumbnail),
               _title: normalize(v.title),
               _description: normalize(v.description),
               _tags: (v.tags || []).map(normalize),
@@ -661,7 +671,7 @@ const Videos = () => {
                                 loading="lazy"
                                 onError={(e) => {
                                   // Fallback a imagen genérica si no se puede cargar el thumbnail específico
-                                  e.target.src = "/src/assets/laptop.png";
+                                  e.target.src = laptopImg;
                                 }}
                               />
                             )}

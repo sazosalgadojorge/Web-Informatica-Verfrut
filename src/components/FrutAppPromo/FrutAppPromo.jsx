@@ -1,8 +1,11 @@
 import './FrutAppPromo.scss'
 import frutappImg from '../../assets/frutapp.png'
+import { publicPath } from '../../utils/publicPath'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mobil.verfrut&pcampaignid=web_share'
 const APP_STORE_URL = 'https://apps.apple.com/cl/app/frutapp/id6478648879?l=en-GB'
+const googlePlayBadge = publicPath('google-play.svg')
+const appStoreBadge = publicPath('app-store.svg')
 
 function FrutAppPromo() {
   return (
@@ -40,7 +43,7 @@ function FrutAppPromo() {
                   aria-label="Descargar en Google Play"
                   className="frutapp-promo__store"
                 >
-                  <img src="/google-play.svg" alt="Google Play" />
+                  <img src={googlePlayBadge} alt="Google Play" />
                 </a>
                 <a
                   href={APP_STORE_URL}
@@ -49,7 +52,7 @@ function FrutAppPromo() {
                   aria-label="Descargar en App Store"
                   className="frutapp-promo__store"
                 >
-                  <img src="/app-store.svg" alt="App Store" />
+                  <img src={appStoreBadge} alt="App Store" />
                 </a>
               </div>
             </div>

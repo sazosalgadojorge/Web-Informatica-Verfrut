@@ -1,14 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './Banner.scss'
-import background from '/svg/background.svg';
-import CHECK from '/svg/CHECK.svg'
-import P1 from '/svg/P1.svg'
-import P2 from '/svg/P2.svg'
-import USER from '/svg/USER.svg'
 import { motion } from "framer-motion";
 import { reportIncident } from '../IncidenciasModal/IncidenciasModal'
 import { Button } from '../ui'
+import { publicPath } from '../../utils/publicPath'
+
+const background = publicPath('svg/background.svg')
+const CHECK = publicPath('svg/CHECK.svg')
+const P1 = publicPath('svg/P1.svg')
+const P2 = publicPath('svg/P2.svg')
+const USER = publicPath('svg/USER.svg')
 
 function Banner() {
   return (

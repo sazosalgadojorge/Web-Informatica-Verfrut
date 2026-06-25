@@ -4,7 +4,11 @@ import { Drawer } from '../ui'
 import GestionUsuariosModal from '../GestionUsuariosModal/GestionUsuariosModal'
 import IncidenciasModal from '../IncidenciasModal/IncidenciasModal'
 import HeaderPhoneMenu from './HeaderPhoneMenu'
+import { publicPath } from '../../utils/publicPath'
 import './Header-Phone.scss'
+
+const logoSrc = publicPath('logotipo.svg')
+const homeHref = publicPath('')
 
 function HeaderPhone() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -35,8 +39,8 @@ function HeaderPhone() {
           <i className="fi fi-rr-menu-burger" aria-hidden="true" />
         </button>
 
-        <a href="/" className="hp-logo" onClick={handleHomeClick} aria-label="Inicio Verfrut">
-          <img src="/logotipo.svg" alt="Verfrut" />
+        <a href={homeHref} className="hp-logo" onClick={handleHomeClick} aria-label="Inicio Verfrut">
+          <img src={logoSrc} alt="Verfrut" />
         </a>
       </header>
 

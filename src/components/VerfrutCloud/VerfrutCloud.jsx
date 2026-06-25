@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../ui'
+import { publicPath } from '../../utils/publicPath'
 import './VerfrutCloud.scss'
 
 const YOUTUBE_ID = 'sy91ryJfeMI'
 const YOUTUBE_EMBED = `https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0`
+const cloudCover = publicPath('blog/verfrut-cloud-cover.png')
 
 function VerfrutCloud() {
   const navigate = useNavigate()
@@ -68,7 +70,7 @@ function VerfrutCloud() {
             <div className="col-xl-6">
               <div className="verfrut-cloud__media">
                 <img
-                  src="/blog/verfrut-cloud-cover.png"
+                  src={cloudCover}
                   alt="Verfrut Cloud"
                   loading="lazy"
                   className="verfrut-cloud__cover"

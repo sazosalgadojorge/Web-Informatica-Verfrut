@@ -1,3 +1,5 @@
+import { publicPath } from '../../utils/publicPath'
+
 export const DEFAULT_MENU_ITEMS = [
   {
     label: 'Inicio',
@@ -35,7 +37,7 @@ export const DEFAULT_MENU_ITEMS = [
     label: 'Recursos',
     url: '#',
     subItems: [
-      { label: 'Ver documentación', url: '/docs/index.html' },
+      { label: 'Ver documentación', url: publicPath('docs/index.html') },
       { label: 'Video Tutoriales', url: '#' },
       { label: 'Generar Firmas', url: 'https://api.verfrut.cl/Home/GeneradorFirma' },
       { label: 'Sugerencias', url: 'https://sugerencias.verfrut.cl' }
@@ -48,7 +50,7 @@ export const DEFAULT_MENU_ITEMS = [
 ];
 
 export const DEFAULT_HEADER_CONFIG = {
-  logo: '/logotipo.svg',
+  logo: publicPath('logotipo.svg'),
   logoAlt: 'Verfrut Logo',
   primaryButtonText: 'Iniciar Sesión',
   primaryButtonUrl: '#'
