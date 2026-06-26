@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useEffect } from 'react'
 import { Modal as BsModal } from 'bootstrap'
 import { Button } from '../ui'

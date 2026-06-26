@@ -21,7 +21,7 @@ const UNIFRUTTI_COMPONENTS = [
 ]
 
 export default defineConfig({
-  base: '/qa_inicio/',
+  base: './',
   plugins: [react()],
   optimizeDeps: {
     include: UNIFRUTTI_COMPONENTS,

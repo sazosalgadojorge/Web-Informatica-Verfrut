@@ -40,31 +40,16 @@ function expandQuery(q) {
   return Array.from(out).join(" ");
 }
 
-// Resalta coincidencias básicas en el título
-function highlight(text, query) {
-  if (!query) return text;
-  const q = normalize(query).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp(`(${q.split("\\ ").filter(Boolean).join("|")})`, "gi");
-  const parts = String(text).split(re);
-  return parts.map((p, i) =>
-    re.test(normalize(p))
-      ? <mark key={i}>{p}</mark>
-      : <React.Fragment key={i}>{p}</React.Fragment>
-  );
-}
+function getYouTubeEmbedUrl(url) {
+  if (!url) return null;
 
-// Genera thumbnail dinámico basado en el ID del video
-function getDynamicThumbnail(video) {
-  // Si ya tiene thumbnail específico, lo usa
-  if (video.thumbnail && video.thumbnail !== "/videos/intro.png" && video.thumbnail !== genericVideoThumbnail) {
-    return withPublicBase(video.thumbnail);
-  }
-  
-  // Genera thumbnail basado en el ID del video
-  const thumbnailPath = publicPath(`videos/thumbnails/${video.id}.png`);
-  
-  // Fallback a thumbnail genérico si no existe el específico
-  return thumbnailPath;
+  const patterns = [
+    /youtube\.com\/watch\?v=([^&]+)/i,
+    /youtu\.be\/([^?]+)/i,
+    /youtube\.com\/embed\/([^?]+)/i,
+  ];
+  const match = patterns.map((pattern) => String(url).match(pattern)).find(Boolean);
+  return match ? `https://www.youtube.com/embed/${match[1]}?autoplay=1&rel=0` : null;
 }
 
 // Genera thumbnail automáticamente desde el video
@@ -556,6 +541,7 @@ const Videos = () => {
     () => results.find(v => v.id === activeId) || videos.find(v => v.id === activeId) || null,
     [activeId, results, videos]
   );
+  const currentYouTubeEmbed = current ? getYouTubeEmbedUrl(current.src) : null;
 
   // Bloquear scroll cuando el modal está abierto
   useEffect(() => {
@@ -735,13 +721,23 @@ const Videos = () => {
               boxShadow: "0 10px 30px rgba(0,0,0,0.4)"
             }}
           >
-            <video
-              src={current.src}
-              poster={getDynamicThumbnailWithGeneration(current)}
-              controls
-              autoPlay
-              style={{ display: "block", width: "100%", height: "auto" }}
-            />
+            {currentYouTubeEmbed ? (
+              <iframe
+                src={currentYouTubeEmbed}
+                title={current.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: 0 }}
+              />
+            ) : (
+              <video
+                src={current.src}
+                poster={getDynamicThumbnailWithGeneration(current)}
+                controls
+                autoPlay
+                style={{ display: "block", width: "100%", height: "auto" }}
+              />
+            )}
             <div className="p-3 bg-dark text-white d-flex align-items-center justify-content-between gap-2">
               <strong className="me-3">{current.title}</strong>
               <Button variant="light" size="sm" onClick={closePlayer}>

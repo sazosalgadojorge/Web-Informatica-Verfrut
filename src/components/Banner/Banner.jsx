@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './Banner.scss'
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { reportIncident } from '../IncidenciasModal/IncidenciasModal'
 import { Button } from '../ui'
 import { publicPath } from '../../utils/publicPath'
@@ -22,16 +22,16 @@ function Banner() {
                    
 
                             <div className="col-12 col-md-8 box-info">
-                            <motion.h1
+                            <Motion.h1
                                 className="gradient-title"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                             >
                                 Bienvenido <br/><span className='light-title'>a sistemas y soporte.</span>
-                            </motion.h1>
+                            </Motion.h1>
 
-                            <motion.p
+                            <Motion.p
                                 className="gradient-description"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -39,9 +39,9 @@ function Banner() {
                             >
                                 Gestionamos la infraestructura tecnológica de Verfrut con soluciones vanguardistas que impulsan la eficiencia
                                 y el crecimiento continuo.
-                            </motion.p>
+                            </Motion.p>
 
-                            <motion.div
+                            <Motion.div
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
@@ -55,7 +55,7 @@ function Banner() {
                                         Incidencias
                                     </span>
                                 </Button>
-                            </motion.div>
+                            </Motion.div>
                             </div>
                             
                         <div className="col-12 col-md-4 hero-anidado" >

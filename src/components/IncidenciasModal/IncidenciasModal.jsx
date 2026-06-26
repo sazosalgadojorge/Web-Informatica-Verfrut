@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useEffect, useState } from 'react'
 import { Modal, Button } from '../ui'
 import { detectCountry, INCIDENCIAS_URLS } from '../../utils/country'

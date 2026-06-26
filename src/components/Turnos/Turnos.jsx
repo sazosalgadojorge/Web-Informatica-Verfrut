@@ -6,6 +6,7 @@ import './Turnos.scss'
 import Footer from '../Footer/Footer'
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
 import { Button } from '../ui'
+import { publicPath } from '../../utils/publicPath'
 
 const AREA_CONFIG = {
   Desarrollo: {
@@ -183,8 +184,8 @@ const Turnos = () => {
 
   useEffect(() => {
     Promise.all([
-      fetch('public/json/turnos_sistemas.json').then(response => response.json()),
-      fetch('public/json/turnos_soporte.json').then(response => response.json()),
+      fetch(publicPath('json/turnos_sistemas.json')).then(response => response.json()),
+      fetch(publicPath('json/turnos_soporte.json')).then(response => response.json()),
     ])
       .then(([desarrolloData, soporteData]) => {
         const nextDevelopmentWeek = getNextWeek(desarrolloData, weekInfo.currentWeek)

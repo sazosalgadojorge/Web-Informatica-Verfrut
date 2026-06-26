@@ -1,119 +1,56 @@
 [
   {
-    "id": "informacion-ciberseguridad",
-    "title": "Información de Ciberseguridad",
-    "description": "Información importante sobre ciberseguridad en la organización.",
-    "src": "/videos/Video - Informacion-Ciberseguridad.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["ciberseguridad", "seguridad", "información"],
+    "id": "app-rendiciones",
+    "title": "App Rendiciones",
+    "description": "Gestión de gastos y rendiciones desde la aplicación móvil.",
+    "src": "https://www.youtube.com/watch?v=l3Cn5ZidUIw",
+    "thumbnail": "https://img.youtube.com/vi/l3Cn5ZidUIw/hqdefault.jpg",
+    "tags": ["rendiciones", "aplicación", "gastos", "tutorial"],
     "date": "2025-01-01"
   },
   {
-    "id": "microsoft-authenticator",
-    "title": "Microsoft Authenticator",
-    "description": "Guía de uso de Microsoft Authenticator para autenticación de dos factores.",
-    "src": "/videos/Video - Microsoft-Authenticator.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["microsoft", "authenticator", "seguridad", "tutorial"],
+    "id": "frutapp-job",
+    "title": "FrutApp Job",
+    "description": "Uso de FrutApp Job para apoyar la gestión del proceso de cosecha.",
+    "src": "https://www.youtube.com/watch?v=mlWARL2l82s",
+    "thumbnail": "https://img.youtube.com/vi/mlWARL2l82s/hqdefault.jpg",
+    "tags": ["frutapp", "cosecha", "aplicación", "tutorial"],
     "date": "2025-02-01"
   },
   {
-    "id": "portal-dte-proveedores",
-    "title": "Portal DTE Proveedores",
-    "description": "Tutorial del portal de Documentos Tributarios Electrónicos para proveedores.",
-    "src": "/videos/Video - Portal DTE Proveedores.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["dte", "proveedores", "portal", "tutorial"],
+    "id": "id-viajes",
+    "title": "ID Viajes",
+    "description": "Trazabilidad y seguimiento de viajes de fruta desde campo hasta packing.",
+    "src": "https://www.youtube.com/watch?v=XGAx8sUHPPY",
+    "thumbnail": "https://img.youtube.com/vi/XGAx8sUHPPY/hqdefault.jpg",
+    "tags": ["id viajes", "trazabilidad", "logística", "tutorial"],
     "date": "2025-03-01"
   },
   {
-    "id": "promocional-intranet",
-    "title": "Promocional Intranet",
-    "description": "Video promocional de la Intranet corporativa.",
-    "src": "/videos/Video - Promocional Intranet.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["intranet", "promocional", "corporativo"],
+    "id": "gestion-dte",
+    "title": "Gestión DTE",
+    "description": "Gestión de Documentos Tributarios Electrónicos en Verfrut.",
+    "src": "https://www.youtube.com/watch?v=GSoTifuEAvQ",
+    "thumbnail": "https://img.youtube.com/vi/GSoTifuEAvQ/hqdefault.jpg",
+    "tags": ["dte", "facturación", "documentos", "tutorial"],
     "date": "2025-04-01"
   },
   {
-    "id": "rendiciones-aplicacion",
-    "title": "Rendiciones en la Aplicación",
-    "description": "Tutorial del sistema de rendiciones a través de la aplicación.",
-    "src": "/videos/Video - Rendiciones-Aplicacion.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["rendiciones", "aplicación", "tutorial"],
+    "id": "ley-karin-sugerencias",
+    "title": "Plataforma de Sugerencias Ley Karin",
+    "description": "Uso de la plataforma de sugerencias asociada a Ley Karin.",
+    "src": "https://www.youtube.com/watch?v=NeNCDiGgtQY",
+    "thumbnail": "https://img.youtube.com/vi/NeNCDiGgtQY/hqdefault.jpg",
+    "tags": ["ley karin", "sugerencias", "rrhh", "tutorial"],
     "date": "2025-05-01"
-  },
-  {
-    "id": "seguridad-usb",
-    "title": "Seguridad USB",
-    "description": "Buenas prácticas de seguridad en el uso de dispositivos USB.",
-    "src": "/videos/Video - Seguridad-USB.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["seguridad", "usb", "buenas prácticas"],
-    "date": "2025-06-01"
-  },
-  {
-    "id": "sistema-radius",
-    "title": "Sistema RADIUS",
-    "description": "Tutorial del sistema RADIUS para autenticación de red.",
-    "src": "/videos/Video - Sistema-Radius.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["radius", "sistema", "tutorial", "red"],
-    "date": "2025-07-01"
   },
   {
     "id": "solicitud-vacaciones",
     "title": "Solicitud de Vacaciones",
-    "description": "Cómo realizar solicitudes de vacaciones a través del sistema.",
-    "src": "/videos/Video - Solicitud de Vacaciones.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["vacaciones", "solicitud", "rrhh", "tutorial"],
-    "date": "2025-08-01"
-  },
-  {
-    "id": "frutappjob",
-    "title": "Tutorial FrutAppJob",
-    "description": "Guía completa de uso de la aplicación FrutAppJob.",
-    "src": "/videos/Video - Tutorial FrutAppJob.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["frutappjob", "aplicación", "tutorial"],
-    "date": "2025-09-01"
-  },
-  {
-    "id": "ley-karin",
-    "title": "Tutorial Ley Karin",
-    "description": "Información y procedimientos relacionados con la Ley Karin.",
-    "src": "/videos/Video - Tutorial Ley Karin.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["ley karin", "legal", "tutorial", "rrhh"],
-    "date": "2025-10-01"
-  },
-  {
-    "id": "modulo-dte",
-    "title": "Módulo DTE",
-    "description": "Tutorial del módulo de Documentos Tributarios Electrónicos.",
-    "src": "/videos/Video - Tutorial-ModuloDTE.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["dte", "módulo", "tutorial", "facturación"],
-    "date": "2025-11-01"
-  },
-  {
-    "id": "gestion-password",
-    "title": "Gestión de Contraseñas",
-    "description": "Guía para la correcta gestión y cambio de contraseñas.",
-    "src": "/videos/Video - Tutorial-Password.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["password", "contraseña", "seguridad", "tutorial"],
-    "date": "2025-12-01"
-  },
-  {
-    "id": "transportistas",
-    "title": "Sistema de Transportistas",
-    "description": "Tutorial del sistema de gestión de transportistas.",
-    "src": "/videos/Video - Tutorial-Transportistas.mp4",
-    "thumbnail": "/videos/intro.png",
-    "tags": ["transportistas", "sistema", "tutorial", "logística"],
-    "date": "2025-01-01"
+    "description": "Cómo solicitar y hacer seguimiento a vacaciones en la plataforma.",
+    "src": "https://www.youtube.com/watch?v=0T9SE2Q7qBQ",
+    "thumbnail": "https://img.youtube.com/vi/0T9SE2Q7qBQ/hqdefault.jpg",
+    "tags": ["vacaciones", "rrhh", "solicitud", "tutorial"],
+    "date": "2025-06-01"
   }
 ]

@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom'
 import { Badge, Button } from '../ui'
 import GestionUsuariosModal, { GESTION_USUARIOS_MODAL_ID } from '../GestionUsuariosModal/GestionUsuariosModal'
 import IncidenciasModal, { reportIncident } from '../IncidenciasModal/IncidenciasModal'
-import chileIcon from '../../assets/chile.svg'
-import peruIcon from '../../assets/peru.svg'
 import solicitudIcon from '../../assets/solicitud.svg'
 import glpiIcon from '../../assets/glpi.svg'
 import { publicPath } from '../../utils/publicPath'
@@ -278,7 +276,7 @@ function Header() {
                     <ul className="dropdown-menu animate slideIn">
                       <li className="dropdown-submenu">
                         <a className="dropdown-item dropdown-toggle-sub" href="#">
-                          Documentación<i className="fi fi-rr-angle-right"></i>
+                          Material de apoyo<i className="fi fi-rr-angle-right"></i>
                         </a>
                         <ul className="submenu">
                           <li><a className="dropdown-item" href={MANUALES_URL} target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-book-open-reader"></i>Manuales</a></li>
