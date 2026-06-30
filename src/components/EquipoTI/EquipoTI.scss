@@ -1,47 +1,51 @@
+@import '../../styles/variables';
+@import '../../styles/breakpoints';
+
 .equipo-ti {
   padding: 4rem 0 5rem;
 
   &__header {
     text-align: center;
     margin-bottom: 2.5rem;
-
-    @media (min-width: 1200px) {
-      text-align: left;
-    }
   }
 
   &__tag {
     display: inline-block;
-    color: #184288;
+    color: $primary-color;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
     margin-bottom: 0.5rem;
   }
 
   &__title {
-    font-size: 2.2rem;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
     font-weight: 700;
     color: #080e1c;
     margin: 0;
+    letter-spacing: -0.01em;
   }
 
   &__slider {
-    padding: 0.5rem 0.25rem 3rem;
+    padding: 0.5rem 0.25rem 4rem;
+    position: relative;
   }
 
   &__card {
     background: #fff;
     border: 1px solid #eef0f3;
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
     height: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      border-color: rgba($primary-color, 0.25);
+      box-shadow: 0 16px 32px rgba(8, 14, 28, 0.08);
     }
   }
 
@@ -63,39 +67,135 @@
     position: absolute;
     bottom: 12px;
     right: 12px;
-    width: clamp(36px, 9vw, 44px);
-    height: clamp(36px, 9vw, 44px);
+    width: clamp(38px, 9vw, 44px);
+    height: clamp(38px, 9vw, 44px);
     border-radius: 50%;
-    background: #0d6efd;
+    background: $primary-color;
     color: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 6px 16px rgba($primary-color, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 
-    &:hover {
-      background: #0a58ca;
-      transform: scale(1.05);
+    // Cancelar el .fi global (top:2px + padding-right:1rem) que viene del header.
+    i {
+      position: static;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: darken($primary-color, 6%);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 10px 22px rgba($primary-color, 0.45);
       color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($primary-color, 0.4);
+      outline-offset: 2px;
     }
   }
 
   &__body {
-    padding: 1rem 1.25rem 1.25rem;
+    padding: 1.1rem 1.25rem 1.4rem;
     text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 6rem;
   }
 
   &__name {
     font-size: 1.05rem;
     font-weight: 600;
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.35rem;
     color: #080e1c;
+    line-height: 1.3;
+    text-wrap: balance;
   }
 
   &__role {
     color: #6c757d;
     font-size: 0.85rem;
-    line-height: 1.3;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+
+  // -----------------------------------------------
+  // Navegación Swiper — sobrescribe estilos default
+  // -----------------------------------------------
+  &__slider {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid #e6e9ef;
+      color: $primary-color;
+      box-shadow: 0 4px 12px rgba(8, 14, 28, 0.08);
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease, box-shadow 0.2s ease;
+      top: calc(50% - 2rem);
+
+      &::after {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background: $primary-color;
+        color: #fff;
+        border-color: $primary-color;
+        transform: scale(1.06);
+        box-shadow: 0 8px 18px rgba($primary-color, 0.35);
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    .swiper-button-prev { left: 0; }
+    .swiper-button-next { right: 0; }
+
+    @include md-down {
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 0.75rem;
+    }
+
+    .swiper-pagination-bullet {
+      width: 22px;
+      height: 4px;
+      border-radius: 4px;
+      background: #d4d9e2;
+      opacity: 1;
+      margin: 0 4px !important;
+      transition: background 0.2s ease, width 0.2s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $primary-color;
+      width: 32px;
+    }
   }
 }

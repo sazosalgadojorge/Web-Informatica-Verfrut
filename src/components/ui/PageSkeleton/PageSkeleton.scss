@@ -1,0 +1,35 @@
+.page-skeleton {
+  min-height: 60vh;
+
+  &__block {
+    display: block;
+    background: linear-gradient(
+      90deg,
+      #eef0f3 0%,
+      #f7f8fa 50%,
+      #eef0f3 100%
+    );
+    background-size: 200% 100%;
+    border-radius: 6px;
+    animation: page-skeleton-shimmer 1.4s ease-in-out infinite;
+  }
+
+  &__card {
+    background: #fff;
+    border: 1px solid #eef0f3;
+    border-radius: 14px;
+    padding: 1rem;
+  }
+}
+
+@keyframes page-skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-skeleton__block {
+    animation: none;
+    background: #eef0f3;
+  }
+}

@@ -1,0 +1,59 @@
+.vpn-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.4rem;
+  padding: 2px;
+  color: #6c757d;
+  cursor: help;
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+
+  &:hover {
+    color: #184289;
+  }
+
+  // Tooltip CSS-only (no depende del bootstrap.Tooltip JS).
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2937;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0.35rem 0.55rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 1100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1f2937;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 1100;
+  }
+
+  &:hover::after,
+  &:hover::before,
+  &:focus-visible::after,
+  &:focus-visible::before {
+    opacity: 1;
+  }
+}

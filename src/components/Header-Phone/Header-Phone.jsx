@@ -29,7 +29,7 @@ function HeaderPhone() {
 
   return (
     <>
-      <header className="hp-header">
+      <header className={`hp-header${menuOpen ? ' hp-header--menu-open' : ''}`}>
         <button
           type="button"
           className="hp-toggle"
@@ -39,8 +39,8 @@ function HeaderPhone() {
           <i className="fi fi-rr-menu-burger" aria-hidden="true" />
         </button>
 
-        <a href={homeHref} className="hp-logo" onClick={handleHomeClick} aria-label="Inicio Verfrut">
-          <img src={logoSrc} alt="Verfrut" />
+        <a href={homeHref} className="hp-logo" onClick={handleHomeClick} aria-label="Inicio Unifrutti">
+          <img src={logoSrc} alt="Unifrutti" />
         </a>
       </header>
 

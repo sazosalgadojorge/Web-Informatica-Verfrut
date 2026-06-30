@@ -1,5 +1,6 @@
 // Importar variables y mixins del proyecto principal
 @import '../../styles/variables';
+@import '../../styles/breakpoints';
 @import '../../styles/mixins';
 
 // Variables específicas del Header
@@ -146,15 +147,15 @@ $header-border-color: rgba(0, 0, 0, 0.1);
   }
 
   // Responsive
-  @media (max-width: 767.98px) {
+  @include md-down {
     .navbar {
       padding: 0.5rem 1rem;
-      
+
       .navbar-brand img {
         height: 32px;
       }
     }
-    
+
     .navbar-nav {
       gap: 0.25rem;
     }

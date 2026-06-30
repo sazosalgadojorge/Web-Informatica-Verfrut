@@ -6,22 +6,13 @@ import Header from './components/Header/Header'
 import HeaderPhone from './components/Header-Phone/Header-Phone'
 import HomePage from './components/HomePage/HomePage'
 import { Button } from './components/ui'
+import PageSkeleton from './components/ui/PageSkeleton/PageSkeleton'
 
 const Turnos = lazy(() => import('./components/Turnos/Turnos'))
 const Anexos = lazy(() => import('./components/Anexos/Anexos'))
 const Videos = lazy(() => import('./components/Videos/Videos'))
 const BlogList = lazy(() => import('./components/Blog/BlogList'))
 const BlogPost = lazy(() => import('./components/Blog/BlogPost'))
-
-function PageLoader() {
-  return (
-    <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
-      <div className="spinner-border text-primary" role="status">
-        <span className="visually-hidden">Cargando…</span>
-      </div>
-    </div>
-  )
-}
 
 function NotFound() {
   const navigate = useNavigate()
@@ -54,7 +45,7 @@ function App() {
     <>
       {isMobile ? <HeaderPhone /> : <Header />}
 
-      <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<PageSkeleton />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/turnos" element={<Turnos />} />

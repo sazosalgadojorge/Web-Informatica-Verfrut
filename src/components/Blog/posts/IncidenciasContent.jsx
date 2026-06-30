@@ -1,8 +1,10 @@
+import VpnBadge from '../../ui/VpnBadge/VpnBadge'
+
 function IncidenciasContent() {
   return (
     <>
       <p className="blog-content">
-        En el Grupo Verfrut, el manejo de incidencias en los sistemas es clave para garantizar la
+        En Unifrutti, el manejo de incidencias en los sistemas es clave para garantizar la
         continuidad operativa y la satisfacción de los usuarios. Con este objetivo, se ha establecido
         un protocolo claro y eficiente que involucra a todos los colaboradores del área de Desarrollo,
         Sistemas e Innovación, tanto en Chile como en Perú.
@@ -12,16 +14,16 @@ function IncidenciasContent() {
       <p className="blog-content" style={{ fontSize: 'larger' }}>
         • Chile:{' '}
         <a href="https://incidencias.verfrut.cl/" target="_blank" rel="noopener noreferrer">
-          https://incidencias.verfrut.cl/
+          https://incidencias.verfrut.cl/<VpnBadge />
         </a>
         <br />
         • Perú:{' '}
         <a href="https://incidencias.verfrut.pe/" target="_blank" rel="noopener noreferrer">
-          https://incidencias.verfrut.pe/
+          https://incidencias.verfrut.pe/<VpnBadge />
         </a>
       </p>
       <p className="blog-content alert alert-primary">
-        ℹ️ Nota: Estos enlaces solo están disponibles dentro de la red corporativa de Verfrut. Si te
+        ℹ️ Nota: Estos enlaces solo están disponibles dentro de la red corporativa de Unifrutti. Si te
         encuentras trabajando fuera de las oficinas, recuerda que puedes acceder a estas plataformas
         mediante la conexión VPN proporcionada por el equipo de TI. Si necesitas ayuda para conectarte,
         no dudes en solicitar el soporte correspondiente.
@@ -30,7 +32,7 @@ function IncidenciasContent() {
       <h3 className="blog-subtitle pt-4">👉 Alcance</h3>
       <p className="blog-content">
         Antes de la implementación, gran parte de la información se gestionaba de manera fragmentada
-        entre planillas y sistemas heredados. Hoy, con esta plataforma unificada, Verfrut ha reducido
+        entre planillas y sistemas heredados. Hoy, con esta plataforma unificada, Unifrutti ha reducido
         errores operacionales, acelerado los tiempos de respuesta y mejorado la coordinación entre sus
         plantas y oficinas en ambos países.
       </p>
@@ -135,7 +137,7 @@ function IncidenciasContent() {
         <strong>💡 Recuerda:</strong>
         <br />
         Si estás fuera de las oficinas, asegúrate de estar conectado a través de la{' '}
-        <strong>VPN de Verfrut</strong> para poder acceder a la plataforma GLPi.
+        <strong>VPN de Unifrutti</strong> para poder acceder a la plataforma GLPi.
       </p>
 
       <h3 className="blog-subtitle pt-2">🎯 Compromiso con la mejora continua</h3>

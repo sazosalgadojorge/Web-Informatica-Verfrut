@@ -1,9 +1,11 @@
+@import '../../styles/breakpoints';
+
 .turnos-container {
   margin-top: 1.5rem;
   padding: 2.5rem 1rem 1rem;
   background: #fff;
 
-  @media (min-width: 768px) {
+  @include md-up {
     padding-left: 0;
     padding-right: 0;
   }
@@ -202,7 +204,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@include md-down {
   .turnos-guide {
     padding: 1.5rem 1.25rem 1.25rem;
 
@@ -335,7 +337,7 @@
   font-style: italic;
 }
 
-@media (max-width: 991.98px) {
+@include lg-down {
   .turnos-hero {
     align-items: flex-start;
     flex-direction: column;
@@ -346,7 +348,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@include md-down {
   .turnos-container {
     padding: 2rem 0 0;
   }

@@ -1,5 +1,6 @@
 import "./Marcas.scss";
 import { useEffect, useRef } from "react";
+import { Divider } from "../ui";
 import entel from "../../assets/img/brand/entel.png";
 import azure from "../../assets/img/brand/azure.png"; 
 import microsoft from "../../assets/img/brand/microsoft.png";
@@ -88,6 +89,9 @@ function Marcas() {
     return (
         <>
         <div className="brand-sec4">
+                <div className="container brand-sec4__top-divider d-md-none">
+                    <Divider />
+                </div>
                 <div className="row-12 d-flex align-items-center justify-content-center">
                     <div className="col-12 d-flex justify-content-center align-items-center">
                         <h3 className="brand-title9" id="marcas-title">Nuestras Tecnologías</h3>

@@ -34,23 +34,19 @@ src/styles/
 ```
 
 ### 3. Media Queries
+Única fuente de verdad: `_breakpoints.scss`. NO escribir `@media (...)` inline.
 ```scss
+@import '../../styles/breakpoints';
+
 .my-component {
-  // Estilos base
-  
-  @include mobile {
-    // Estilos para móvil
-  }
-  
-  @include tablet {
-    // Estilos para tablet
-  }
-  
-  @include desktop {
-    // Estilos para desktop
-  }
+  // Estilos base (mobile-first)
+
+  @include md-down { /* ≤ 767.98px */ }
+  @include md-up   { /* ≥ 768px    */ }
+  @include lg-up   { /* ≥ 992px    */ }
 }
 ```
+Mixins disponibles: `sm-down`, `md-down`, `lg-down`, `xl-down`, `xxl-down` y sus equivalentes `-up`.
 
 ### 4. Anidamiento
 ```scss

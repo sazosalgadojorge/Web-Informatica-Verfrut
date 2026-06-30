@@ -37,10 +37,10 @@ function VerfrutCloud() {
             <div className="col-xl-6">
               <span className="verfrut-cloud__tag">Innovación</span>
               <h2 className="verfrut-cloud__title h1 display-8 fw-bold mb-4">
-                Verfrut Cloud: La clave para optimizar el proceso de la fruta en Verfrut Chile y Perú
+                Frusys Cloud: La clave para optimizar el proceso de la fruta en Unifrutti Chile y Perú
               </h2>
               <p className="verfrut-cloud__description">
-                Verfrut Cloud es nuestra solución tecnológica que moderniza un antiguo ERP,
+                Frusys Cloud es nuestra solución tecnológica que moderniza un antiguo ERP,
                 transformándolo en una plataforma web para optimizar procesos, simplificar su uso y
                 mejorar la gestión de la fruta.
               </p>
@@ -71,14 +71,14 @@ function VerfrutCloud() {
               <div className="verfrut-cloud__media">
                 <img
                   src={cloudCover}
-                  alt="Verfrut Cloud"
+                  alt="Frusys Cloud"
                   loading="lazy"
                   className="verfrut-cloud__cover"
                 />
                 <button
                   type="button"
                   className="play-btn"
-                  aria-label="Reproducir video de Verfrut Cloud"
+                  aria-label="Reproducir video de Frusys Cloud"
                   onClick={() => setVideoOpen(true)}
                 >
                   <span className="play-btn__circle">
@@ -98,7 +98,7 @@ function VerfrutCloud() {
           className="verfrut-cloud-video-lightbox"
           role="dialog"
           aria-modal="true"
-          aria-label="Video Verfrut Cloud"
+          aria-label="Video Frusys Cloud"
           onClick={() => setVideoOpen(false)}
         >
           <div className="verfrut-cloud-video-lightbox__content" onClick={(event) => event.stopPropagation()}>
@@ -113,7 +113,7 @@ function VerfrutCloud() {
             <div className="verfrut-cloud-video-lightbox__frame">
               <iframe
                 src={YOUTUBE_EMBED}
-                title="Verfrut Cloud"
+                title="Frusys Cloud"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints';
+
 .gestion-usuarios-modal {
   padding-top: 100px;
   background-color: transparent !important;
@@ -117,7 +119,7 @@ body.gestion-usuarios-modal-open .modal-backdrop.show {
   }
 }
 
-@media (max-width: 1199.98px) {
+@include xl-down {
   .gestion-usuarios-cards {
     flex-wrap: wrap;
   }
@@ -128,7 +130,7 @@ body.gestion-usuarios-modal-open .modal-backdrop.show {
   }
 }
 
-@media (max-width: 767.98px) {
+@include md-down {
   .gestion-usuarios-modal {
     padding-top: 40px;
   }

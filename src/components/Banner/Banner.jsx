@@ -37,7 +37,7 @@ function Banner() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
                             >
-                                Gestionamos la infraestructura tecnológica de Verfrut con soluciones vanguardistas que impulsan la eficiencia
+                                Gestionamos la infraestructura tecnológica de Unifrutti con soluciones vanguardistas que impulsan la eficiencia
                                 y el crecimiento continuo.
                             </Motion.p>
 
@@ -100,6 +100,11 @@ function Banner() {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className="scroll-hint" aria-hidden="true">
+                    <span className="scroll-hint__label">Desliza para ver más</span>
+                    <i className="fi fi-rr-angle-down scroll-hint__icon" />
                 </div>
             </div>
 

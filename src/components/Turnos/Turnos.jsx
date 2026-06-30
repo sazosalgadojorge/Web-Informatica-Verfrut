@@ -267,7 +267,7 @@ const Turnos = () => {
               <div className="turnos-guide__step-body">
                 <strong>Identifica el área.</strong>
                 <span>
-                  Si el problema es de un <em>sistema interno, aplicación o integración</em> (DTE, Vacaciones, Rendiciones, FrutApp, Verfrut Cloud, etc.) contacta a
+                  Si el problema es de un <em>sistema interno, aplicación o integración</em> (DTE, Vacaciones, Rendiciones, FrutApp, Frusys Cloud, etc.) contacta a
                   <strong> Desarrollo</strong>. Si es de <em>accesos, equipos, correo, red, impresoras</em> o conectividad, contacta a <strong>Soporte Técnico</strong>.
                 </span>
               </div>

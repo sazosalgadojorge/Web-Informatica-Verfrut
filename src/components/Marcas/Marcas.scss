@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints';
+
 /* Blog Grid end ---------------------------------- */
 /*------------------- 4.00. Brand  -------------------*/
 
@@ -20,11 +22,17 @@
     padding: 20px 0;
     font-size: 2rem;
     font-weight: 800;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    text-align: center;
+    display: block;
     color: var(--title-color, #333);
     margin: 0;
+    line-height: 1.2;
+    word-break: normal;
+    overflow-wrap: break-word;
+
+    @include md-down {
+        display: none;
+    }
 }
 
 .brand-sec4 .slider-area {
@@ -36,6 +44,10 @@
 .brand-sec4 .swiper {
     width: 100%;
     padding: 40px 0;
+
+    @include md-down {
+        padding: 56px 0 48px;
+    }
 }
 
 .brand-sec4 .swiper-wrapper {
@@ -129,16 +141,12 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 767.98px) {
+@include md-down {
     .brand-sec4 {
-        padding: 20px 0;
+        padding: 1.5rem 1.5rem 2rem;
         margin: 20px auto;
     }
-    
-    .brand-sec4 .brand-title9 {
-        font-size: 2.5rem;
-    }
-    
+
     .brand-sec4 .brand-box {
         height: 140px;
         padding: 30px;
@@ -165,16 +173,12 @@
     }
 }
 
-@media (max-width: 575.98px) {
+@include sm-down {
     .brand-sec4 {
-        padding: 30px 0;
+        padding: 1.25rem 1.25rem 1.75rem;
         margin: 15px auto;
     }
-    
-    .brand-sec4 .brand-title9 {
-        font-size: 2rem;
-    }
-    
+
     .brand-sec4 .brand-box {
         height: 120px;
         padding: 25px;
@@ -205,21 +209,21 @@
     /* Medium Large devices */
   }
   
-  @media (max-width: 1399.98px) {
+  @include xxl-down {
     .brand-sec1:after {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 11px, calc(100% - 40px) 50%, 100% calc(100% - 11px), 100% 100%, 0 100%, 0 calc(100% - 11px), 40px 50%, 0 11px);
               clip-path: polygon(0 0, 100% 0, 100% 11px, calc(100% - 40px) 50%, 100% calc(100% - 11px), 100% 100%, 0 100%, 0 calc(100% - 11px), 40px 50%, 0 11px);
     }
   }
-  
-  @media (max-width: 1199.98px) {
+
+  @include xl-down {
     .brand-sec1:after {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 11px, calc(100% - 30px) 50%, 100% calc(100% - 11px), 100% 100%, 0 100%, 0 calc(100% - 11px), 30px 50%, 0 11px);
               clip-path: polygon(0 0, 100% 0, 100% 11px, calc(100% - 30px) 50%, 100% calc(100% - 11px), 100% 100%, 0 100%, 0 calc(100% - 11px), 30px 50%, 0 11px);
     }
   }
-  
-  @media (max-width: 767.98px) {
+
+  @include md-down {
     .brand-sec1 {
       margin-left: 12px;
       margin-right: 12px;
@@ -229,14 +233,14 @@
               clip-path: none;
     }
   }
-  
+
   .brand-sec1 .slick-arrow {
     visibility: visible;
     opacity: 1;
   }
-  
+
   /* Small devices */
-  @media (max-width: 767.98px) {
+  @include md-down {
     .brand-box.py-20 {
       padding-top: 0;
       padding-bottom: 0;
@@ -314,7 +318,7 @@
     /* Large devices */
   }
   
-  @media (max-width: 1199.98px) {
+  @include xl-down {
     .brand-item {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -435,7 +439,7 @@
     /* Large devices */
   }
   
-  @media (max-width: 1199.98px) {
+  @include xl-down {
     .brand-slider8-area {
       max-width: 100%;
     }

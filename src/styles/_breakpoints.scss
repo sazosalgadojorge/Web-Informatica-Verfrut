@@ -1,8 +1,17 @@
 // Mixins responsive — Bootstrap standard breakpoints
+// Única fuente de verdad de breakpoints del proyecto.
 // Valores hardcoded para evitar dependencias circulares con _variables.scss
 // (también disponibles como $breakpoint-* en variables).
 //
-// Uso: @include sm-down { ... } / @include md-up { ... }
+// Convención:
+//   -down  → @media (max-width: …)  aplica a viewports hasta ese tamaño.
+//   -up    → @media (min-width: …)  aplica a viewports desde ese tamaño.
+//
+// Uso:
+//   @include md-down { ... }   // ≤ 767.98px (mobile)
+//   @include md-up   { ... }   // ≥ 768px    (tablet+)
+//
+// NO escribir @media (max-width: …) inline en componentes. Usar siempre estos mixins.
 
 @mixin sm-down  { @media (max-width: 575.98px)  { @content; } }
 @mixin md-down  { @media (max-width: 767.98px)  { @content; } }

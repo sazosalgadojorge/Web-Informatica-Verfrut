@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints';
+
 .videos-container {
     margin-top: 1.5rem;
     background: #ffffff;
@@ -110,7 +112,7 @@
     }
     
     // Responsive adjustments
-    @media (max-width: 767.98px) {
+    @include md-down {
       padding: 2rem 0;
       
       .videos-section {

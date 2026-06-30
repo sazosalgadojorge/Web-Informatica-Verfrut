@@ -1,0 +1,51 @@
+// Utilidades responsive reutilizables.
+// Requiere _breakpoints.scss importado antes.
+
+// Wrapper de ancho seguro: respeta el viewport sin ser tragado por la scrollbar.
+// Reemplazo a patrones tipo `width: 100vw + translateX(-50%)` que provocan overflow.
+.container-fluid-safe {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  @include sm-down {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+// Scroll horizontal controlado — envolver tablas o filas anchas para que el
+// overflow viva dentro del componente y no rompa el layout global.
+.scroll-x {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Helpers de visibilidad por viewport.
+.hide-sm-down {
+  @include sm-down {
+    display: none !important;
+  }
+}
+
+.hide-md-down {
+  @include md-down {
+    display: none !important;
+  }
+}
+
+.hide-md-up {
+  @include md-up {
+    display: none !important;
+  }
+}
+
+.hide-lg-up {
+  @include lg-up {
+    display: none !important;
+  }
+}

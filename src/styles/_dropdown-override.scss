@@ -1,5 +1,19 @@
 // Sobrescribir completamente Bootstrap dropdown
 // $primary-color viene de main.scss (variables)
+
+// Bypass del :hover tras un click navegacional. JS añade [data-no-hover]
+// por unos ms para forzar el cierre del dropdown — sin esto, el cursor
+// sigue sobre la zona y el :hover lo mantiene abierto.
+.th-header .dropdown[data-no-hover],
+.th-header .dropdown[data-no-hover]:hover {
+  .dropdown-menu,
+  .submenu {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
 .th-header {
   // Estilos base del dropdown
   .dropdown {
@@ -14,6 +28,7 @@
       left: 50% !important;
       transform: translateX(-50%) !important;
       min-width: 220px !important;
+      max-width: calc(100vw - 2rem) !important;
       background: white !important;
       border: 1px solid #eaeaea !important;
       border-radius: 8px !important;
@@ -86,6 +101,7 @@
     transition: all 0.3s ease-in-out !important;
     position: relative !important;
     font-weight: 500 !important;
+    font-size: 0.9rem !important;
     
     &:hover {
       background-color: #f8f9fa !important;

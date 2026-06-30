@@ -109,7 +109,7 @@ function Footer() {
                     <div className="row justify-content-between align-items-center">
                         <div className="col-lg-6">
                             <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> 2025 <a
-                                    href="https://themeforest.net/user/themeholy">Verfrut Technology</a>. All Rights
+                                    href="https://themeforest.net/user/themeholy">Unifrutti Technology</a>. All Rights
                                 Reserved.
                             </p>
                         </div>

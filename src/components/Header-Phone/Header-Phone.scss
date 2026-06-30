@@ -10,6 +10,15 @@
   padding: 0.5rem 0.875rem;
   background: #fff;
   box-shadow: 0 1px 0 #edf2f7;
+  transition: opacity 0.18s ease, visibility 0.18s ease;
+}
+
+// Mientras el drawer está abierto se oculta el header para evitar que el logo
+// quede asomando al lado del menú.
+.hp-header--menu-open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .hp-toggle {

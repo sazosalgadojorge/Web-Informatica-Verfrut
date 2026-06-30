@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Badge } from '../ui'
 import { openGestionUsuariosModal } from '../GestionUsuariosModal/GestionUsuariosModal'
 import { reportIncident } from '../IncidenciasModal/IncidenciasModal'
+import VpnBadge from '../ui/VpnBadge/VpnBadge'
 import solicitudIcon from '../../assets/solicitud.svg'
 import glpiIcon from '../../assets/glpi.svg'
 import './HeaderPhoneMenu.scss'
@@ -31,7 +32,7 @@ function ActionItem({ variant = 'default', icon, label, onClick }) {
 /**
  * Item del menú — link interno (SPA), externo (target _blank) o acción.
  */
-function MenuItem({ label, icon, image, badge, href, external, onClick, disabled, active }) {
+function MenuItem({ label, icon, image, badge, href, external, onClick, disabled, active, vpn }) {
   const content = (
     <>
       {image ? (
@@ -39,7 +40,10 @@ function MenuItem({ label, icon, image, badge, href, external, onClick, disabled
       ) : icon ? (
         <i className={`hp-menu-item__icon ${icon}`} aria-hidden="true" />
       ) : null}
-      <span className="hp-menu-item__label">{label}</span>
+      <span className="hp-menu-item__label">
+        {label}
+        {vpn && <VpnBadge />}
+      </span>
       {badge && (
         <span className="hp-menu-item__badge">
           <Badge variant={badge.variant} size="sm">{badge.text}</Badge>
@@ -89,7 +93,7 @@ function Section({ icon, title, defaultOpen = false, children }) {
           <i className={icon} aria-hidden="true" />
         </span>
         <span className="hp-menu-section__title">{title}</span>
-        <i className="fi fi-rr-angle-small-down hp-menu-section__chevron" aria-hidden="true" />
+        <i className="fi fi-rr-angle-small-right hp-menu-section__chevron" aria-hidden="true" />
       </button>
       {open && <div className="hp-menu-section__body">{children}</div>}
     </section>
@@ -111,7 +115,7 @@ function Subsection({ title, children }) {
         aria-expanded={open}
       >
         <span>{title}</span>
-        <i className="fi fi-rr-angle-small-down hp-menu-section__chevron" aria-hidden="true" />
+        <i className="fi fi-rr-angle-small-right hp-menu-section__chevron" aria-hidden="true" />
       </button>
       {open && <div className="hp-menu-subsection__body">{children}</div>}
     </div>
@@ -128,29 +132,32 @@ function HeaderPhoneMenu({ onNavigate, isActive }) {
       <div className="hp-menu-actions">
         <span className="hp-menu-kicker">Acciones rápidas</span>
         <ActionItem
-          variant="primary"
           icon="fi fi-rr-apps-add"
           label="Gestión de Usuarios"
           onClick={openGestionUsuariosModal}
         />
         <ActionItem
           icon="fi fi-rr-bug"
-          label="Reportar incidencia"
+          label="Reportar Incidencia"
           onClick={reportIncident}
         />
       </div>
 
       <nav className="hp-menu-nav" aria-label="Navegación principal">
-        <Section icon="fi fi-rr-home" title="Inicio" defaultOpen>
+        <Section icon="fi fi-rr-home" title="Inicio">
           <MenuItem
             label="Panel Principal"
-            icon="fi fi-rr-apps"
+            icon="fi fi-rr-home"
             onClick={() => onNavigate('/')}
             active={isActive('/')}
           />
+          <MenuItem
+            label="Apps"
+            icon="fi fi-rr-apps"
+            href="https://api.verfrut.cl"
+            external
+          />
         </Section>
-
-        <Separator />
 
         <Section icon="fi fi-rr-grid" title="Sistemas">
           <Subsection title="Operacionales">
@@ -240,30 +247,27 @@ function HeaderPhoneMenu({ onNavigate, isActive }) {
         </Section>
 
         <Section icon="fi fi-rr-headset" title="Soporte TI">
-          <MenuItem label="Reportar Incidencia" icon="fi fi-rr-bug" onClick={reportIncident} />
+          <MenuItem label="Reportar Incidencia" icon="fi fi-rr-bug" onClick={reportIncident} vpn />
           <MenuItem
             label="Portal de Solicitudes"
             image={solicitudIcon}
             href="https://solicitudes.verfrut.cl"
             external
+            vpn
           />
           <MenuItem
             label="GLPI (Chile)"
             image={glpiIcon}
             href="https://glpi.verfrut.cl"
             external
+            vpn
           />
           <MenuItem
             label="GLPI (Perú)"
             image={glpiIcon}
             href="https://glpi.verfrut.pe"
             external
-          />
-          <MenuItem
-            label="Anexos Telefónicos"
-            icon="fi fi-rr-phone-call"
-            onClick={() => onNavigate('/anexos')}
-            active={isActive('/anexos')}
+            vpn
           />
           <MenuItem
             label="Correo de Soporte"
@@ -283,12 +287,9 @@ function HeaderPhoneMenu({ onNavigate, isActive }) {
           <MenuItem
             label="Protocolos de Seguridad"
             icon="fi fi-rr-document"
-            disabled
-            badge={{ variant: 'warning', text: 'Pronto' }}
+            onClick={() => onNavigate('/blog/protocolos-seguridad')}
           />
         </Section>
-
-        <Separator />
 
         <Section icon="fi fi-rr-folder" title="Recursos">
           <MenuItem
@@ -308,6 +309,12 @@ function HeaderPhoneMenu({ onNavigate, isActive }) {
             icon="fi fi-rr-play-alt"
             onClick={() => onNavigate('/videos')}
             active={isActive('/videos')}
+          />
+          <MenuItem
+            label="Anexos Telefónicos"
+            icon="fi fi-rr-phone-call"
+            onClick={() => onNavigate('/anexos')}
+            active={isActive('/anexos')}
           />
           <MenuItem
             label="Generar Firmas"

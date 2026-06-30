@@ -24,9 +24,9 @@ function BlogPost() {
   const post = getPost(slug)
 
   useEffect(() => {
-    if (post) document.title = `${post.title} – Verfrut`
+    if (post) document.title = `${post.title} – Unifrutti`
     return () => {
-      document.title = 'VerFrut Technology'
+      document.title = 'Unifrutti Technology'
     }
   }, [post])
 

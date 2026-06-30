@@ -50,7 +50,7 @@ export const DEFAULT_MENU_ITEMS = [
 
 export const DEFAULT_HEADER_CONFIG = {
   logo: publicPath('logotipo.svg'),
-  logoAlt: 'Verfrut Logo',
+  logoAlt: 'Unifrutti Logo',
   primaryButtonText: 'Iniciar Sesión',
   primaryButtonUrl: '#'
 };

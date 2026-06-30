@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints';
+
 .gradient {
     align-items: center;
     background: linear-gradient(253deg, #1B3F8C 0%, #142c61 100%);
@@ -7,7 +9,8 @@
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
-    height: 100vh; // Reducido para mobile
+    height: auto;
+    min-height: auto;
     justify-content: center;
     left: 50%;
     margin-left: -50vw;
@@ -19,30 +22,87 @@
     width: 100vw;
     border-radius: 0px 0px 15px 15px;
 
-    @media (min-width: 768px) {
+    @include md-up {
         height: 100vh;
         align-items: center;
         padding: 100px 12rem;
     }
+
+    @include md-down {
+        border-radius: 0;
+        // Ocupa el viewport visible exacto descontando el header fijo (60px en mobile,
+        // ver main.scss). 100dvh evita el bug de iOS donde 100vh ignora la barra del
+        // navegador. Con esto el contenido queda centrado en el área visible real
+        // y el scroll-hint coincide con el borde inferior de la pantalla.
+        min-height: calc(100vh - 60px);
+        min-height: calc(100dvh - 60px);
+        padding-bottom: 4.5rem; // espacio para el scroll-hint
+    }
+}
+
+.scroll-hint {
+    display: none;
+
+    @include md-down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+        position: absolute;
+        bottom: 4.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(#ffffff, 0.6);
+        pointer-events: none;
+        animation: scroll-hint-fade 0.6s ease 0.8s both;
+    }
+
+    &__label {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    &__icon {
+        font-size: 1rem;
+        line-height: 1;
+        animation: scroll-hint-bounce 1.8s ease-in-out infinite;
+    }
+}
+
+@keyframes scroll-hint-bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50%      { transform: translateY(4px); opacity: 1; }
+}
+
+@keyframes scroll-hint-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-hint__icon { animation: none; }
 }
 
 .gradient-title {
     width: 100%;
-    text-align: center;
-    font-size: 2.5rem !important;
+    text-align: left;
+    font-size: 3rem !important;
     color: #ffffff;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.15;
     font-weight: 700;
-    
-    @media (min-width: 768px) {
+    letter-spacing: -0.01em;
+
+    @include md-up {
         width: 100%;
-        text-align: left;
         font-size: 3.5rem !important;
         margin-bottom: 1rem;
     }
 
-    @media (min-width: 1200px) {
+    @include xl-up {
         width: 80%;
         font-size: 4.5rem !important;
     }
@@ -50,24 +110,22 @@
 
 .gradient-description {
     width: 100%;
-    text-align: center;
-    font-size: 1.3rem !important;
+    text-align: left;
+    font-size: 1.15rem !important;
     color: #ffffff;
     margin-bottom: 2rem;
     line-height: 1.5;
     opacity: 0.9;
-    
-    @media (min-width: 768px) {
+
+    @include md-up {
         width: 80%;
-        text-align: left;
         font-size: 1rem !important;
         margin-bottom: 2.5rem;
     }
 
-    @media (min-width: 1200px) {
+    @include xl-up {
         width: 60%;
         font-size: 1.2rem !important;
-    
     }
 }
 
@@ -98,7 +156,7 @@
         transform: translateY(0);
     }
     
-    @media (min-width: 768px) {
+    @include md-up {
         padding: 18px 35px;
         font-size: 1.2rem;
     }
@@ -108,36 +166,50 @@
     position: relative;
     width: 100%;
     min-height: clamp(280px, 50vh, 460px);
+
+    @include md-down {
+        display: none;
+    }
+}
+
+.hero-anidado {
+    @include md-down {
+        display: none;
+    }
 }
 
 .box-info {
     text-align: left;
 
     // Solo aplicar estilos específicos en mobile
-    @media (max-width: 767.98px) {
+    @include md-down {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 29rem 0.5rem 2rem 0.5rem;
-        
+        align-items: flex-start;
+        text-align: left;
+        // padding-bottom mayor que padding-top: como el bloque se centra
+        // verticalmente, esto empuja el texto visible hacia arriba.
+        padding: 3rem 0.75rem 8rem;
+
         .gradient-title {
-            font-size: 2rem !important;
-            margin-bottom: 0.8rem;
+            font-size: 3.25rem !important;
+            margin-bottom: 1rem;
+            text-align: left;
         }
-        
+
         .gradient-description {
-            font-size: 1.1rem !important;
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem !important;
+            margin-bottom: 1.75rem;
+            text-align: left;
         }
-        
+
         .btn-incidencias {
             padding: 12px 25px;
             font-size: 1rem;
         }
     }
-    
+
     // En desktop y tablet, no aplicar estilos adicionales
     // para mantener el diseño original del gradient
 }
@@ -260,14 +332,14 @@
     right: 0%;
     transition: all 0.3s ease;
 
-    @media (min-width: 768px) {
+    @include md-up {
         display: block;
         width: 18%;
         right: 42%;
         top: 26%;
     }
 
-    @media (min-width: 1200px) {
+    @include xl-up {
         right: 35%;
         top: 23%;
         width: 15%;
@@ -399,7 +471,7 @@
     }
     
     // Ocultar en tablet y mobile
-    @media (max-width: 767.98px) {
+    @include md-down {
         display: none !important;
     }
 }
@@ -414,7 +486,7 @@
     }
     
     // Ocultar en tablet y mobile
-    @media (max-width: 767.98px) {
+    @include md-down {
         display: none !important;
     }
 }
@@ -429,7 +501,7 @@
     }
     
     // Ocultar en tablet y mobile
-    @media (max-width: 767.98px) {
+    @include md-down {
         display: none !important;
     }
 }
@@ -444,7 +516,7 @@
     }
     
     // Ocultar en tablet y mobile
-    @media (max-width: 767.98px) {
+    @include md-down {
         display: none !important;
     }
 }
@@ -459,7 +531,7 @@
     }
     
     // Ocultar en tablet y mobile
-    @media (max-width: 767.98px) {
+    @include md-down {
         display: none !important;
     }
 }

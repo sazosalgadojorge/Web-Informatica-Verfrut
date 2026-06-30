@@ -1,13 +1,14 @@
 import IncidenciasContent from './posts/IncidenciasContent'
 import VerfrutCloudContent from './posts/VerfrutCloudContent'
+import ProtocolosSeguridadContent from './posts/ProtocolosSeguridadContent'
 import { publicPath } from '../../utils/publicPath'
 
 export const POSTS = [
   {
     slug: 'verfrut-cloud',
-    title: 'Verfrut Cloud: La clave para optimizar el proceso de la fruta en Verfrut Chile y Perú',
+    title: 'Frusys Cloud: La clave para optimizar el proceso de la fruta en Unifrutti Chile y Perú',
     excerpt:
-      'Verfrut Cloud es nuestra solución tecnológica que moderniza un antiguo ERP, transformándolo en una plataforma web para optimizar procesos, simplificar su uso y mejorar la gestión de la fruta.',
+      'Frusys Cloud es nuestra solución tecnológica que moderniza un antiguo ERP, transformándolo en una plataforma web para optimizar procesos, simplificar su uso y mejorar la gestión de la fruta.',
     date: '2025-05-01',
     image: publicPath('blog/verfrut-cloud-cover.png'),
     tag: 'Innovación',
@@ -22,6 +23,16 @@ export const POSTS = [
     image: publicPath('laptop-glpi.png'),
     tag: 'Guía',
     Content: IncidenciasContent,
+  },
+  {
+    slug: 'protocolos-seguridad',
+    title: 'Protocolos de Seguridad de la Información',
+    excerpt:
+      'Guía con las prácticas mínimas que cada colaborador debe seguir para proteger la información de Unifrutti: contraseñas, phishing, equipos, VPN y manejo de datos.',
+    date: '2026-06-26',
+    image: publicPath('blog/security.jpg'),
+    tag: 'Seguridad',
+    Content: ProtocolosSeguridadContent,
   },
 ]
 

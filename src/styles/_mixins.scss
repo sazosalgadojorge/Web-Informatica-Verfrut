@@ -21,24 +21,7 @@
   transition: $property $duration $timing;
 }
 
-// Media queries
-@mixin mobile {
-  @media (max-width: #{$breakpoint-md - 1px}) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-lg - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$breakpoint-lg}) {
-    @content;
-  }
-}
+// Media queries: usar mixins de _breakpoints.scss (sm-down, md-up, etc.)
 
 // Botones
 @mixin button-base {
