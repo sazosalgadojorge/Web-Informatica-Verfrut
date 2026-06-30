@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vite.dev/config/
 // Componentes de @unifrutti/ui que importamos (incluyendo los usados en rutas lazy
@@ -22,7 +23,23 @@ const UNIFRUTTI_COMPONENTS = [
 
 export default defineConfig({
   base: './',
-  plugins: [react()],
+  plugins: [
+    react(),
+    ViteImageOptimizer({
+      png: { quality: 80, compressionLevel: 9 },
+      jpeg: { quality: 75, mozjpeg: true },
+      jpg: { quality: 75, mozjpeg: true },
+      svg: {
+        multipass: true,
+        plugins: [
+          {
+            name: 'preset-default',
+            params: { overrides: { removeViewBox: false } },
+          },
+        ],
+      },
+    }),
+  ],
   optimizeDeps: {
     include: UNIFRUTTI_COMPONENTS,
   },

@@ -31,7 +31,13 @@
     overflow-wrap: break-word;
 
     @include md-down {
-        display: none;
+        font-size: 1.5rem;
+        padding: 12px 0;
+    }
+
+    @include sm-down {
+        font-size: 1.25rem;
+        padding: 8px 0;
     }
 }
 

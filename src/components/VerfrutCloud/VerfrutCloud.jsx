@@ -36,7 +36,7 @@ function VerfrutCloud() {
           <div className="row align-items-center g-4 g-xl-5">
             <div className="col-xl-6">
               <span className="verfrut-cloud__tag">Innovación</span>
-              <h2 className="verfrut-cloud__title h1 display-8 fw-bold mb-4">
+              <h2 className="verfrut-cloud__title fw-bold mb-4">
                 Frusys Cloud: La clave para optimizar el proceso de la fruta en Unifrutti Chile y Perú
               </h2>
               <p className="verfrut-cloud__description">
