@@ -1,6 +1,7 @@
 import IncidenciasContent from './posts/IncidenciasContent'
 import VerfrutCloudContent from './posts/VerfrutCloudContent'
 import ProtocolosSeguridadContent from './posts/ProtocolosSeguridadContent'
+import PhishingContent from './posts/PhishingContent'
 import { publicPath } from '../../utils/publicPath'
 
 export const POSTS = [
@@ -23,6 +24,16 @@ export const POSTS = [
     image: publicPath('laptop-glpi.png'),
     tag: 'Guía',
     Content: IncidenciasContent,
+  },
+  {
+    slug: 'phishing',
+    title: 'Phishing: ¿Qué es y cómo protegerte?',
+    excerpt:
+      'El phishing es una de las amenazas más comunes hoy en día. Aprende a identificar correos y mensajes fraudulentos antes de que sea demasiado tarde.',
+    date: '2026-06-30',
+    image: publicPath('blog/pishing.jpg'),
+    tag: 'Seguridad',
+    Content: PhishingContent,
   },
   {
     slug: 'protocolos-seguridad',

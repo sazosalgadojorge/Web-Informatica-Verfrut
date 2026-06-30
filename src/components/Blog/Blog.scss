@@ -32,17 +32,17 @@
 }
 
 .blog-content {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
-  color: #737373;
+  color: #4a4a4a;
   margin-bottom: 1rem;
-  line-height: 2;
+  line-height: 1.8;
   text-align: left;
 }
 
 .verfrut-cloud-post {
   .blog-content {
-    font-size: larger;
+    font-size: 1.125rem;
   }
 }
 
@@ -88,8 +88,10 @@
   }
 }
 
-.blog-br {
-  border-bottom: 1px solid #737373;
+.blog-hr {
+  border: none;
+  border-bottom: 1px solid #d0d0d0;
+  margin: 2rem 0;
 }
 
 a {
