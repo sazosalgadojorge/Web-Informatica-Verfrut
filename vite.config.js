@@ -53,6 +53,12 @@ export default defineConfig({
       }
     }
   },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js',
+    css: false,
+  },
   build: {
     chunkSizeWarningLimit: 800,
     rollupOptions: {
@@ -60,10 +66,9 @@ export default defineConfig({
         manualChunks(id) {
           if (!id.includes('node_modules')) return
           if (id.includes('react-router')) return 'router'
-          if (id.includes('react-dom') || id.includes('/react/')) return 'react'
-          if (id.includes('@mui') || id.includes('@emotion')) return 'mui'
+          if (/node_modules\/react(-dom)?\//.test(id)) return 'react'
           if (id.includes('swiper')) return 'swiper'
-          if (id.includes('gsap') || id.includes('framer-motion') || id.includes('/motion/')) return 'motion'
+          if (id.includes('framer-motion')) return 'motion'
           if (id.includes('bootstrap')) return 'bootstrap'
           if (id.includes('fuse.js')) return 'fuse'
           return 'vendor'

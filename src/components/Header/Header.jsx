@@ -102,7 +102,13 @@ function Header() {
                       Inicio
                     </a>
                     <ul className="dropdown-menu animate slideIn">
-                      <li><a className="dropdown-item" href="#" onClick={handleHomeClick}><i className="fi fi-rr-home"></i>Panel Principal</a></li>
+                      <li>
+                        <a className="dropdown-item" href="#" onClick={handleHomeClick}>
+                          <i className="fi fi-rr-home"></i>
+                          Página de inicio
+                        </a>
+                      </li>
+                 
                       <li><a className="dropdown-item" href="https://api.verfrut.cl" target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-apps"></i>Apps</a></li>
                     </ul>
                   </li>

@@ -4,15 +4,15 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Header from './components/Header/Header'
 import HeaderPhone from './components/Header-Phone/Header-Phone'
-import HomePage from './components/HomePage/HomePage'
+import HomePage from './pages/HomePage/HomePage'
 import { Button } from './components/ui'
 import PageSkeleton from './components/ui/PageSkeleton/PageSkeleton'
 
-const Turnos = lazy(() => import('./components/Turnos/Turnos'))
-const Anexos = lazy(() => import('./components/Anexos/Anexos'))
-const Videos = lazy(() => import('./components/Videos/Videos'))
-const BlogList = lazy(() => import('./components/Blog/BlogList'))
-const BlogPost = lazy(() => import('./components/Blog/BlogPost'))
+const Turnos = lazy(() => import('./pages/Turnos/Turnos'))
+const Anexos = lazy(() => import('./pages/Anexos/Anexos'))
+const Videos = lazy(() => import('./pages/Videos/Videos'))
+const BlogList = lazy(() => import('./pages/Blog/BlogList'))
+const BlogPost = lazy(() => import('./pages/Blog/BlogPost'))
 
 function NotFound() {
   const navigate = useNavigate()

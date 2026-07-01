@@ -1,4 +1,4 @@
-import VpnBadge from '../../ui/VpnBadge/VpnBadge'
+import VpnBadge from '../../../components/ui/VpnBadge/VpnBadge'
 
 function IncidenciasContent() {
   return (

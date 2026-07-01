@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./Videos.scss";
-import Footer from "../Footer/Footer";
-import Breadcrumb from "../Breadcrumb/Breadcrumb";
-import { Input, Button } from "../ui";
+import Footer from "../../components/Footer/Footer";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+import { Input, Button } from "../../components/ui";
+import { useTitle } from "../../hooks/useTitle";
 import Fuse from "fuse.js";
 import loadImg from "../../assets/load.png";
 import laptopImg from "../../assets/laptop.png";
@@ -181,6 +182,7 @@ const SkeletonThumbnail = () => (
 );
 
 const Videos = () => {
+  useTitle('Videos', 'Videos tutoriales y capacitaciones del equipo TI de Unifrutti.');
   const [videos, setVideos] = useState([]);
   const [q, setQ] = useState("");
   const [debouncedQ, setDebouncedQ] = useState("");

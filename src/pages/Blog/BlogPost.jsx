@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
-import Footer from '../Footer/Footer'
-import Breadcrumb from '../Breadcrumb/Breadcrumb'
-import { Button } from '../ui'
+import Footer from '../../components/Footer/Footer'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
+import { Button } from '../../components/ui'
 import { getPost } from './posts'
+import { useTitle } from '../../hooks/useTitle'
 import './Blog.scss'
 
 const formatDate = (iso) => {
@@ -22,13 +22,7 @@ function BlogPost() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const post = getPost(slug)
-
-  useEffect(() => {
-    if (post) document.title = `${post.title} – Unifrutti`
-    return () => {
-      document.title = 'Unifrutti Technology'
-    }
-  }, [post])
+  useTitle(post?.title, post?.excerpt)
 
   if (!post) {
     return (

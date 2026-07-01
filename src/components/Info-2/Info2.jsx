@@ -7,11 +7,13 @@ function Info2({ title, description, imageSrc, imageAlt, buttonText, tag }) {
             <div className="container bg-light rounded-3">
                 <div className="row align-items-center">
                     <div className="col-md-6 p-5">
-                        <img 
-                            src={imageSrc} 
+                        <img
+                            src={imageSrc}
                             alt={imageAlt}
                             className="rounded "
                             style={{ maxHeight: '450px', objectFit : 'contain' }}
+                            loading="lazy"
+                            decoding="async"
                         />
                     </div>
                     <div className="col-md-6 text-start p-5">

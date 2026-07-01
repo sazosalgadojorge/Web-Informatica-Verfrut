@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import './Anexos.scss'
-import Footer from '../Footer/Footer'
-import Breadcrumb from '../Breadcrumb/Breadcrumb'
-import { Input, Select, Table, Pagination } from '../ui'
+import Footer from '../../components/Footer/Footer'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
+import { Input, Select, Table, Pagination } from '../../components/ui'
 import AnexosMobileList from './AnexosMobileList'
+import { useTitle } from '../../hooks/useTitle'
 
 const COLUMNS = [
   { key: 'empresa', label: 'Empresa', sortable: true, align: 'left' },
@@ -25,6 +26,7 @@ const capitalizeWords = (text) => {
 }
 
 const Anexos = () => {
+  useTitle('Anexos', 'Directorio de anexos telefónicos y correos del personal de Unifrutti.')
   const [anexos, setAnexos] = useState([])
   const [empresaOptions, setEmpresaOptions] = useState([])
   const [departamentoOptions, setDepartamentoOptions] = useState([])

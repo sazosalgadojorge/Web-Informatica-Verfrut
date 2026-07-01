@@ -3,10 +3,11 @@ import '@unifrutti/ui/components/alert'
 import '@unifrutti/ui/components/card'
 import '@unifrutti/ui/components/tag'
 import './Turnos.scss'
-import Footer from '../Footer/Footer'
-import Breadcrumb from '../Breadcrumb/Breadcrumb'
-import { Button } from '../ui'
+import Footer from '../../components/Footer/Footer'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
+import { Button } from '../../components/ui'
 import { publicPath } from '../../utils/publicPath'
+import { useTitle } from '../../hooks/useTitle'
 
 const AREA_CONFIG = {
   Desarrollo: {
@@ -167,6 +168,7 @@ function ContactCard({ area, turno, nextTurno, copiedArea, onCopyPhone }) {
 }
 
 const Turnos = () => {
+  useTitle('Turnos', 'Turnos de sistemas y soporte técnico del equipo TI de Unifrutti.')
   const [turnoDesarrollo, setTurnoDesarrollo] = useState(null)
   const [turnoSoporte, setTurnoSoporte] = useState(null)
   const [nextTurnoDesarrollo, setNextTurnoDesarrollo] = useState(null)

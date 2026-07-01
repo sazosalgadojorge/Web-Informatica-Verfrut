@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './Footer.scss'
 import { Input, Button } from '../ui'
 import { publicPath } from '../../utils/publicPath'
@@ -5,7 +6,25 @@ import { publicPath } from '../../utils/publicPath'
 const googlePlayBadge = publicPath('google-play.svg')
 const appStoreBadge = publicPath('app-store.svg')
 
+const CONTACT_EMAIL = 'contacto@verfrut.cl'
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 function Footer() {
+    const [email, setEmail] = useState('')
+    const [status, setStatus] = useState('idle')
+
+    const handleContactSubmit = (e) => {
+        e.preventDefault()
+        if (!EMAIL_RE.test(email)) {
+            setStatus('invalid')
+            return
+        }
+        const subject = encodeURIComponent('Contacto desde el portal Unifrutti')
+        const body = encodeURIComponent(`Hola equipo TI,\n\nMi correo de contacto es: ${email}\n\n`)
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+        setStatus('sent')
+    }
+
     return (
         <footer className="footer-wrapper mt-5 mb-0">
             <div className="container">
@@ -22,12 +41,18 @@ function Footer() {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <form className="newsletter-form">
+                                <form className="newsletter-form" onSubmit={handleContactSubmit} noValidate>
                                     <div className="row g-3 align-items-end">
                                         <div className="col-sm-9">
                                             <Input
                                                 type="email"
                                                 placeholder="Email"
+                                                value={email}
+                                                onChange={(e) => {
+                                                    setEmail(e.target.value)
+                                                    if (status !== 'idle') setStatus('idle')
+                                                }}
+                                                error={status === 'invalid' ? 'Ingresa un email válido' : undefined}
                                                 required
                                             />
                                         </div>
@@ -37,6 +62,11 @@ function Footer() {
                                             </Button>
                                         </div>
                                     </div>
+                                    {status === 'sent' && (
+                                        <p className="text-white small mt-2 mb-0" role="status">
+                                            Abriendo tu cliente de correo…
+                                        </p>
+                                    )}
                                 </form>
                             </div>
                         </div>
@@ -66,9 +96,9 @@ function Footer() {
                                             <a href="tel:+5173480005" className="text-inherit">+51 73 48 00 05</a>
                                         </p>
                                     </div>
-                                    <p className="footer-info">Caserio El Papayo Mz. "O" Castilla Pirua, Peru</p>
+                                    <p className="footer-info">Caserio El Papayo Mz. "O" Castilla Piura, Perú</p>
                                     <p className="footer-info">
-                                    <a className="text-inherit" href="mailto:webteck@gmail.com">contacto@verfrut.cl</a>
+                                    <a className="text-inherit" href="mailto:contacto@verfrut.cl">contacto@verfrut.cl</a>
                                     </p>
                                 </div>
                             </div>
@@ -108,9 +138,7 @@ function Footer() {
                 <div className="copyright-wrap">
                     <div className="row justify-content-between align-items-center">
                         <div className="col-lg-6">
-                            <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> 2025 <a
-                                    href="https://themeforest.net/user/themeholy">Unifrutti Technology</a>. All Rights
-                                Reserved.
+                            <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> {new Date().getFullYear()} Unifrutti Technology. Todos los derechos reservados.
                             </p>
                         </div>
                     </div>

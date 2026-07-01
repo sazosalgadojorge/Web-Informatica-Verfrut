@@ -31,7 +31,7 @@ export const POSTS = [
     excerpt:
       'El phishing es una de las amenazas más comunes hoy en día. Aprende a identificar correos y mensajes fraudulentos antes de que sea demasiado tarde.',
     date: '2026-06-30',
-    image: publicPath('blog/pishing.jpg'),
+    image: publicPath('blog/phishing.jpg'),
     tag: 'Seguridad',
     Content: PhishingContent,
   },

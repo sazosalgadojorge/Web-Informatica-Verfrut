@@ -22,7 +22,7 @@ export const componentsConfig = {
     className: "pt-5",
     title: "Cuidado con el anzuelo: Todo lo que debes saber sobre el phishing",
     description: "El phishing es un fraude donde ciberdelincuentes imitan a entidades legítimas para robar datos personales, como contraseñas o información bancaria, mediante mensajes o sitios web falsos.",
-    imageSrc: "./src/assets/pishing.png",
+    imageSrc: "./src/assets/phishing.png",
     imageAlt: "Phishing",
     buttonText: "Ver Video"
   }

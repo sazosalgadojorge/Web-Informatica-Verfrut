@@ -1,8 +1,9 @@
 import { useMemo, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../Footer/Footer'
-import Breadcrumb from '../Breadcrumb/Breadcrumb'
+import Footer from '../../components/Footer/Footer'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import { POSTS } from './posts'
+import { useTitle } from '../../hooks/useTitle'
 import './Blog.scss'
 
 const POSTS_PER_PAGE = 6
@@ -20,6 +21,7 @@ const formatDate = (iso) => {
 }
 
 function BlogList() {
+  useTitle('Blog', 'Artículos y noticias del equipo TI de Unifrutti sobre ciberseguridad, incidencias y sistemas.')
   const [page, setPage] = useState(1)
 
   const sortedPosts = useMemo(

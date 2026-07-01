@@ -11,6 +11,8 @@ function Info({ title, description, imageSrc, imageAlt, buttonText, onClick }) {
                             src={imageSrc}
                             alt={imageAlt}
                             className="img-fluid rounded"
+                            loading="lazy"
+                            decoding="async"
                         />
                     </div>
                     <div className="col-md-6 text-start p-5 info-section__copy">

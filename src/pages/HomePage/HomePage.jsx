@@ -1,18 +1,20 @@
 import { useNavigate } from 'react-router-dom'
-import Banner from '../Banner/Banner'
-import Marcas from '../Marcas/Marcas'
-import Info from '../Info/Info'
-import FrutAppPromo from '../FrutAppPromo/FrutAppPromo'
-import VerfrutCloud from '../VerfrutCloud/VerfrutCloud'
-import EquipoTI from '../EquipoTI/EquipoTI'
-import Footer from '../Footer/Footer'
-import { Divider } from '../ui'
+import { useTitle } from '../../hooks/useTitle'
+import Banner from '../../components/Banner/Banner'
+import Marcas from '../../components/Marcas/Marcas'
+import Info from '../../components/Info/Info'
+import FrutAppPromo from '../../components/FrutAppPromo/FrutAppPromo'
+import VerfrutCloud from '../../components/VerfrutCloud/VerfrutCloud'
+import EquipoTI from '../../components/EquipoTI/EquipoTI'
+import Footer from '../../components/Footer/Footer'
+import { Divider } from '../../components/ui'
 import incidenciasImg from '../../assets/incidencias.png'
-import pishingImg from '../../assets/pishing.png'
+import phishingImg from '../../assets/phishing.png'
 
 const PHISHING_VIDEO_URL = 'https://verfrutsa.sharepoint.com/sites/Ciberseguridadconcientizacion/_layouts/15/stream.aspx?id=%2Fsites%2FCiberseguridadconcientizacion%2FDocumentos%20compartidos%2FVideo%20Phishing%2FVerfrut%2DInformacion%2Dphishing%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E1de0a668%2Dcbe0%2D42ec%2D80e5%2D6b9064c3e189'
 
 function HomePage() {
+  useTitle('Inicio', 'Portal corporativo de Unifrutti: sistemas, soporte TI, turnos, anexos y recursos para colaboradores.')
   const navigate = useNavigate()
 
   const openPhishingVideo = () => {
@@ -48,7 +50,7 @@ function HomePage() {
         className="pt-5"
         title="Cuidado con el anzuelo: Todo lo que debes saber sobre el phishing"
         description="El phishing es un fraude donde ciberdelincuentes imitan a entidades legítimas para robar datos personales, como contraseñas o información bancaria, mediante mensajes o sitios web falsos."
-        imageSrc={pishingImg}
+        imageSrc={phishingImg}
         imageAlt="Phishing"
         buttonText="Ver Video"
         onClick={openPhishingVideo}
