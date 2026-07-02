@@ -8,7 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "manuals:inventory": "node scripts/knowledge/create-manual-inventory.mjs",
+    "manuals:extract": "node scripts/knowledge/extract-manuals.mjs",
+    "manuals:images": "node scripts/knowledge/extract-manual-images.mjs",
+    "manuals:chunk": "node scripts/knowledge/chunk-manuals.mjs",
+    "manuals:classify": "node --env-file=.env scripts/knowledge/classify-manuals.mjs",
+    "manuals:classify-images": "node --env-file=.env scripts/knowledge/classify-manual-images.mjs",
+    "manuals:build-index": "node scripts/knowledge/build-manual-index.mjs"
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.3.1",
