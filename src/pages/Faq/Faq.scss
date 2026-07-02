@@ -1,0 +1,70 @@
+@import '../../styles/breakpoints';
+
+.faq-wrapper {
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .section-description {
+    color: #4a4a4a;
+    line-height: 1.7;
+  }
+}
+
+.faq-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 2rem;
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid #dfe3e8;
+    border-radius: 999px;
+    background: #fff;
+    color: #184289;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: #eef4fd;
+    }
+
+    i {
+      font-size: 0.85rem;
+      display: inline-flex;
+    }
+  }
+}
+
+.faq-category {
+  margin-bottom: 2.25rem;
+  scroll-margin-top: 90px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+
+    i {
+      color: #184289;
+      display: inline-flex;
+    }
+  }
+}
+
+@include md-down {
+  .faq-category {
+    scroll-margin-top: 70px;
+  }
+}

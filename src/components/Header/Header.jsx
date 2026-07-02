@@ -1,11 +1,14 @@
 import '../../styles/main.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import '@flaticon/flaticon-uicons/css/all/all.css'
+import 'bootstrap/js/dist/collapse'
+import 'bootstrap/js/dist/dropdown'
+import '@flaticon/flaticon-uicons/css/regular/rounded.css'
+import '@flaticon/flaticon-uicons/css/brands/all.css'
 import { useNavigate } from 'react-router-dom'
-import { Badge, Button } from '../ui'
-import GestionUsuariosModal, { GESTION_USUARIOS_MODAL_ID } from '../GestionUsuariosModal/GestionUsuariosModal'
+import { Badge, Tooltip } from '../ui'
+import GestionUsuariosModal, { openGestionUsuariosModal } from '../GestionUsuariosModal/GestionUsuariosModal'
 import IncidenciasModal, { reportIncident } from '../IncidenciasModal/IncidenciasModal'
+import { openGlobalSearch, SEARCH_SHORTCUT_HINT } from '../GlobalSearch/GlobalSearch'
 import VpnBadge from '../ui/VpnBadge/VpnBadge'
 import solicitudIcon from '../../assets/solicitud.svg'
 import glpiIcon from '../../assets/glpi.svg'
@@ -61,13 +64,34 @@ function Header() {
     closeDropdownAfterClick(e)
     navigate('/blog/protocolos-seguridad')
   }
+  const handleGuiasClick = (e) => {
+    e.preventDefault()
+    closeDropdownAfterClick(e)
+    navigate('/guias')
+  }
+  const handleFaqClick = (e) => {
+    e.preventDefault()
+    closeDropdownAfterClick(e)
+    navigate('/faq')
+  }
+  const handleGlosarioClick = (e) => {
+    e.preventDefault()
+    closeDropdownAfterClick(e)
+    navigate('/glosario')
+  }
+  const handleQuizClick = (e) => {
+    e.preventDefault()
+    closeDropdownAfterClick(e)
+    navigate('/quiz-seguridad')
+  }
 
   return (
     <>
       <header className="th-header p-4">
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-3">
+        <div className="d-flex align-items-center gap-3">
+          {/* Laterales con flex: 1 1 0 (mismo ancho) para que el menú quede centrado real */}
+          <div className="d-flex align-items-center" style={{ flex: '1 1 0' }}>
             <a href={homeHref} className="d-flex align-items-center" onClick={handleHomeClick}>
               <img
                 src={logotipos}
@@ -82,7 +106,7 @@ function Header() {
               />
             </a>
           </div>
-          <div className="col-6">
+          <div className="flex-shrink-0">
             <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
               <button
                 className="navbar-toggler"
@@ -289,6 +313,15 @@ function Header() {
                           <i className="fi fi-rr-document"></i>Protocolos de Seguridad
                         </a>
                       </li>
+                      <li>
+                        <a
+                          className="dropdown-item"
+                          href="#"
+                          onClick={handleQuizClick}
+                        >
+                          <i className="fi fi-rr-brain"></i>Quiz de Ciberseguridad<Badge variant="success" size="sm" className="ms-2">Nuevo</Badge>
+                        </a>
+                      </li>
                     </ul>
                   </li>
 
@@ -306,6 +339,9 @@ function Header() {
                           <li><a className="dropdown-item" href={MANUALES_URL} target="_blank" rel="noopener noreferrer"><i className="fi fi-rr-book-open-reader"></i>Manuales</a></li>
                           <li><a className="dropdown-item" href="#" onClick={handleBlogClick}><i className="fi fi-rr-newspaper"></i>Blog</a></li>
                           <li><a className="dropdown-item" href="#" onClick={handleVideosClick}><i className="fi fi-rr-video-camera-alt"></i>Video Tutoriales</a></li>
+                          <li><a className="dropdown-item" href="#" onClick={handleGuiasClick}><i className="fi fi-rr-book-open-cover"></i>Guías paso a paso<Badge variant="success" size="sm" className="ms-2">Nuevo</Badge></a></li>
+                          <li><a className="dropdown-item" href="#" onClick={handleFaqClick}><i className="fi fi-rr-interrogation"></i>Preguntas Frecuentes</a></li>
+                          <li><a className="dropdown-item" href="#" onClick={handleGlosarioClick}><i className="fi fi-rr-book-alt"></i>Glosario TI</a></li>
                         </ul>
                       </li>
                       <li className="dropdown-submenu">
@@ -330,18 +366,27 @@ function Header() {
               </div>
             </nav>
           </div>
-          <div className="col-3 d-flex justify-content-end align-items-center">
-            <Button
-              variant="primary"
-              size="lg"
-              data-bs-toggle="modal"
-              data-bs-target={`#${GESTION_USUARIOS_MODAL_ID}`}
+          <div className="d-flex align-items-center justify-content-end gap-1" style={{ flex: '1 1 0' }}>
+            <button
+              type="button"
+              className="header-search-btn"
+              onClick={openGlobalSearch}
+              aria-label={`Buscar en el sitio (${SEARCH_SHORTCUT_HINT})`}
             >
-              <span className="d-inline-flex align-items-center gap-1" style={{ fontWeight: 400, fontSize: '0.9rem', padding: '0.4rem 1rem' }}>
-                <i className="fi fi-rr-apps-add" style={{ fontSize: '1.1rem', color: '#a6c0e6' }}></i>
-                Gestión Usuarios
-              </span>
-            </Button>
+              <i className="fi fi-rr-search"></i>
+              <span className="header-search-btn__label">Buscar</span>
+              <span className="header-search-btn__kbd">{SEARCH_SHORTCUT_HINT}</span>
+            </button>
+            <Tooltip tip="Gestión de Usuarios" placement="bottom">
+              <button
+                type="button"
+                className="header-user-btn"
+                onClick={openGestionUsuariosModal}
+                aria-label="Gestión de Usuarios"
+              >
+                <i className="fi fi-rr-apps-add"></i>
+              </button>
+            </Tooltip>
           </div>
         </div>
       </div>

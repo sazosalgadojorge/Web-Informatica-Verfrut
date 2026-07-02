@@ -191,11 +191,22 @@
   }
 }
 
-// Estilos de íconos
-.fi {
+// Estilos de íconos dentro del Header (botones + dropdowns).
+// Antes era una regla global `.fi` que contaminaba toda la app; ahora
+// se limita a íconos dentro de <header> o de menús Bootstrap.
+header .fi,
+.dropdown-item .fi,
+.dropdown-menu .fi {
   position: relative;
-  top: 2px;
   vertical-align: middle;
   font-size: 1.2em;
-  padding-right: 1rem;
+  line-height: 1;
+}
+
+.dropdown-item > .fi:first-child {
+  margin-right: 0.65rem;
+}
+
+.dropdown-toggle-sub > .fi:last-child {
+  margin-right: 0;
 }

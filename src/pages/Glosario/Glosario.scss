@@ -1,0 +1,127 @@
+@import '../../styles/breakpoints';
+
+.glosario-wrapper {
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .section-description {
+    color: #4a4a4a;
+    line-height: 1.7;
+  }
+}
+
+.glosario-letters {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+
+  &__btn {
+    min-width: 2.1rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    background: #fff;
+    color: #184289;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover:not(:disabled) {
+      background: #eef4fd;
+    }
+
+    &.is-active {
+      background: #184289;
+      border-color: #184289;
+      color: #fff;
+    }
+
+    &:disabled {
+      color: #c3c9d1;
+      background: #f7f8fa;
+      cursor: default;
+    }
+  }
+}
+
+.glosario-group {
+  margin-bottom: 2rem;
+
+  &__letter {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #184289;
+    border-bottom: 2px solid #eef0f3;
+    padding-bottom: 0.35rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.glosario-term {
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(13, 95, 195, 0.1);
+  }
+
+  &__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  &__definition {
+    color: #4a4a4a;
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  &__related {
+    font-size: 0.8rem;
+    color: #8a919b;
+  }
+
+  &__link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #184289;
+    white-space: nowrap;
+
+    i {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@include md-down {
+  .glosario-letters {
+    position: static;
+  }
+}

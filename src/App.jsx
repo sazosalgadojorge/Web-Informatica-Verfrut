@@ -7,12 +7,18 @@ import HeaderPhone from './components/Header-Phone/Header-Phone'
 import HomePage from './pages/HomePage/HomePage'
 import { Button } from './components/ui'
 import PageSkeleton from './components/ui/PageSkeleton/PageSkeleton'
+import GlobalSearch from './components/GlobalSearch/GlobalSearch'
 
 const Turnos = lazy(() => import('./pages/Turnos/Turnos'))
 const Anexos = lazy(() => import('./pages/Anexos/Anexos'))
 const Videos = lazy(() => import('./pages/Videos/Videos'))
 const BlogList = lazy(() => import('./pages/Blog/BlogList'))
 const BlogPost = lazy(() => import('./pages/Blog/BlogPost'))
+const Faq = lazy(() => import('./pages/Faq/Faq'))
+const GuiasList = lazy(() => import('./pages/Guias/GuiasList'))
+const GuiaDetail = lazy(() => import('./pages/Guias/GuiaDetail'))
+const QuizSeguridad = lazy(() => import('./pages/QuizSeguridad/QuizSeguridad'))
+const Glosario = lazy(() => import('./pages/Glosario/Glosario'))
 
 function NotFound() {
   const navigate = useNavigate()
@@ -53,9 +59,16 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/guias" element={<GuiasList />} />
+          <Route path="/guias/:slug" element={<GuiaDetail />} />
+          <Route path="/quiz-seguridad" element={<QuizSeguridad />} />
+          <Route path="/glosario" element={<Glosario />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+
+      <GlobalSearch />
     </>
   )
 }

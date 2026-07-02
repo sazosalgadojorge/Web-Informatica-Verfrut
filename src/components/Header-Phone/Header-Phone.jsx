@@ -4,6 +4,7 @@ import { Drawer } from '../ui'
 import GestionUsuariosModal from '../GestionUsuariosModal/GestionUsuariosModal'
 import IncidenciasModal from '../IncidenciasModal/IncidenciasModal'
 import HeaderPhoneMenu from './HeaderPhoneMenu'
+import { openGlobalSearch } from '../GlobalSearch/GlobalSearch'
 import { publicPath } from '../../utils/publicPath'
 import './Header-Phone.scss'
 
@@ -42,6 +43,15 @@ function HeaderPhone() {
         <a href={homeHref} className="hp-logo" onClick={handleHomeClick} aria-label="Inicio Unifrutti">
           <img src={logoSrc} alt="Unifrutti" />
         </a>
+
+        <button
+          type="button"
+          className="hp-toggle"
+          aria-label="Buscar en el sitio"
+          onClick={openGlobalSearch}
+        >
+          <i className="fi fi-rr-search" aria-hidden="true" />
+        </button>
       </header>
 
       <Drawer

@@ -1,0 +1,62 @@
+.guide-steps {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+
+  &__step {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.75rem;
+    position: relative;
+
+    // Línea vertical que conecta los pasos
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background: #e3e9f2;
+    }
+  }
+
+  &__number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #184289;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  &__content {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0.35rem 0 0.5rem;
+  }
+
+  &__body {
+    color: #4a4a4a;
+    line-height: 1.7;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 6px 18px rgba(13, 95, 195, 0.1);
+  }
+}

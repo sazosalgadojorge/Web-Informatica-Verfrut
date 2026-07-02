@@ -289,6 +289,13 @@ function HeaderPhoneMenu({ onNavigate, isActive }) {
             icon="fi fi-rr-document"
             onClick={() => onNavigate('/blog/protocolos-seguridad')}
           />
+          <MenuItem
+            label="Quiz de Ciberseguridad"
+            icon="fi fi-rr-brain"
+            onClick={() => onNavigate('/quiz-seguridad')}
+            active={isActive('/quiz-seguridad')}
+            badge={{ variant: 'success', text: 'Nuevo' }}
+          />
         </Section>
 
         <Section icon="fi fi-rr-folder" title="Recursos">
@@ -309,6 +316,25 @@ function HeaderPhoneMenu({ onNavigate, isActive }) {
             icon="fi fi-rr-play-alt"
             onClick={() => onNavigate('/videos')}
             active={isActive('/videos')}
+          />
+          <MenuItem
+            label="Guías paso a paso"
+            icon="fi fi-rr-book-open-cover"
+            onClick={() => onNavigate('/guias')}
+            active={isActive('/guias')}
+            badge={{ variant: 'success', text: 'Nuevo' }}
+          />
+          <MenuItem
+            label="Preguntas Frecuentes"
+            icon="fi fi-rr-interrogation"
+            onClick={() => onNavigate('/faq')}
+            active={isActive('/faq')}
+          />
+          <MenuItem
+            label="Glosario TI"
+            icon="fi fi-rr-book-alt"
+            onClick={() => onNavigate('/glosario')}
+            active={isActive('/glosario')}
           />
           <MenuItem
             label="Anexos Telefónicos"

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Videos.scss";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
@@ -8,38 +9,10 @@ import Fuse from "fuse.js";
 import loadImg from "../../assets/load.png";
 import laptopImg from "../../assets/laptop.png";
 import { publicPath, withPublicBase } from "../../utils/publicPath";
+import { normalize, expandQuery } from "../../utils/searchText";
 
 const genericVideoThumbnail = publicPath('videos/intro.png');
 const videosJsonUrl = publicPath('json/videos.json');
-
-// ========= Normalización y Sinónimos =========
-function normalize(text) {
-  return (text || "")
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "");
-}
-
-const SYN = {
-  erp: ["sistema", "empresarial", "gestion", "gestión"],
-  dte: ["factura", "boleta", "xml", "sii", "documento tributario"],
-  vacaciones: ["feriado", "permiso"],
-  rendiciones: ["gastos", "viaticos", "viáticos", "reembolso", "rendir"],
-  firmas: ["firma", "firma digital", "firma electronica", "signature", "sign"],
-  svg: ["vector", "gráfico", "grafico"],
-  orden: ["oc", "orden de compra", "purchase order"],
-  trazabilidad: ["flujo", "relaciones", "vínculos", "tracking"],
-  recepcion: ["recepción", "ingreso", "entrada"],
-};
-
-function expandQuery(q) {
-  const tokens = normalize(q).split(/\s+/).filter(Boolean);
-  const out = new Set(tokens);
-  for (const t of tokens) {
-    if (SYN[t]) for (const s of SYN[t]) out.add(normalize(s));
-  }
-  return Array.from(out).join(" ");
-}
 
 function getYouTubeEmbedUrl(url) {
   if (!url) return null;
@@ -183,9 +156,11 @@ const SkeletonThumbnail = () => (
 
 const Videos = () => {
   useTitle('Videos', 'Videos tutoriales y capacitaciones del equipo TI de Unifrutti.');
+  const location = useLocation();
+  const initialQ = location.state?.q || "";
   const [videos, setVideos] = useState([]);
-  const [q, setQ] = useState("");
-  const [debouncedQ, setDebouncedQ] = useState("");
+  const [q, setQ] = useState(initialQ);
+  const [debouncedQ, setDebouncedQ] = useState(initialQ);
   const [activeId, setActiveId] = useState(null); // id del video activo (para el modal)
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
@@ -229,6 +204,11 @@ const Videos = () => {
     // Mientras se genera, usa el fallback
     return loadImg;
   };
+
+  // Si llega una nueva búsqueda vía navegación (buscador global) estando ya en la página
+  useEffect(() => {
+    if (location.state?.q) setQ(location.state.q);
+  }, [location.state]);
 
   // Debounce 250ms
   const tRef = useRef(null);
