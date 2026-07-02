@@ -4,19 +4,21 @@ import { GUIAS } from '../pages/Guias/guias'
 import { TERMINOS } from '../pages/Glosario/terminos'
 import { FAQ_CATEGORIES } from '../pages/Faq/faqData'
 import { NAV_LINKS } from './navLinks'
+import { MANUAL_PROCEDURES } from './manualIndex'
 import { normalize } from '../utils/searchText'
 import { publicPath, withPublicBase } from '../utils/publicPath'
 
 export const TYPE_LABELS = {
+  enlace: 'Navegación',
+  manual: 'Manuales ERP',
   guia: 'Guías',
   blog: 'Blog',
   faq: 'Preguntas Frecuentes',
   glosario: 'Glosario',
   video: 'Videos',
-  enlace: 'Enlaces y sistemas',
 }
 
-export const TYPE_ORDER = ['guia', 'blog', 'faq', 'glosario', 'video', 'enlace']
+export const TYPE_ORDER = ['enlace', 'manual', 'guia', 'blog', 'faq', 'glosario', 'video']
 
 // Todos los documentos comparten este shape:
 // { id, type, title, description, tags, url, external?, vpn?, icon?, action?, state? }
@@ -97,7 +99,30 @@ export function buildStaticDocs() {
     }),
   )
 
-  return [...guiaDocs, ...blogDocs, ...faqDocs, ...glosarioDocs, ...linkDocs]
+  const manualDocs = MANUAL_PROCEDURES.map((procedure) =>
+    toDoc({
+      id: procedure.id,
+      type: 'manual',
+      title: procedure.title,
+      description: [
+        procedure.module,
+        procedure.status === 'pendiente_revision' ? 'Pendiente de revisión' : procedure.status,
+        procedure.summary,
+      ].filter(Boolean).join(' · '),
+      tags: [
+        ...(procedure.tags || []),
+        procedure.module,
+        procedure.system,
+        procedure.confidence,
+        procedure.source?.title,
+      ].filter(Boolean),
+      url: `/manuales/${procedure.slug}`,
+      state: { procedureId: procedure.id },
+      icon: 'fi fi-rr-book-open-cover',
+    }),
+  )
+
+  return [...linkDocs, ...manualDocs, ...guiaDocs, ...blogDocs, ...faqDocs, ...glosarioDocs]
 }
 
 // Los videos viven en public/json/videos.json: se cargan la primera vez que

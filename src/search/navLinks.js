@@ -1,6 +1,55 @@
 // Enlaces del menú expresados como datos para el buscador global.
 // `external: true` abre en pestaña nueva; `action` ejecuta una acción especial.
 export const NAV_LINKS = [
+  // Accesos rápidos de gestión de usuarios
+  {
+    id: 'cambiar-contrasena',
+    title: 'Cambiar o recuperar contraseña',
+    description: 'Abre la web para recuperar o cambiar tu clave de acceso.',
+    tags: [
+      'contraseña',
+      'contrasena',
+      'clave',
+      'password',
+      'recuperar contraseña',
+      'cambiar contraseña',
+      'olvide mi contraseña',
+      'olvide clave',
+      'gestion usuarios',
+      'acceso',
+    ],
+    url: 'https://api.verfrut.cl/RecoverPass',
+    external: true,
+    icon: 'fi fi-rr-key',
+  },
+  {
+    id: 'desbloqueo-usuario',
+    title: 'Desbloqueo de Usuario',
+    description: 'Desbloquea tu cuenta cuando haya quedado bloqueada por intentos fallidos.',
+    tags: [
+      'desbloquear',
+      'desbloqueo',
+      'usuario bloqueado',
+      'cuenta bloqueada',
+      'bloqueo',
+      'clave',
+      'password',
+      'gestion usuarios',
+      'acceso',
+    ],
+    url: 'https://api.verfrut.cl/recoverpass/unlockuser',
+    external: true,
+    icon: 'fi fi-rr-unlock',
+  },
+  {
+    id: 'inicio',
+    title: 'Página de inicio',
+    description: 'Vuelve al inicio del portal de Informática.',
+    tags: ['inicio', 'home', 'principal', 'portal'],
+    url: '/',
+    icon: 'fi fi-rr-home',
+  },
+
   // Sistemas
   {
     id: 'apps',
@@ -108,6 +157,14 @@ export const NAV_LINKS = [
     external: true,
     icon: 'fi fi-rr-shield-check',
   },
+  {
+    id: 'protocolos-seguridad',
+    title: 'Protocolos de Seguridad',
+    description: 'Buenas prácticas de seguridad de la información para colaboradores.',
+    tags: ['protocolo', 'seguridad', 'ciberseguridad', 'contraseña', 'phishing', 'vpn'],
+    url: '/blog/protocolos-seguridad',
+    icon: 'fi fi-rr-document',
+  },
 
   // Recursos y herramientas
   {
@@ -118,6 +175,14 @@ export const NAV_LINKS = [
     url: 'https://verfrutsa-my.sharepoint.com/:f:/g/personal/jsazo_verfrut_cl/EoIKH1AvVABCvzypHMh2HxkBJFHPcLw6Pj_6LIY_TzsKYQ?e=1D6gra',
     external: true,
     icon: 'fi fi-rr-book-open-reader',
+  },
+  {
+    id: 'base-conocimiento-erp',
+    title: 'Base de conocimiento ERP',
+    description: 'Procedimientos extraídos desde manuales internos para revisión progresiva.',
+    tags: ['manuales erp', 'procedimientos', 'base conocimiento', 'manual', 'erp'],
+    url: '/manuales',
+    icon: 'fi fi-rr-book-open-cover',
   },
   {
     id: 'generar-firmas',

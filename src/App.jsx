@@ -17,6 +17,8 @@ const BlogPost = lazy(() => import('./pages/Blog/BlogPost'))
 const Faq = lazy(() => import('./pages/Faq/Faq'))
 const GuiasList = lazy(() => import('./pages/Guias/GuiasList'))
 const GuiaDetail = lazy(() => import('./pages/Guias/GuiaDetail'))
+const ManualesList = lazy(() => import('./pages/Manuales/ManualesList'))
+const ManualDetail = lazy(() => import('./pages/Manuales/ManualDetail'))
 const QuizSeguridad = lazy(() => import('./pages/QuizSeguridad/QuizSeguridad'))
 const Glosario = lazy(() => import('./pages/Glosario/Glosario'))
 
@@ -62,6 +64,8 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/guias" element={<GuiasList />} />
           <Route path="/guias/:slug" element={<GuiaDetail />} />
+          <Route path="/manuales" element={<ManualesList />} />
+          <Route path="/manuales/:slug" element={<ManualDetail />} />
           <Route path="/quiz-seguridad" element={<QuizSeguridad />} />
           <Route path="/glosario" element={<Glosario />} />
           <Route path="*" element={<NotFound />} />
