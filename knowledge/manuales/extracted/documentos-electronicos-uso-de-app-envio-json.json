@@ -1,0 +1,22 @@
+{
+  "id": "documentos-electronicos-uso-de-app-envio-json",
+  "title": "Uso de App Envío Json",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Documentos Electrónicos/Uso de App Envío Json.docx",
+  "relativePath": "Documentos Electrónicos/Uso de App Envío Json.docx",
+  "sourceFolder": "Documentos Electrónicos",
+  "system": "ERP",
+  "module": "Documentos Electrónicos",
+  "extension": "docx",
+  "sizeBytes": 28861,
+  "modifiedAt": "2019-06-25T18:31:00.010Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.792Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1997,
+  "text": "Envío de Json\n\nNota: La aplicación ExportaJson.exe debe ir adentro de una carpeta llamada json y en la misma ruta de la aplicación que la llama.\n\nListado de DLL\n\n\nArgumentos Aceptados\n\n\t•\tCONSULTA SQL\n\t•\tUBICACION ARCHIVO JSON\n\t•\tID DOCUMENTO ACEPTA\n\t•\tTIPO DOCUMENTO\n\t•\tCODIGO RESPOSABLE RRHH\n\t•\tID EMPRESA\n\t•\tBASE DE DATOS\n\t•\tUSUARIO (OPCIONAL)\n\t•\tCLAVE USUARIO (OPCIONAL)\n\n\t•\tNota 1: Los argumentos deben ir separados por un espacio en blanco y deben ir entre comillas dobles “Ejemplo”.\n\t•\tNota 2: El ERP (Remuneraciones) es la encargada de llamar al ejecutable y enviarle los argumentos.\n\f\nEjemplo VB6 Contratos:\n\nDim ArgumentosJson As String\nDim SQL As String\n\nSQL = \"\"\"EXEC SPC_CONTRATOS_TRABAJADORES_JSON @IDEMPRESA ='\" & codigoEmpresa & \"', \"\nSQL = SQL & \"@IDTRABAJADOR =\" & VarIdTrabajadores & \"\"\"\"\n\nArgumentosJson = SQL & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & NombreJson & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & LeeCodigo(cboDocumentos) & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & \"1\" & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & LeeCodigo(cboResponsable.Text) & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & codigoEmpresa & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & BaseString & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & Usuario & \"\"\"\" & \" \"\nArgumentosJson = ArgumentosJson & \"\"\"\" & Password & \"\"\"\"\n\nShell (App.Path & \"\\json\\ExportaJSon.exe \" & ArgumentosJson), vbMinimizedNoFocus\n\nDocumentos Aceptados (Tipo de Documento)\n\n\t•\tContratos y anexos (Plantilla DEC)\n\t•\tFormulario de Vacaciones (Envío de PDF)\n\t•\tFormulario de Permisos (Plantilla DEC). Programados no Creados en DEC\n\t•\tLiquidaciones de Sueldo (Envío de PDF)\n\t•\tFiniquitos (Plantilla DEC). Programados no Creados en DEC\n\nEjemplos Argumentos\n\nContratos y Anexos\n\n\t•\t\"EXEC SPC_CONTRATOS_TRABAJADORES_JSON @IDEMPRESA ='1', @IDTRABAJADOR ='923578'\" \"C:\\Users\\cvasquez\\Desktop\\ContratosJson.json\" \"CL2019138031518\" \"1\" \"0003\" \"1\" \"bsis_rem_afr\" \"cvasquez\" \"abc.321\""
+}

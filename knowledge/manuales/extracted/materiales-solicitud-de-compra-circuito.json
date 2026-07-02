@@ -1,0 +1,22 @@
+{
+  "id": "materiales-solicitud-de-compra-circuito",
+  "title": "SOLICITUD DE COMPRA Circuito",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/SOLICITUD DE COMPRA Circuito.docx",
+  "relativePath": "Materiales/SOLICITUD DE COMPRA Circuito.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 676418,
+  "modifiedAt": "2021-07-12T13:59:06.424Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.848Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1019,
+  "text": "SOLICITUD DE COMPRA\n1.- Ubicación en el Menú\n\n\n2.- Interfaz de Usuario\n\nDebemos seleccionar un material y darle una prioridad de compra, en la interfaz (pantalla) se puede observar claramente las secciones del encabezado y detalle de materiales, que se van agregando uno a uno a la grilla.\n\n3.- Aprobación de una solicitud de compra, Ubicación en el Menú.\n\n\n4.- Interfaz de Aprobación de Solicitud de Compra.\n\n\nComo se puede apreciar, debemos ingresar la solicitud de compra y este desplegara el detalle, detalle que puede ser aprobado en particular y modificar las cantidades.\n\n\n5.- Llamar a solicitudes de compra desde las OC.\n\n\n6.- Seleccionar Materiales Solicitados.\n\nUna vez llamado el importe de solicitudes de materiales, bastara con hacer doble clic sobre el material seleccionado y este se agregara automáticamente a la OC, además para hacer la navegación de materiales mas amigable, se puede observar que existen filtros por Zona de destino, por material o producto, por numero de solicitud o por Responsable."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-impresion-de-permiso-post-natal-paternal",
+  "title": "Impresión de Permiso Post Natal Paternal",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Impresión de Permiso Post Natal Paternal.docx",
+  "relativePath": "Remuneraciones/Impresión de Permiso Post Natal Paternal.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 412779,
+  "modifiedAt": "2020-01-14T12:16:21.864Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.276Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 514,
+  "text": "Impresión de Permiso Post Natal Paternal\nDespués de guardar el Permiso Con, seleccionando la razón Post Natal Parental, debemos escoger la Vista Resumida en la grilla.\n\nAl final de la grilla, este tipo de permisos queda marcado con el Switch de Paternidad\n\nAl estar marcado el Switch de Paternidad, este me permitirá imprimir el documento\n\n\nLa impresión puede ser electrónica para el caso de enviar el documento a la plataforma DEC 5 de Acepta ó impresión tradicional.\n\nComprobante electrónico\n Comprobante impreso"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "materiales-entrega-de-documentos",
+  "title": "Entrega de Documentos",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/Entrega de Documentos.pptx",
+  "relativePath": "Materiales/Entrega de Documentos.pptx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "pptx",
+  "sizeBytes": 488072,
+  "modifiedAt": "2021-04-20T17:24:12.386Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.597Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .pptx"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

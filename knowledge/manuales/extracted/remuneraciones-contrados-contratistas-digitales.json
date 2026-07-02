@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-contrados-contratistas-digitales",
+  "title": "CONTRADOS CONTRATISTAS DIGITALES",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/CONTRADOS CONTRATISTAS DIGITALES.docx",
+  "relativePath": "Remuneraciones/CONTRADOS CONTRATISTAS DIGITALES.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 767811,
+  "modifiedAt": "2021-07-12T14:46:04.614Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.061Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1440,
+  "text": "CONTRADOS CONTRATISTAS DIGITALES\n1.- Ubicación en el Sistema\n\n\n2.- Interfaz de Usuario\n\nEn el encabezado de la Interfaz, al ingresar el Id del contratista este debe desplegar de manera automática los datos que se encuentran en nuestros registros, tales como: Razón Social, Depósito Bancario, Personería y Representante Legal (solo para los casos que corresponde), luego debemos completar la fecha de inicio, para la fecha de término solo si corresponde y fecha de cese es cuando se pone fin al contrato de manera distinta a la fecha de término.\nAl momento de ingresar las labores, lo podemos hacer a nivel de: Especie/Variedad, Cuarteles o solo a nivel de Actividad/Labor.\n\f\n3.- Imprimir Contrato\n\nLo primero que debemos hacer es seleccionar una Plantilla de Word, esto nos permite imprimir o enviar un documento (el envió de documentos se puede visualizar y firmar en la plataforma 5 Dec de Acepta, previamente de seleccionar el tipo de Documento Electrónico).\n4.- Anexos de Contrato\n\n5.- Interfaz de Usuario\n\nPrevio al ingreso de un Anexo, el Contratista previamente debe tener un contrato, donde tenemos 2 formas de completarlo, la primera es hacerlo igual que el contrato, seleccionando las Actividades y Labores y la segunda es cargar automáticamente las actividades y labores que ya fueron registradas en la facturación del contratista, esto completara automáticamente la grilla. El imprimir procede de la misma forma que el contrato."
+}

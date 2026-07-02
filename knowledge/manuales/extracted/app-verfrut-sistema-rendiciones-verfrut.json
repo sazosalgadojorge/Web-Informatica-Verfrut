@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-sistema-rendiciones-verfrut",
+  "title": "Sistema Rendiciones Verfrut",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/Sistema Rendiciones Verfrut.pdf",
+  "relativePath": "App Verfrut/Sistema Rendiciones Verfrut.pdf",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pdf",
+  "sizeBytes": 1487656,
+  "modifiedAt": "2023-03-09T18:53:00.679Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.127Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

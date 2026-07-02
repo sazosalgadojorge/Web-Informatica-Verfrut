@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-manual-app-campo",
+  "title": "MANUAL APP CAMPO",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/MANUAL APP CAMPO.pdf",
+  "relativePath": "App Verfrut/MANUAL APP CAMPO.pdf",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pdf",
+  "sizeBytes": 504471,
+  "modifiedAt": "2020-06-24T12:47:55.000Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.577Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

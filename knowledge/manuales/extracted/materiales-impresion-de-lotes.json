@@ -1,0 +1,22 @@
+{
+  "id": "materiales-impresion-de-lotes",
+  "title": "Impresión de Lotes",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/Impresión de Lotes.docx",
+  "relativePath": "Materiales/Impresión de Lotes.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 246254,
+  "modifiedAt": "2019-10-15T11:59:04.320Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.638Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 591,
+  "text": "Ícono de proceso, funciona cuando se llama al Número de Planilla a imprimir\n\nDebemos seleccionar el material a imprimir (1 a la vez), el cálculo de unidades por bultos los hace automáticamente el sistema ingresando la cantidad de bultos, los bultos en el sistema aparecen como N° Envase (resaltado con rojo en la figura anterior), por lo que al momento de cambiar esta opción en la impresión del lote también lo hará en la recepción del material, eso en ese campo.\n\nLa cantidad de etiquetas a imprimir lo hará acorde a la cantidad de bultos y los bultos aparecerán desde el 1 hasta N bultos."
+}

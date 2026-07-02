@@ -1,0 +1,22 @@
+{
+  "id": "materiales-instructivo-para-la-rebaja-de-materiales-por-estandar",
+  "title": "Instructivo para la rebaja de materiales por Estandar",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/Instructivo para la rebaja de materiales por Estandar.docx",
+  "relativePath": "Materiales/Instructivo para la rebaja de materiales por Estandar.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 165928,
+  "modifiedAt": "2016-11-07T02:47:26.460Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.680Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1560,
+  "text": "Instructivo para la rebaja de materiales por Estandar\n\t•\tEstándar de Materiales\nSe crean los estándar de embalajes, para cada envase operacional, identificando los materiales que se ocupan ya sea a nivel de caja, por un factor o por unidad al pallet, también se pueden hacer distinciones a nivel de Variedad, etiqueta o calibre\n\n\n-Proceso de Rebaja por Estándar por Zona\n\tSe selecciona el nro. de proceso, el cual mostrara al costado derecho si tiene sus estándar creado (cod_sta ), en la imagen seleccioné el proceso 221, el cual tiene 5 embalajes diferentes pero todos con sus estándar creados. De no existir aparecerá (-----)\n\n\nLuego se pasa a crear la rebaja, en donde se identifica la bodega, el número de guía (si corresponde)\nEl sistema calcula la cantidad de materiales a rebajar, de aparecer una línea en rojo significa que estamos consumiendo mas de lo que tenemos Stock, esto por lo general sucede por algún cambio en el embalaje que no está identificado en el estándar, en la imagen se advierte que el adhesivo blanco 45*25, que está indicado en el estándar, no está disponible para rebajar, tal vez sea porque se ocupó otro adhesivo.\n(Es por esto que sugiero que estos procesos se hagan día a día ya que es en el momento cuando recordare que material es el que realmente se ocupo)\n\n\nPor último tenemos una pantalla, que nos avisa si es que hay variaciones en los procesos después de que hicimos las rebajas ( cambios en la producción ya sea por embalajes, etiqueta, calibres ,etc), esto para poder recalcular y rebajar los materiales q corresponda"
+}

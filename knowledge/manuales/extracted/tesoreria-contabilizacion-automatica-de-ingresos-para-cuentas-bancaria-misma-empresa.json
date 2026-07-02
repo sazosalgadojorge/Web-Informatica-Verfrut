@@ -1,0 +1,22 @@
+{
+  "id": "tesoreria-contabilizacion-automatica-de-ingresos-para-cuentas-bancaria-misma-empresa",
+  "title": "Contabilización automática de Ingresos Para cuentas bancaria Misma empresa",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Tesoreria/Contabilización automática de Ingresos Para cuentas bancaria Misma empresa.docx",
+  "relativePath": "Tesoreria/Contabilización automática de Ingresos Para cuentas bancaria Misma empresa.docx",
+  "sourceFolder": "Tesoreria",
+  "system": "ERP",
+  "module": "Tesoreria",
+  "extension": "docx",
+  "sizeBytes": 233533,
+  "modifiedAt": "2025-05-20T20:16:22.531Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.262Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1223,
+  "text": "Contabilización Automática de Ingresos para Cuentas Bancarias de la Misma Empresa (desde el Egreso)\n1. Emisión del Egreso\nUna vez emitido un egreso, el sistema detectará automáticamente si el RUC corresponde a una empresa relacionada o a la misma empresa. En tal caso, se habilitará el botón \"Generar Ingreso Automático\".\n\n\n|\n\n\n2. Activación del Proceso\nAl hacer clic en el botón \"Generar Ingreso Automático\", se abrirá la siguiente pantalla:\n\n3. Selección de Moneda y Carga de Información\nSelecciona la moneda correspondiente a la cuenta del o los bancos destino. Luego, el sistema cargará en la grilla todas las líneas que están registradas al DEBE del egreso.\n\n\n4. Confirmación de Bancos y Cuentas de Destino\nSelecciona los bancos y las cuentas de destino correspondientes. Una vez hecho esto, haz clic en Aceptar para continuar.\n\n\n5. Mensaje de Confirmación\nEl sistema mostrará un mensaje indicando que el ingreso ha sido generado correctamente.\n\n\n6. Visualización en el Egreso\nEn el comprobante de egreso aparecerá al menos uno de los folios generados de manera automática.\n\n\n7. Revisión de Todos los Folios Generados\nPara visualizar todos los folios generados, deberás volver a hacer clic en el botón correspondiente."
+}

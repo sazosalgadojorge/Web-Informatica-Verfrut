@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-manual-proceso-packing",
+  "title": "MANUAL PROCESO PACKING",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/MANUAL PROCESO PACKING.pdf",
+  "relativePath": "App Verfrut/MANUAL PROCESO PACKING.pdf",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pdf",
+  "sizeBytes": 594042,
+  "modifiedAt": "2020-06-23T16:09:52.000Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.845Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

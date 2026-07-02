@@ -1,0 +1,24 @@
+{
+  "id": "remuneraciones-datas-29-10-2019",
+  "title": "DATAS 29 10 2019",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/DATAS_29_10_2019.xlsx",
+  "relativePath": "Remuneraciones/DATAS_29_10_2019.xlsx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "xlsx",
+  "sizeBytes": 60913,
+  "modifiedAt": "2019-10-29T14:03:12.477Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.152Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .xlsx"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

@@ -1,0 +1,22 @@
+{
+  "id": "contabilidad-nuevo-ajuste-automatico-x-diferencia-de-tipo-cambio",
+  "title": "Nuevo ajuste automático x diferencia de tipo cambio",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/Nuevo ajuste automático x diferencia de tipo cambio.docx",
+  "relativePath": "Contabilidad/Nuevo ajuste automático x diferencia de tipo cambio.docx",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "docx",
+  "sizeBytes": 155602,
+  "modifiedAt": "2025-05-20T20:58:22.225Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.478Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 596,
+  "text": "Nuevo Ajuste Automático por Diferencia de Tipo de Cambio\n1. Detección de Descuadre en Voucher Manual\nA partir de ahora, al contabilizar un voucher manual que presente descuadre (como se muestra en la imagen), el sistema identificará automáticamente la diferencia.\n\n\n2. Mensajes del Sistema\nAl intentar grabar el voucher descuadrado, el sistema mostrará automáticamente los siguientes mensajes informativos:\n\n\n3. Ajuste Automático\nUna vez detectada la diferencia, el sistema agregará de forma automática la cuenta contable correspondiente, de acuerdo con la diferencia generada por tipo de cambio."
+}

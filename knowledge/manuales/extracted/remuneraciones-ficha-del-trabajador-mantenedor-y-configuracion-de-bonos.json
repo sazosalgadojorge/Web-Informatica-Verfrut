@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-ficha-del-trabajador-mantenedor-y-configuracion-de-bonos",
+  "title": "Ficha del trabajador MANTENEDOR Y CONFIGURACIÓN DE BONOS",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Ficha del trabajador - MANTENEDOR Y CONFIGURACIÓN DE BONOS.docx",
+  "relativePath": "Remuneraciones/Ficha del trabajador - MANTENEDOR Y CONFIGURACIÓN DE BONOS.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 1010846,
+  "modifiedAt": "2019-02-20T13:52:41.245Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.234Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1855,
+  "text": "MANTENEDOR Y CONFIGURACIÓN DE BONOS\nEn la ficha del trabajador en el sub-menú de procesos encontramos el link para la configuración de los bonos que serán asignados al trabajador y para poder asignarlos primero debemos ingresar el ID del trabajador, irnos al área de contratos, seleccionar el contrato al que le asignaremos los bonos\n\n Haciendo doble click sobre el contrato seleccionado podemos modificarlo o haciendo clik en el icono de modificar de nuestra barra de herramientas\n\n\n Presionado F2 sobre ComboBox de Bonos se nos despliega una búsqueda, donde podemos seleccionar de forma más fácil el concepto.\n\n\n\f\nIMPORTAR BONOS\nEn la ficha del trabajador en el sub-menú de procesos encontramos el link para importar desde una planilla Excel los bonos por trabajador, donde deben ir los siguientes campos:\n\t•\tRUN/DNI\n\t•\tNúmero de contrato (Opcional, puede ir en blanco y este se asignará al contrato actual vigente)\n\t•\tID Concepto Haber (Ejemplo: 97 – Bono por Responsabilidad)\n\t•\tMonto (debe ir en blanco cuando el monto esta especificado en la glosa del concepto)\n\n\n\f\nIMPORTAR HORARIOS\nEn la ficha del trabajador en el sub-menú de procesos encontramos el link para importar desde una planilla Excel las jornadas u horarios que tendrá el trabajador y en la imagen de más abajo se especifican los campos que son necesarios completar.\n\n Recuerde seguir el mismo orden de las celdas en su planilla Excel\n\fIMPORTAR MOTIVO DE TÉRMINO\nEn la ficha del trabajador en el sub-menú de procesos encontramos el link para importar desde una planilla Excel los motivos del termino de un contrato solo para los trabajadores por faena, en el caso de la Empresa El Porvenir el Tipo de Contrato en el sistema lo muestra con el ID 11 y los campos necesarios sin los siguientes:\n\t•\tRUN/DNI\n\t•\tMotivo del Termino (Ejemplo: hasta el termino del proceso de manzana Royal Gala)"
+}

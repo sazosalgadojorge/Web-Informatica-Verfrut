@@ -1,0 +1,22 @@
+{
+  "id": "frio-packing-pasos-para-la-configuracion-de-evaluacion-ctrl-de-calidad",
+  "title": "Pasos para la configuracion de evaluación Ctrl de Calidad",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Frio Packing/Pasos para la configuracion de  evaluación Ctrl de Calidad.docx",
+  "relativePath": "Frio Packing/Pasos para la configuracion de  evaluación Ctrl de Calidad.docx",
+  "sourceFolder": "Frio Packing",
+  "system": "ERP",
+  "module": "Frio Packing",
+  "extension": "docx",
+  "sizeBytes": 41273,
+  "modifiedAt": "2018-12-18T18:56:42.622Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.475Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 714,
+  "text": "Pasos para la evaluación de informes de Control de Calidad\nPaso 1, Agrupación de Items (Menú -> Ctrl Calidad -> Mantenedor de Grupos)\n\t•\tEs necesario crear agrupaciones para cada Item, tal como lo muestra la imagen\n\nPaso 2, Configuración de Notas (Menú -> Ctrl Calidad -> Mantenedor Configuración Notas)\n\t•\tEn este formulario podemos ingresar los rangos y notas a evaluar, sí un grupo no tiene registrado un criterio de evaluación este no aparecerá en la planilla a imprimir.\n\n\fPaso 2, ingresar Items (Menú -> Ctrl Calidad -> Mantenedor de Items)\n\t•\tEn este formulario ingresamos los ítems a evaluar, donde en el combo box Agrupar por asignamos el grupo con su correspondiente criterio de evaluación ya configurado"
+}

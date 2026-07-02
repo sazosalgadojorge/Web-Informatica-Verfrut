@@ -1,0 +1,690 @@
+{
+  "generatedAt": "2026-07-02T20:11:57.461Z",
+  "model": "gpt-5.5",
+  "sourceChunksFile": "/Users/desarrolloverfrut/Web-Informatica-Verfrut/knowledge/manuales/chunks.json",
+  "totalChunksAvailable": 209,
+  "offset": 0,
+  "limit": 5,
+  "analyses": [
+    {
+      "chunkId": "activo-fijo-instructivo-de-activo-fijo-chunk-0001",
+      "documentId": "activo-fijo-instructivo-de-activo-fijo",
+      "hasUsefulProcedure": true,
+      "module": "Activo Fijo",
+      "source": {
+        "title": "Instructivo de Activo Fijo",
+        "relativePath": "Activo Fijo/Instructivo de Activo Fijo.docx",
+        "sourceFolder": "Activo Fijo",
+        "extension": "docx"
+      },
+      "procedures": [
+        {
+          "title": "Configurar tablas base de Activo Fijo",
+          "summary": "Define las familias de activos y tablas base requeridas para el funcionamiento de los mantenedores, reportes dinámicos y centralización contable del módulo de Activo Fijo.",
+          "system": "ERP interno",
+          "module": "Activo Fijo",
+          "tags": [
+            "activo fijo",
+            "familias de activos",
+            "factores de corrección",
+            "grupo de activos",
+            "ubicaciones",
+            "cuentas contables",
+            "centralización contable"
+          ],
+          "steps": [
+            "Ingresar al menú del sistema de Activo Fijo.",
+            "Definir las familias de activos con su relación con las cuentas contables para contabilizaciones de correcciones monetarias y control de adquisiciones.",
+            "Definir la tabla Factores de Corrección PCGA para generar la centralización contable automática.",
+            "Definir la tabla Grupo de Activos para agrupar información en reportes dinámicos.",
+            "Definir la tabla Ubicaciones para indicar el lugar físico del activo y agrupar información en reportes dinámicos."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "baja",
+          "warnings": [
+            "El fragmento no entrega rutas exactas de menú ni nombres de botones para crear, guardar o confirmar registros.",
+            "El texto fuente describe qué tablas deben existir, pero no detalla el flujo completo de mantención de cada tabla.",
+            "Debe revisarse con usuario experto antes de publicarlo como procedimiento oficial."
+          ]
+        },
+        {
+          "title": "Registrar ficha de activo fijo",
+          "summary": "Permite registrar o actualizar una ficha de activo fijo indicando datos del activo, valores, depreciación, información IFRS, proveedor, factura, ubicación y centros de costo.",
+          "system": "ERP interno",
+          "module": "Activo Fijo",
+          "tags": [
+            "activo fijo",
+            "ficha de activos",
+            "adquisición",
+            "depreciación",
+            "IFRS",
+            "proveedor",
+            "factura",
+            "centro de costo"
+          ],
+          "steps": [
+            "Abrir la pantalla Ficha de Activos.",
+            "Indicar el tipo de activo y el nombre del activo.",
+            "Ingresar el valor activo actualizado del periodo anterior; si corresponde a una nueva adquisición, marcar el switch “Adquisición” e ingresar el valor de factura.",
+            "Ingresar el valor de depreciación e indicar el saldo de vida útil del activo cuando corresponda.",
+            "Si se usa contabilidad IFRS, ingresar saldo de vida útil en modalidad IFRS, monto del activo IFRS y depreciación del activo IFRS.",
+            "Si es una adquisición, indicar el nombre del proveedor y el número de factura para que el sistema rescate el voucher de compra y enlace la ficha a la contabilidad.",
+            "Indicar la ubicación física del activo.",
+            "Indicar el CC y SCC contables para la asignación de la corrección monetaria y depreciación del periodo al momento de centralizar.",
+            "Opcionalmente, asignar el activo a un grupo cuando se requiera agrupar fichas independientes para reportes.",
+            "Emitir desde la parte superior de la pantalla el reporte dinámico de control de ingreso de fichas de activos, si se requiere."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El fragmento no entrega ruta exacta de menú ni nombres de botones para guardar o confirmar la ficha.",
+            "El resultado de guardado de la ficha no se describe explícitamente en el texto fuente.",
+            "Algunos campos dependen de configuración previa de familias, ubicaciones, centros de costo y parámetros contables."
+          ]
+        },
+        {
+          "title": "Definir proyectos de inversión y registrar gastos asociados",
+          "summary": "Flujo general para configurar datos de inversiones y registrar gastos relacionados con un proyecto de inversión, incluyendo información de factura, proveedor, gasto, ubicación y datos contables.",
+          "system": "ERP interno",
+          "module": "Activo Fijo",
+          "tags": [
+            "inversiones",
+            "proyectos de inversión",
+            "grupo de inversiones",
+            "tipos de gastos",
+            "PCGA",
+            "IFRS",
+            "centralización"
+          ],
+          "steps": [
+            "Ingresar a la sección Inversiones.",
+            "Definir los proyectos de inversión.",
+            "Definir el grupo de inversiones para la emisión de reportes dinámicos de control.",
+            "Definir los tipos de gastos para la emisión de reportes dinámicos de control.",
+            "En la pantalla de proyectos de inversión, ingresar los gastos relacionados con el proyecto.",
+            "Registrar el número de factura y el proveedor.",
+            "Seleccionar o indicar el tipo de gasto, como escritura, planos, mano de obra o insumos.",
+            "Ingresar la ubicación física del activo.",
+            "Indicar el CC y SCC contables para efectos de la corrección monetaria.",
+            "Indicar la etapa del proyecto de inversión.",
+            "Ingresar la cantidad y el valor.",
+            "Generar el primer reporte para obtener valorizaciones para PCGA e IFRS, si corresponde.",
+            "Definir el asiento de centralización en la pantalla indicada por el sistema.",
+            "Estando en el año base, generar la apertura contable para el año siguiente."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "baja",
+          "warnings": [
+            "El texto no incluye ruta exacta, nombres de pantallas completos ni botones.",
+            "La sección mezcla configuración, registro de gastos, reportes, asiento de centralización y apertura contable sin detallar transiciones entre pantallas.",
+            "La frase sobre generación de apertura contable es ambigua y no describe validaciones ni resultado final."
+          ]
+        }
+      ],
+      "keywords": [
+        "Activo Fijo",
+        "familias de activos",
+        "cuentas contables",
+        "corrección monetaria",
+        "PCGA",
+        "grupo de activos",
+        "ubicaciones",
+        "ficha de activos",
+        "adquisición",
+        "depreciación",
+        "IFRS",
+        "proveedor",
+        "factura",
+        "voucher de compra",
+        "CC",
+        "SCC",
+        "centralización",
+        "inversiones",
+        "proyectos de inversión",
+        "grupos de inversiones",
+        "tipos de gastos",
+        "erogaciones capitalizables",
+        "activo fijo",
+        "factores de corrección",
+        "centralización contable",
+        "centro de costo"
+      ],
+      "notes": "El fragmento contiene además definiciones conceptuales sobre erogaciones capitalizables y no capitalizables, con ejemplos. No se extrajeron como procedimiento porque no describen una acción operativa en el sistema. También hay menciones repetidas al reporte dinámico de control de ingreso de fichas de activos. Procedimiento mixto separado manualmente en configuracion de tablas base y registro de ficha de activo fijo."
+    },
+    {
+      "chunkId": "app-verfrut-manual-app-materiales-chunk-0001",
+      "documentId": "app-verfrut-manual-app-materiales",
+      "hasUsefulProcedure": true,
+      "module": "App Verfrut",
+      "source": {
+        "title": "MANUAL APP MATERIALES",
+        "relativePath": "App Verfrut/MANUAL APP MATERIALES.docx",
+        "sourceFolder": "App Verfrut",
+        "extension": "docx"
+      },
+      "procedures": [
+        {
+          "title": "Instalar e ingresar a la aplicación Grupo Verfrut",
+          "summary": "Descargar la aplicación desde Play Store e ingresar seleccionando empresa, temporada y módulo.",
+          "system": "App Grupo Verfrut / App FrioPacking",
+          "module": "App Verfrut",
+          "tags": [
+            "instalación",
+            "login",
+            "android",
+            "grupo verfrut"
+          ],
+          "steps": [
+            "Ir a Play Store en el dispositivo Android.",
+            "Buscar la aplicación \"Grupo Verfrut\".",
+            "Instalar la aplicación \"Grupo Verfrut\".",
+            "Abrir la aplicación y brindar todos los permisos solicitados.",
+            "Ingresar usuario.",
+            "Ingresar clave.",
+            "Seleccionar empresa, temporada y módulo a utilizar.",
+            "Presionar \"Ingresar\"."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El texto menciona App FrioPacking y Grupo Verfrut; se requiere validar el nombre exacto de la aplicación o módulo.",
+            "Las actualizaciones se realizan desde la misma tienda Play Store."
+          ]
+        },
+        {
+          "title": "Registrar y enviar abastecimientos de combustible",
+          "summary": "Descargar datos, registrar un abastecimiento de combustible escaneando tarjeta e ingresar los datos, y enviar los abastecimientos no enviados al sistema.",
+          "system": "App Grupo Verfrut / Sistema de Materiales",
+          "module": "App Verfrut",
+          "tags": [
+            "combustible",
+            "abastecimiento",
+            "descarga de datos",
+            "envío de datos"
+          ],
+          "steps": [
+            "Antes de realizar cada abastecimiento, realizar la descarga de datos.",
+            "Para descargar los datos, seleccionar una opción y dar clic en \"GUARDAR INFORMACION\".",
+            "Abrir el menú de opciones dando clic en la esquina superior izquierda.",
+            "Seleccionar la opción \"COMBUSTIBLE\".",
+            "Escanear la tarjeta del trabajador o de la maquinaria.",
+            "Revisar que la aplicación muestre los datos de combustible.",
+            "Ingresar el horómetro u odómetro.",
+            "Ingresar la cantidad abastecida.",
+            "Dar clic en \"REGISTRAR\".",
+            "Revisar el mensaje que muestra la app con los datos ingresados y la solicitud de confirmación.",
+            "Si todos los datos están correctos, dar clic en \"ABASTECER\".",
+            "Después de realizar todos los abastecimientos, entrar en la opción \"ENVIAR ABASTECIMIENTOS\".",
+            "Seleccionar la opción \"NO ENVIADOS\" y dar clic en \"mostrar\".",
+            "Confirmar los abastecimientos por enviar.",
+            "Dar clic en el botón \"ENVIAR DATOS\"."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "La descarga de datos debe realizarse en una zona con buena cobertura de WIFI o red móvil; una mala conexión puede generar una mala descarga.",
+            "Si no se descargan datos antes del abastecimiento pueden mostrarse diferencias en las cantidades disponibles.",
+            "El texto no especifica el nombre exacto de la opción usada para la descarga de datos de combustible."
+          ]
+        },
+        {
+          "title": "Importar abastecimientos Android al Sistema de Materiales",
+          "summary": "Ingresar al Sistema de Materiales para seleccionar una planilla de abastecimiento Android desde consumos de combustible y otros.",
+          "system": "Sistema de Materiales",
+          "module": "App Verfrut",
+          "tags": [
+            "android",
+            "sistema de materiales",
+            "importación",
+            "abastecimiento",
+            "combustible"
+          ],
+          "steps": [
+            "Ingresar al Sistema de Materiales.",
+            "Entrar en la opción \"Insumos Consumos de combustible y otros\".",
+            "Seleccionar el tipo.",
+            "Seleccionar la bodega.",
+            "En la parte superior del formulario, dar clic en el icono de tuerca ubicado a la derecha del icono de impresora.",
+            "Revisar el listado de abastecimientos que se muestra.",
+            "Seleccionar una planilla de abastecimiento Android."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "baja",
+          "warnings": [
+            "El texto no indica la acción final para confirmar o ejecutar la importación después de seleccionar la planilla.",
+            "El documento indica que todos los usuarios de la aplicación de materiales deben estar registrados en Android Parámetros, en Sistema de Materiales > Insumos > Tablas Maestras > Parámetros Android."
+          ]
+        },
+        {
+          "title": "Registrar recepción de materiales en la app",
+          "summary": "Descargar la base de recepción de materiales, completar los datos de recepción y preparar el envío de datos.",
+          "system": "App Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "recepción de materiales",
+            "descarga de datos",
+            "bodega",
+            "orden",
+            "envío de datos"
+          ],
+          "steps": [
+            "Para utilizar recepción de materiales, seleccionar la opción \"BD RECEPCION MATERIALES\".",
+            "Dar en \"GUARDAR INFORMACION\".",
+            "Seleccionar \"Recepcion de Materiales\".",
+            "Seleccionar zona de recepción.",
+            "Seleccionar tipo de movimiento.",
+            "Ingresar fecha de recepción y fecha del documento.",
+            "Completar los datos del origen, como bodega, productor o proveedor.",
+            "Seleccionar bodega de destino.",
+            "Ingresar número de serie y número de guía del documento.",
+            "Seleccionar número de orden.",
+            "Ingresar material recepcionado y cantidad.",
+            "Ir a la pestaña de envío de datos."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El texto solo menciona la pestaña de envío de datos, pero no detalla el botón o acción final para enviar la recepción.",
+            "Se conserva la palabra 'producctor' como referencia textual a productor/proveedor, pero debe validarse en revisión."
+          ]
+        },
+        {
+          "title": "Registrar y enviar rendiciones en la app",
+          "summary": "Crear una rendición escaneando o ingresando trabajador, completar datos del documento, adjuntar fotografía y enviar; si corresponde a combustible, completar datos adicionales.",
+          "system": "App Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "rendiciones",
+            "fotocheck",
+            "combustible",
+            "documento",
+            "envío"
+          ],
+          "steps": [
+            "Escanear el fotocheck de trabajador o ingresar el RUT.",
+            "Seleccionar el tipo de rendición.",
+            "Completar los datos como fecha del documento, número de documento, total y una observación si fuese requerido.",
+            "Cargar la fotografía del documento a la aplicación, tomando la fotografía o cargándola desde la galería.",
+            "Si la rendición no es de tipo combustible, enviar la rendición.",
+            "Si la rendición es de tipo combustible, buscar el proveedor del gasto por código, RUT o nombre.",
+            "Seleccionar el tipo de combustible.",
+            "Seleccionar el vehículo.",
+            "Completar los datos requeridos como cantidad, valor, horómetro u odómetro.",
+            "Enviar la rendición."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "Para enviar rendiciones no combustibles, el texto indica que se debe estar conectado a una red de la empresa.",
+            "El flujo de aprobación de rendiciones aparece en el fragmento, pero solo incluye seleccionar mes/año, rendidor y aprobar, por lo que se dejó fuera como procedimiento independiente por falta de detalle."
+          ]
+        }
+      ],
+      "keywords": [
+        "Play Store",
+        "Grupo Verfrut",
+        "App FrioPacking",
+        "login",
+        "descarga de datos",
+        "guardar informacion",
+        "combustible",
+        "abastecimiento",
+        "enviar abastecimientos",
+        "no enviados",
+        "Android Parámetros",
+        "Sistema de Materiales",
+        "Insumos",
+        "Recepción de Materiales",
+        "rendiciones",
+        "aprobación de rendiciones"
+      ],
+      "notes": "El fragmento contiene además referencias a actualización de la app desde Play Store, registro obligatorio de usuarios en Android Parámetros y aprobación de rendiciones. La aprobación de rendiciones no se extrajo como procedimiento separado porque el texto entrega pocos pasos y poco detalle operativo."
+    },
+    {
+      "chunkId": "app-verfrut-manual-de-usuario-app-hallazgos-chunk-0001",
+      "documentId": "app-verfrut-manual-de-usuario-app-hallazgos",
+      "hasUsefulProcedure": true,
+      "module": "App Verfrut",
+      "source": {
+        "title": "Manual de usuario App. Hallazgos",
+        "relativePath": "App Verfrut/Manual de usuario  - App. Hallazgos.docx",
+        "sourceFolder": "App Verfrut",
+        "extension": "docx"
+      },
+      "procedures": [
+        {
+          "title": "Ingresar a la aplicación y descargar datos de hallazgos",
+          "summary": "Acceder a la aplicación Grupo Verfrut, ingresar credenciales y descargar la información necesaria para utilizar el módulo de Hallazgos.",
+          "system": "Aplicación móvil Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "hallazgos",
+            "login",
+            "descarga de datos",
+            "Grupo Verfrut",
+            "AppRemu"
+          ],
+          "steps": [
+            "Hacer clic en el icono del Grupo Verfrut.",
+            "Ingresar el nombre de usuario.",
+            "Ingresar la contraseña.",
+            "Ingresar la empresa, por ejemplo Rapel o Verfrut.",
+            "Ingresar la temporada, por ejemplo 2021.",
+            "Ingresar al módulo de Remuneraciones: AppRemu.",
+            "Seleccionar en SI el botón ubicado al costado de la etiqueta PERSONAL VERFRUT SST.",
+            "Hacer clic en Guardar Información.",
+            "Esperar hasta que termine de cargar.",
+            "Seleccionar en SI el botón ubicado al costado de la etiqueta HALLAZGOS.",
+            "Hacer clic en Guardar Información.",
+            "Esperar hasta que termine de cargar.",
+            "Hacer clic en las tres rayitas horizontales de la parte superior izquierda de la pantalla.",
+            "Buscar el módulo de hallazgos e ingresar."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El fragmento depende de imágenes no incluidas para algunas pantallas y botones.",
+            "No se especifican validaciones ni mensajes exactos al finalizar la descarga."
+          ]
+        },
+        {
+          "title": "Registrar hallazgo",
+          "summary": "Completar el formulario de registro de un hallazgo, adjuntar foto, clasificar su importancia, registrar y enviar el informe generado por correo.",
+          "system": "Aplicación móvil Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "hallazgos",
+            "registrar hallazgo",
+            "informe",
+            "correo",
+            "foto"
+          ],
+          "steps": [
+            "Ingresar al módulo de hallazgos.",
+            "Elegir la opción REGISTRAR HALLAZGO.",
+            "Registrar la información según sea el caso.",
+            "Seleccionar Zona.",
+            "Seleccionar área.",
+            "Seleccionar Lugar.",
+            "Escoger turno.",
+            "Escanear fotocheck o ingresar número de DNI del responsable que reporta el hallazgo.",
+            "Tomar foto del hallazgo.",
+            "Ingresar descripción de hallazgo.",
+            "Ingresar las causas del hallazgo.",
+            "Ingresar las medidas correctivas del hallazgo.",
+            "Ingresar las posibles consecuencias del hallazgo.",
+            "Seleccionar el nivel de importancia: OBSERVACIÓN, MENOR o MAYOR.",
+            "Seleccionar plazo, por ejemplo INMEDIATO.",
+            "Hacer clic en el botón REGISTRAR.",
+            "Hacer clic en REGISTRAR en el mensaje de comprobación.",
+            "Ingresar correo para enviar el informe generado de hallazgo.",
+            "Hacer clic en el botón ENVIAR.",
+            "Si se requiere registrar otro hallazgo, hacer clic en nuevo."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "alta",
+          "warnings": [
+            "Algunos pasos del documento hacen referencia a ejemplos e imágenes no disponibles.",
+            "No se detallan valores posibles para todos los campos, como zona, área, lugar o turno."
+          ]
+        },
+        {
+          "title": "Listar hallazgos registrados",
+          "summary": "Visualizar los hallazgos registrados en el equipo filtrando entre no enviados y enviados.",
+          "system": "Aplicación móvil Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "hallazgos",
+            "listar hallazgos",
+            "no enviados",
+            "enviados"
+          ],
+          "steps": [
+            "Ingresar al módulo de hallazgos siguiendo el acceso indicado en el manual.",
+            "Entrar a la sección LISTA HALLAZGO.",
+            "Seleccionar No enviados y hacer clic en el botón MOSTRAR para mostrar los hallazgos registrados que no fueron enviados por falta de conexión a internet.",
+            "Seleccionar Enviados y hacer clic en el botón MOSTRAR para mostrar los hallazgos registrados y enviados."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "La ruta exacta se referencia como 'paso 3' en el documento, pero el fragmento no conserva una numeración clara.",
+            "La visualización de la lista depende de imágenes no incluidas."
+          ]
+        },
+        {
+          "title": "Levantar hallazgo",
+          "summary": "Registrar la corrección de un hallazgo, adjuntar evidencia fotográfica, confirmar el levantamiento y enviar el informe por correo.",
+          "system": "Aplicación móvil Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "hallazgos",
+            "levantar hallazgo",
+            "corrección",
+            "informe",
+            "correo"
+          ],
+          "steps": [
+            "Hacer clic en LEVANTAR HALLAZGO.",
+            "Ingresar la medida implementada.",
+            "Ingresar alguna observación.",
+            "Tomar foto del hallazgo corregido.",
+            "Hacer clic en Levantar Hallazgo.",
+            "Hacer clic en REGISTRAR en el mensaje de comprobación.",
+            "Ingresar correo para enviar el informe generado de hallazgo.",
+            "Hacer clic en el botón ENVIAR.",
+            "Volver a realizar el paso de ingreso o actualización de lista de hallazgos para actualizar la lista."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "No se especifica desde qué lista o pantalla exacta se selecciona el hallazgo a levantar.",
+            "El texto referencia 'paso 3' para actualizar la lista, pero la numeración no es clara en el fragmento."
+          ]
+        },
+        {
+          "title": "Generar informe de hallazgo",
+          "summary": "Volver a generar un informe de hallazgo y enviarlo a un correo específico.",
+          "system": "Aplicación móvil Grupo Verfrut",
+          "module": "App Verfrut",
+          "tags": [
+            "hallazgos",
+            "generar informe",
+            "correo",
+            "informe"
+          ],
+          "steps": [
+            "Hacer clic en Generar informe para volver a generar el informe de hallazgo y enviarlo a un correo específico.",
+            "Ingresar el correo al que se enviará el informe de hallazgo levantado.",
+            "Hacer clic en enviar."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "baja",
+          "warnings": [
+            "El procedimiento tiene menos de 4 pasos accionables, pero corresponde a un flujo explícito del fragmento.",
+            "No se indica la pantalla exacta desde donde se accede a Generar informe ni si aplica solo a hallazgos levantados."
+          ]
+        }
+      ],
+      "keywords": [
+        "Aplicación móvil",
+        "Hallazgos",
+        "Grupo Verfrut",
+        "AppRemu",
+        "PERSONAL VERFRUT SST",
+        "HALLAZGOS",
+        "Registrar hallazgo",
+        "Lista hallazgo",
+        "Enviar hallazgo",
+        "Levantar hallazgo",
+        "Generar informe",
+        "Guardar Información",
+        "MOSTRAR",
+        "REGISTRAR",
+        "ENVIAR"
+      ],
+      "notes": "El fragmento contiene referencias a imágenes representadas como '<v' y numeración poco clara. Se fusionó el acceso a la aplicación con la descarga de datos y el ingreso al módulo por formar parte del flujo previo necesario para operar Hallazgos. La opción ENVIAR HALLAZGO aparece mencionada en el menú, pero no se desarrolla un procedimiento específico en el texto."
+    },
+    {
+      "chunkId": "casino-offline-sistema-de-casino-offline-chunk-0001",
+      "documentId": "casino-offline-sistema-de-casino-offline",
+      "hasUsefulProcedure": true,
+      "module": "Casino OffLine",
+      "source": {
+        "title": "Sistema de Casino OffLine",
+        "relativePath": "Casino OffLine/Sistema de Casino OffLine.docx",
+        "sourceFolder": "Casino OffLine",
+        "extension": "docx"
+      },
+      "procedures": [
+        {
+          "title": "Instalar el sistema de Casino OffLine",
+          "summary": "Instalación base del sistema Casino OffLine, incluyendo prerrequisitos, creación de base de datos local mediante scripts SQL y copia del ejecutable.",
+          "system": "Sistema de Casino OffLine",
+          "module": "Casino OffLine",
+          "tags": [
+            "instalacion",
+            "base de datos",
+            "SQL Server",
+            "ejecutable",
+            "casino offline"
+          ],
+          "steps": [
+            "Instalar Microsoft SQL Server Express 2012 (x86-x64).",
+            "Durante la instalación de SQL Server Express, seleccionar el modo de autentificación Mixto y definir una contraseña para el usuario “sa”.",
+            "Instalar Microsoft SQL Server Management Studio 2012 (x86-x64).",
+            "Instalar Microsoft Net Framework 4.5.2.",
+            "Instalar Microsoft Visual Basic Power Packs 10.",
+            "Abrir Microsoft SQL Server Management Studio 2012.",
+            "Ejecutar el script SQL “Casino Desconectado” para crear la base de datos local “REGISTRO_CASINO_LOCAL”.",
+            "Ejecutar el script SQL “Crea Vinculo Servidor” para crear el vínculo con la base de datos “BSIS_REM_AFR” en el servidor de base de datos local.",
+            "Ejecutar el script SQL “SPC IMPORTA”, encargado de importar los datos desde “BSIS_REM_AFR” a la base de datos local.",
+            "Crear el directorio “C:\\appCasino”.",
+            "Copiar la aplicación en el directorio “C:\\appCasino”.",
+            "Opcionalmente, crear el directorio “C:\\Fotos” para almacenar fotografías de los trabajadores."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El fragmento no indica ubicación de los instaladores, ubicación de los scripts SQL ni parámetros detallados de conexión.",
+            "La contraseña “abc.123” aparece solo como sugerencia en la fuente y debe revisarse antes de usarla en un entorno real.",
+            "No se describen validaciones posteriores a la ejecución de los scripts, salvo el resultado esperado de creación/importación indicado en el texto."
+          ]
+        },
+        {
+          "title": "Configurar el primer inicio y los parámetros de registro del Casino OffLine",
+          "summary": "Configuración inicial que se muestra la primera vez que se abre la aplicación, importación inicial de datos y definición de parámetros por defecto en la pantalla de registro.",
+          "system": "Sistema de Casino OffLine",
+          "module": "Casino OffLine",
+          "tags": [
+            "configuracion inicial",
+            "login",
+            "importacion",
+            "registro",
+            "colacion"
+          ],
+          "steps": [
+            "Iniciar la aplicación por primera vez para que se muestre la configuración de Login.",
+            "Ingresar en “Servidor” el nombre del equipo donde se instaló la base de datos.",
+            "Ingresar en “Base de Datos” el nombre de la base de datos.",
+            "Definir “Empresa Extranjera” como activo solo si corresponde a una implementación en Perú.",
+            "Definir “Predeterminar RUT” para establecer el RUT o DNI usado en la impresión y registro de la colación.",
+            "Ingresar en “Usuario de Sistema” el usuario de la base de datos local.",
+            "Ingresar en “Contraseña” la contraseña de la base de datos local.",
+            "Aceptar la configuración para iniciar la importación de datos.",
+            "Esperar a que finalice la importación; el tiempo depende de la cantidad de datos.",
+            "En la pantalla de registro de la primera ejecución, seleccionar el Casino.",
+            "Ingresar el ID del lector de huella dactilar, si corresponde.",
+            "Seleccionar el tipo de Colación.",
+            "Guardar los parámetros por defecto usando “Ctrl + S”."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El fragmento no muestra la pantalla ni nombres de botones, solo indica aceptar la configuración.",
+            "El orden exacto entre seleccionar parámetros y guardar con Ctrl+S se infiere del texto de configuración de parámetros por defecto.",
+            "El ID del lector de huella dactilar es opcional según la fuente."
+          ]
+        }
+      ],
+      "keywords": [
+        "Casino OffLine",
+        "REGISTRO_CASINO_LOCAL",
+        "BSIS_REM_AFR",
+        "SQL Server Express 2012",
+        "SQL Server Management Studio 2012",
+        "SPC IMPORTA",
+        "C:\\appCasino",
+        "C:\\Fotos",
+        "Ctrl + S",
+        "Ctrl + F8",
+        "importacion",
+        "exportacion"
+      ],
+      "notes": "El fragmento también menciona opciones de Importar, Exportación Manual con Ctrl + F8 y Exportación Automática al cerrar la aplicación, pero no entrega pasos suficientes para extraer procedimientos completos sin inventar acciones. La descripción de indicadores de pantalla de registro se conserva como información contextual, no como procedimiento."
+    },
+    {
+      "chunkId": "contabilidad-cambios-en-contabilidad-para-adaptacaion-peru-chunk-0001",
+      "documentId": "contabilidad-cambios-en-contabilidad-para-adaptacaion-peru",
+      "hasUsefulProcedure": true,
+      "module": "Contabilidad",
+      "source": {
+        "title": "Cambios en Contabilidad para adaptacaion Peru",
+        "relativePath": "Contabilidad/Cambios en Contabilidad para adaptacaion Peru.docx",
+        "sourceFolder": "Contabilidad",
+        "extension": "docx"
+      },
+      "procedures": [
+        {
+          "title": "Procesar detracciones de compras con archivo SUNAT",
+          "summary": "Flujo descrito para generar un TXT con documentos de compras previamente digitados, enviarlo a SUNAT e importar al sistema el CSV devuelto.",
+          "system": "ERP Contabilidad",
+          "module": "Contabilidad",
+          "tags": [
+            "compras",
+            "detracciones",
+            "SUNAT",
+            "TXT",
+            "CSV",
+            "Perú"
+          ],
+          "steps": [
+            "Verificar que los documentos de compras sujetos a detracción estén previamente digitados en el sistema.",
+            "Generar un archivo TXT con los documentos previamente digitados.",
+            "Subir el archivo TXT a SUNAT.",
+            "Obtener el archivo CSV devuelto por SUNAT.",
+            "Importar el archivo CSV devuelto por SUNAT al sistema."
+          ],
+          "status": "pendiente_revision",
+          "confidence": "media",
+          "warnings": [
+            "El fragmento no indica ruta, pantalla, botones ni nombre exacto de la opción para generar o importar archivos.",
+            "No se detallan validaciones, estructura del TXT/CSV ni mensajes de confirmación.",
+            "El texto menciona adjuntos por correo que no están incluidos en el fragmento."
+          ]
+        }
+      ],
+      "keywords": [
+        "Serie alfanumérica",
+        "compras",
+        "documentos no domiciliados",
+        "factura de exportación",
+        "comprobante manual",
+        "voucher manual",
+        "detracciones",
+        "SUNAT",
+        "mantenedor de bienes y servicios",
+        "mantenedor de tipos de detracción",
+        "ventas",
+        "boletas",
+        "contabilizador manual",
+        "tipos de renta",
+        "cuentas contables",
+        "IGV",
+        "ítems balance"
+      ],
+      "notes": "El resto del fragmento describe cambios de configuración, campos agregados y mantenedores para Perú en Compras, Ventas, Boletas, Contabilizador Manual y Cuentas Contables. No se extrajeron como procedimientos porque son notas técnicas, listas de campos o referencias a mantenedores sin un flujo operativo completo. También se menciona la digitación de documentos no domiciliados y la asociación a un voucher manual, pero faltan pasos suficientes, pantallas y orden detallado para extraerlo como procedimiento independiente."
+    }
+  ],
+  "errors": []
+}

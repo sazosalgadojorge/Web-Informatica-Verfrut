@@ -1,0 +1,920 @@
+{
+  "generatedAt": "2026-07-02T19:30:53.305Z",
+  "inventoryFile": "/Users/desarrolloverfrut/Web-Informatica-Verfrut/knowledge/manuales/inventory.json",
+  "totalFiles": 79,
+  "extracted": [
+    {
+      "id": "activo-fijo-instructivo-de-activo-fijo-inversiones",
+      "relativePath": "Activo Fijo/Instructivo de Activo Fijo (Inversiones).docx",
+      "module": "Activo Fijo",
+      "extension": "docx",
+      "status": "skipped",
+      "method": "textutil",
+      "textLength": 0,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/activo-fijo-instructivo-de-activo-fijo-inversiones.json"
+    },
+    {
+      "id": "activo-fijo-instructivo-de-activo-fijo",
+      "relativePath": "Activo Fijo/Instructivo de Activo Fijo.docx",
+      "module": "Activo Fijo",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 4520,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/activo-fijo-instructivo-de-activo-fijo.json"
+    },
+    {
+      "id": "app-verfrut-3-manual-app-fotografia",
+      "relativePath": "App Verfrut/3. Manual App Fotografia.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-3-manual-app-fotografia.json"
+    },
+    {
+      "id": "app-verfrut-3-manual-app-fotografia",
+      "relativePath": "App Verfrut/3. Manual App Fotografia.pptx",
+      "module": "App Verfrut",
+      "extension": "pptx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .pptx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-3-manual-app-fotografia.json"
+    },
+    {
+      "id": "app-verfrut-3-manual-app-materiales-copia",
+      "relativePath": "App Verfrut/3. Manual App Materiales - copia.pptx",
+      "module": "App Verfrut",
+      "extension": "pptx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .pptx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-3-manual-app-materiales-copia.json"
+    },
+    {
+      "id": "app-verfrut-3-manual-app-materiales",
+      "relativePath": "App Verfrut/3. Manual App Materiales.pptx",
+      "module": "App Verfrut",
+      "extension": "pptx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .pptx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-3-manual-app-materiales.json"
+    },
+    {
+      "id": "app-verfrut-manual-frio-packing",
+      "relativePath": "App Verfrut/ASD/MANUAL FRIO PACKING.docx",
+      "module": "App Verfrut",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 4063,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-frio-packing.json"
+    },
+    {
+      "id": "app-verfrut-instructivo-ctral-calidad",
+      "relativePath": "App Verfrut/Instructivo Ctral calidad.docx",
+      "module": "App Verfrut",
+      "extension": "docx",
+      "status": "skipped",
+      "method": "textutil",
+      "textLength": 0,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-instructivo-ctral-calidad.json"
+    },
+    {
+      "id": "app-verfrut-manual-app-campo",
+      "relativePath": "App Verfrut/MANUAL APP CAMPO.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-app-campo.json"
+    },
+    {
+      "id": "app-verfrut-manual-app-materiales",
+      "relativePath": "App Verfrut/MANUAL APP MATERIALES.docx",
+      "module": "App Verfrut",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 4122,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-app-materiales.json"
+    },
+    {
+      "id": "app-verfrut-manual-de-registro-de-dotacion-app",
+      "relativePath": "App Verfrut/Manual de Registro de Dotación - APP.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-de-registro-de-dotacion-app.json"
+    },
+    {
+      "id": "app-verfrut-manual-de-usuario-app-hallazgos",
+      "relativePath": "App Verfrut/Manual de usuario  - App. Hallazgos.docx",
+      "module": "App Verfrut",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 2971,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-de-usuario-app-hallazgos.json"
+    },
+    {
+      "id": "app-verfrut-manual-frio-packing",
+      "relativePath": "App Verfrut/MANUAL FRIO PACKING.docx",
+      "module": "App Verfrut",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 7907,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-frio-packing.json"
+    },
+    {
+      "id": "app-verfrut-manual-frio-packing",
+      "relativePath": "App Verfrut/MANUAL FRIO PACKING.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-frio-packing.json"
+    },
+    {
+      "id": "app-verfrut-manual-proceso-packing",
+      "relativePath": "App Verfrut/MANUAL PROCESO PACKING.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-proceso-packing.json"
+    },
+    {
+      "id": "app-verfrut-manual-remuneraciones",
+      "relativePath": "App Verfrut/MANUAL REMUNERACIONES.docx",
+      "module": "App Verfrut",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 16959,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-remuneraciones.json"
+    },
+    {
+      "id": "app-verfrut-manual-remuneraciones",
+      "relativePath": "App Verfrut/MANUAL REMUNERACIONES.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-remuneraciones.json"
+    },
+    {
+      "id": "app-verfrut-manual-sst",
+      "relativePath": "App Verfrut/MANUAL SST.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-manual-sst.json"
+    },
+    {
+      "id": "app-verfrut-sistema-rendiciones-verfrut",
+      "relativePath": "App Verfrut/Sistema Rendiciones Verfrut.pdf",
+      "module": "App Verfrut",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/app-verfrut-sistema-rendiciones-verfrut.json"
+    },
+    {
+      "id": "casino-offline-sistema-de-casino-offline",
+      "relativePath": "Casino OffLine/Sistema de Casino OffLine.docx",
+      "module": "Casino OffLine",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 3270,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/casino-offline-sistema-de-casino-offline.json"
+    },
+    {
+      "id": "contabilidad-cambios-en-contabilidad-para-adaptacaion-peru",
+      "relativePath": "Contabilidad/Cambios en Contabilidad para adaptacaion Peru.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 3043,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-cambios-en-contabilidad-para-adaptacaion-peru.json"
+    },
+    {
+      "id": "contabilidad-facturas-cedidas-a-bancos",
+      "relativePath": "Contabilidad/Facturas cedidas a bancos.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 4364,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-facturas-cedidas-a-bancos.json"
+    },
+    {
+      "id": "contabilidad-formato-para-subida-masiva-voucher-manual",
+      "relativePath": "Contabilidad/FORMATO PARA SUBIDA MASIVA VOUCHER MANUAL.xlsx",
+      "module": "Contabilidad",
+      "extension": "xlsx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .xlsx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-formato-para-subida-masiva-voucher-manual.json"
+    },
+    {
+      "id": "contabilidad-implementacion-balance-comprobacion-forma-sunat",
+      "relativePath": "Contabilidad/Implementación Balance Comprobación Forma SUNAT.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 5840,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-implementacion-balance-comprobacion-forma-sunat.json"
+    },
+    {
+      "id": "contabilidad-implementacion-emision-gre-actualizacion-1",
+      "relativePath": "Contabilidad/Implementación emisión GRE- Actualización 1.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 14801,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-implementacion-emision-gre-actualizacion-1.json"
+    },
+    {
+      "id": "contabilidad-informes-financiero-y-tributario-de-activo-fijo-y-planta-productora",
+      "relativePath": "Contabilidad/Informes Financiero y Tributario de Activo Fijo y Planta Productora.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 4441,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-informes-financiero-y-tributario-de-activo-fijo-y-planta-productora.json"
+    },
+    {
+      "id": "contabilidad-manual-solicitud-drawback",
+      "relativePath": "Contabilidad/Manual Solicitud Drawback.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 2925,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-manual-solicitud-drawback.json"
+    },
+    {
+      "id": "contabilidad-nuevo-ajuste-automatico-x-diferencia-de-tipo-cambio",
+      "relativePath": "Contabilidad/Nuevo ajuste automático x diferencia de tipo cambio.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 596,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-nuevo-ajuste-automatico-x-diferencia-de-tipo-cambio.json"
+    },
+    {
+      "id": "contabilidad-recepcion-de-documentos-facturas-desde-materiales-y-remuneraciones",
+      "relativePath": "Contabilidad/Recepcion de Documentos (Facturas) desde Materiales y Remuneraciones.docx",
+      "module": "Contabilidad",
+      "extension": "docx",
+      "status": "skipped",
+      "method": "textutil",
+      "textLength": 0,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-recepcion-de-documentos-facturas-desde-materiales-y-remuneraciones.json"
+    },
+    {
+      "id": "contabilidad-sistematizacion-flujo-de-caja",
+      "relativePath": "Contabilidad/Sistematización Flujo de Caja.pdf",
+      "module": "Contabilidad",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-sistematizacion-flujo-de-caja.json"
+    },
+    {
+      "id": "contabilidad-sistematizacion-nuevos-reportes-de-balances",
+      "relativePath": "Contabilidad/Sistematización Nuevos Reportes de Balances.pdf",
+      "module": "Contabilidad",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/contabilidad-sistematizacion-nuevos-reportes-de-balances.json"
+    },
+    {
+      "id": "ctas-ctes-facturas-factoring",
+      "relativePath": "Ctas Ctes/Facturas Factoring.docx",
+      "module": "Ctas Ctes",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1587,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/ctas-ctes-facturas-factoring.json"
+    },
+    {
+      "id": "documentos-electronicos-consideracion-envio-documentos-electronicos",
+      "relativePath": "Documentos Electrónicos/Consideración envío documentos electrónicos.docx",
+      "module": "Documentos Electrónicos",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1311,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/documentos-electronicos-consideracion-envio-documentos-electronicos.json"
+    },
+    {
+      "id": "documentos-electronicos-manual-de-administracion-de-usuarios-v1-2",
+      "relativePath": "Documentos Electrónicos/Manual de Administracion de Usuarios v1.2.pdf",
+      "module": "Documentos Electrónicos",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/documentos-electronicos-manual-de-administracion-de-usuarios-v1-2.json"
+    },
+    {
+      "id": "documentos-electronicos-uso-de-app-envio-json",
+      "relativePath": "Documentos Electrónicos/Uso de App Envío Json.docx",
+      "module": "Documentos Electrónicos",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1997,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/documentos-electronicos-uso-de-app-envio-json.json"
+    },
+    {
+      "id": "estimaciones-manual-de-estimaciones-productivas-y-comerciales-frusysep",
+      "relativePath": "Estimaciones/Manual de Estimaciones Productivas y  Comerciales (Frusysep).docx",
+      "module": "Estimaciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 76548,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/estimaciones-manual-de-estimaciones-productivas-y-comerciales-frusysep.json"
+    },
+    {
+      "id": "estimaciones-orden-de-aplicacion",
+      "relativePath": "Estimaciones/Orden de Aplicación.docx",
+      "module": "Estimaciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 284,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/estimaciones-orden-de-aplicacion.json"
+    },
+    {
+      "id": "etiquetado-el-nevado-configurar-sistema-de-etiquetado",
+      "relativePath": "Etiquetado El Nevado/Configurar Sistema de Etiquetado.docx",
+      "module": "Etiquetado El Nevado",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 5678,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/etiquetado-el-nevado-configurar-sistema-de-etiquetado.json"
+    },
+    {
+      "id": "etiquetado-el-nevado-manual-tlp2844",
+      "relativePath": "Etiquetado El Nevado/Manual_TLP2844.pdf",
+      "module": "Etiquetado El Nevado",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/etiquetado-el-nevado-manual-tlp2844.json"
+    },
+    {
+      "id": "frio-packing-impresion-de-etiquetas-desde-proceso-de-packing",
+      "relativePath": "Frio Packing/Impresión de etiquetas desde Proceso de Packing.docx",
+      "module": "Frio Packing",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 780,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/frio-packing-impresion-de-etiquetas-desde-proceso-de-packing.json"
+    },
+    {
+      "id": "frio-packing-impresion-de-etiquetas-desde-proceso-de-packing",
+      "relativePath": "Frio Packing/Impresión de etiquetas desde Proceso de Packing.pdf",
+      "module": "Frio Packing",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/frio-packing-impresion-de-etiquetas-desde-proceso-de-packing.json"
+    },
+    {
+      "id": "frio-packing-instructivo-distribuicion-de-servicos-campos-y-plantas",
+      "relativePath": "Frio Packing/Instructivo Distribuicion de Servicos Campos y Plantas.docx",
+      "module": "Frio Packing",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 2679,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/frio-packing-instructivo-distribuicion-de-servicos-campos-y-plantas.json"
+    },
+    {
+      "id": "frio-packing-manual-control-de-gestion-de-procesos-de-frio-y-packing-frusysfrpk",
+      "relativePath": "Frio Packing/Manual Control de Gestion de Procesos de Frio Y Packing (Frusysfrpk).DOC",
+      "module": "Frio Packing",
+      "extension": "doc",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 157388,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/frio-packing-manual-control-de-gestion-de-procesos-de-frio-y-packing-frusysfrpk.json"
+    },
+    {
+      "id": "frio-packing-manual-control-de-gestion-de-procesos-de-frio-y-packing-frusysfrpk",
+      "relativePath": "Frio Packing/Manual Control de Gestion de Procesos de Frio Y Packing (Frusysfrpk).docx",
+      "module": "Frio Packing",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 195850,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/frio-packing-manual-control-de-gestion-de-procesos-de-frio-y-packing-frusysfrpk.json"
+    },
+    {
+      "id": "frio-packing-pasos-para-la-configuracion-de-evaluacion-ctrl-de-calidad",
+      "relativePath": "Frio Packing/Pasos para la configuracion de  evaluación Ctrl de Calidad.docx",
+      "module": "Frio Packing",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 714,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/frio-packing-pasos-para-la-configuracion-de-evaluacion-ctrl-de-calidad.json"
+    },
+    {
+      "id": "huella-acceso-a-puerta",
+      "relativePath": "Huella/Acceso a Puerta.docx",
+      "module": "Huella",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 472,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/huella-acceso-a-puerta.json"
+    },
+    {
+      "id": "materiales-consumo-de-combustible",
+      "relativePath": "Materiales/Consumo de Combustible.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 843,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-consumo-de-combustible.json"
+    },
+    {
+      "id": "materiales-entrega-de-documentos",
+      "relativePath": "Materiales/Entrega de documentos.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 205,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-entrega-de-documentos.json"
+    },
+    {
+      "id": "materiales-entrega-de-documentos",
+      "relativePath": "Materiales/Entrega de Documentos.pptx",
+      "module": "Materiales",
+      "extension": "pptx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .pptx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/materiales-entrega-de-documentos.json"
+    },
+    {
+      "id": "materiales-impresion-de-lotes",
+      "relativePath": "Materiales/Impresión de Lotes.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 591,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-impresion-de-lotes.json"
+    },
+    {
+      "id": "materiales-instructivo-para-la-rebaja-de-materiales-por-estandar",
+      "relativePath": "Materiales/Instructivo para la rebaja de materiales por Estandar.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1560,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-instructivo-para-la-rebaja-de-materiales-por-estandar.json"
+    },
+    {
+      "id": "materiales-instructivo-para-reemplazo-cod-material-por-otro",
+      "relativePath": "Materiales/Instructivo para reemplazo cod material por otro.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 461,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-instructivo-para-reemplazo-cod-material-por-otro.json"
+    },
+    {
+      "id": "materiales-manual-app-materiales",
+      "relativePath": "Materiales/Manual App Materiales.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 2662,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-manual-app-materiales.json"
+    },
+    {
+      "id": "materiales-manual-app-materiales",
+      "relativePath": "Materiales/Manual App Materiales.pptx",
+      "module": "Materiales",
+      "extension": "pptx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .pptx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/materiales-manual-app-materiales.json"
+    },
+    {
+      "id": "materiales-manual-o-especificaciones-tecnica",
+      "relativePath": "Materiales/MANUAL O ESPECIFICACIONES TÉCNICA.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 340,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-manual-o-especificaciones-tecnica.json"
+    },
+    {
+      "id": "materiales-solicitud-de-compra-circuito",
+      "relativePath": "Materiales/SOLICITUD DE COMPRA Circuito.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1019,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-solicitud-de-compra-circuito.json"
+    },
+    {
+      "id": "materiales-solicitud-de-compra",
+      "relativePath": "Materiales/SOLICITUD DE COMPRA.docx",
+      "module": "Materiales",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 2147,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/materiales-solicitud-de-compra.json"
+    },
+    {
+      "id": "plataforma-facturacion-plataforma-facturacion",
+      "relativePath": "Plataforma Facturacion/Plataforma Facturacion.docx",
+      "module": "Plataforma Facturacion",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 9991,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/plataforma-facturacion-plataforma-facturacion.json"
+    },
+    {
+      "id": "remuneraciones-cambios-en-remuneraciones-para-adaptacaion-peru",
+      "relativePath": "Remuneraciones/Cambios en Remuneraciones para adaptacaion Peru.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 526,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-cambios-en-remuneraciones-para-adaptacaion-peru.json"
+    },
+    {
+      "id": "remuneraciones-contrados-contratistas-digitales",
+      "relativePath": "Remuneraciones/CONTRADOS CONTRATISTAS DIGITALES.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1440,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-contrados-contratistas-digitales.json"
+    },
+    {
+      "id": "remuneraciones-contrato-en-pdf-para-subir-a-dec",
+      "relativePath": "Remuneraciones/Contrato en PDF para subir a DEC.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 433,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-contrato-en-pdf-para-subir-a-dec.json"
+    },
+    {
+      "id": "remuneraciones-contratos-contratistas",
+      "relativePath": "Remuneraciones/Contratos Contratistas.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 2510,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-contratos-contratistas.json"
+    },
+    {
+      "id": "remuneraciones-datas-29-10-2019",
+      "relativePath": "Remuneraciones/DATAS_29_10_2019.xlsx",
+      "module": "Remuneraciones",
+      "extension": "xlsx",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .xlsx"
+      ],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-datas-29-10-2019.json"
+    },
+    {
+      "id": "remuneraciones-emision-masiva-de-contratos-electronicos",
+      "relativePath": "Remuneraciones/EMISIÓN MASIVA DE CONTRATOS ELECTRÓNICOS.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 3923,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-emision-masiva-de-contratos-electronicos.json"
+    },
+    {
+      "id": "remuneraciones-ficha-del-trabajador-mantenedor-y-configuracion-de-bonos",
+      "relativePath": "Remuneraciones/Ficha del trabajador - MANTENEDOR Y CONFIGURACIÓN DE BONOS.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1855,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-ficha-del-trabajador-mantenedor-y-configuracion-de-bonos.json"
+    },
+    {
+      "id": "remuneraciones-impresion-de-permiso-post-natal-paternal",
+      "relativePath": "Remuneraciones/Impresión de Permiso Post Natal Paternal.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 514,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-impresion-de-permiso-post-natal-paternal.json"
+    },
+    {
+      "id": "remuneraciones-instructivo-capacitaciones",
+      "relativePath": "Remuneraciones/Instructivo capacitaciones.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 249,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-instructivo-capacitaciones.json"
+    },
+    {
+      "id": "remuneraciones-mantenedor-contratos-transportistas",
+      "relativePath": "Remuneraciones/Mantenedor Contratos Transportistas.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 584,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-mantenedor-contratos-transportistas.json"
+    },
+    {
+      "id": "remuneraciones-manual-de-historias-clinicas-v2-con-inventario",
+      "relativePath": "Remuneraciones/Manual de Historias Clinicas v2_Con Inventario.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 20349,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-manual-de-historias-clinicas-v2-con-inventario.json"
+    },
+    {
+      "id": "remuneraciones-manual-remuneraciones-frusysrem",
+      "relativePath": "Remuneraciones/Manual Remuneraciones(frusysrem).doc",
+      "module": "Remuneraciones",
+      "extension": "doc",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 7229970,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-manual-remuneraciones-frusysrem.json"
+    },
+    {
+      "id": "remuneraciones-manual-remuneraciones-frusysrem",
+      "relativePath": "Remuneraciones/Manual Remuneraciones(frusysrem).docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 85290,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-manual-remuneraciones-frusysrem.json"
+    },
+    {
+      "id": "remuneraciones-manual-generacion-de-excel-para-impresion-de-tarjetas",
+      "relativePath": "Remuneraciones/Manual_Generacion de Excel para Impresion de Tarjetas.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 3374,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-manual-generacion-de-excel-para-impresion-de-tarjetas.json"
+    },
+    {
+      "id": "remuneraciones-observacion-para-impresion-de-liquidaciones-cristal-report",
+      "relativePath": "Remuneraciones/Observacion para Impresión de liquidaciones Cristal Report.pdf",
+      "module": "Remuneraciones",
+      "extension": "pdf",
+      "status": "skipped",
+      "method": "pdf-unavailable",
+      "textLength": 0,
+      "warnings": [
+        "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+      ],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-observacion-para-impresion-de-liquidaciones-cristal-report.json"
+    },
+    {
+      "id": "remuneraciones-production-pallets-4-1-espaciados",
+      "relativePath": "Remuneraciones/Production_Pallets (4) (1)_espaciados.xls",
+      "module": "Remuneraciones",
+      "extension": "xls",
+      "status": "skipped",
+      "method": "unsupported",
+      "textLength": 0,
+      "warnings": [
+        "Extractor pendiente para .xls"
+      ],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-production-pallets-4-1-espaciados.json"
+    },
+    {
+      "id": "remuneraciones-registros-log-de-envios-acepta",
+      "relativePath": "Remuneraciones/Registros Log de envíos Acepta.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "skipped",
+      "method": "textutil",
+      "textLength": 0,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-registros-log-de-envios-acepta.json"
+    },
+    {
+      "id": "remuneraciones-vacaciones-firma-electronica",
+      "relativePath": "Remuneraciones/VACACIONES - FIRMA ELECTRONICA.docx",
+      "module": "Remuneraciones",
+      "extension": "docx",
+      "status": "skipped",
+      "method": "textutil",
+      "textLength": 0,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/remuneraciones-vacaciones-firma-electronica.json"
+    },
+    {
+      "id": "tesoreria-cambios-en-tesoreria-para-adaptacaion-peru",
+      "relativePath": "Tesoreria/Cambios en Tesoreria para adaptacaion Peru.docx",
+      "module": "Tesoreria",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1216,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/tesoreria-cambios-en-tesoreria-para-adaptacaion-peru.json"
+    },
+    {
+      "id": "tesoreria-contabilizacion-automatica-de-ingresos-para-cuentas-bancaria-misma-empresa",
+      "relativePath": "Tesoreria/Contabilización automática de Ingresos Para cuentas bancaria Misma empresa.docx",
+      "module": "Tesoreria",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 1223,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/tesoreria-contabilizacion-automatica-de-ingresos-para-cuentas-bancaria-misma-empresa.json"
+    },
+    {
+      "id": "tesoreria-manual-tesoreria-frusystes",
+      "relativePath": "Tesoreria/Manual Tesoreria ( FrusysTes).docx",
+      "module": "Tesoreria",
+      "extension": "docx",
+      "status": "extracted",
+      "method": "textutil",
+      "textLength": 42110,
+      "warnings": [],
+      "outputFile": "knowledge/manuales/extracted/tesoreria-manual-tesoreria-frusystes.json"
+    }
+  ]
+}

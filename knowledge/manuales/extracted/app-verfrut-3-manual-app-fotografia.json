@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-3-manual-app-fotografia",
+  "title": "3. Manual App Fotografia",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/3. Manual App Fotografia.pptx",
+  "relativePath": "App Verfrut/3. Manual App Fotografia.pptx",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pptx",
+  "sizeBytes": 48963700,
+  "modifiedAt": "2021-06-16T18:49:30.548Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.437Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .pptx"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

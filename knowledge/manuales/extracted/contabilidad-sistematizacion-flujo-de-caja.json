@@ -1,0 +1,24 @@
+{
+  "id": "contabilidad-sistematizacion-flujo-de-caja",
+  "title": "Sistematización Flujo de Caja",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/Sistematización Flujo de Caja.pdf",
+  "relativePath": "Contabilidad/Sistematización Flujo de Caja.pdf",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "pdf",
+  "sizeBytes": 372319,
+  "modifiedAt": "2024-09-04T18:15:11.908Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.554Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

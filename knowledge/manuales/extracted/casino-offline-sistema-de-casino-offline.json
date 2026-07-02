@@ -1,0 +1,22 @@
+{
+  "id": "casino-offline-sistema-de-casino-offline",
+  "title": "Sistema de Casino OffLine",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Casino OffLine/Sistema de Casino OffLine.docx",
+  "relativePath": "Casino OffLine/Sistema de Casino OffLine.docx",
+  "sourceFolder": "Casino OffLine",
+  "system": "ERP",
+  "module": "Casino OffLine",
+  "extension": "docx",
+  "sizeBytes": 2448264,
+  "modifiedAt": "2018-10-02T18:12:59.074Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.168Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 3270,
+  "text": "Sistema de Casino OffLine (desconectado)\nInstalación\nPre-Requisitos\n\t•\tMicrosoft SQL Server Express 2012 (x86-x64), al momento de la instalación solicitará modo de autentificación, se debe seleccionar Mixto (se creará usuario “sa”) e ingresar una contraseña, como sugerencia utilizaremos “abc.123”.\n\t•\tMicrosoft SQL Server Management Studio 2012 (x86-x64)\n\t•\tMicrosoft Net Framework 4.5.2\n\t•\tMicrosoft Visual Basic Power Packs 10\nInstalación de la base de datos\nAbrimos el Microsoft SQL Server Management Studio 2012 y cargamos los siguientes Scrips:\n\n01.- Ejecutamos el Scrip SQL “Casino Desconectado”, este crea la nueva base de datos local “REGISTRO_CASINO_LOCAL”\n\n \n\f\n02.- Ejecutamos el Scrip SQL “Crea Vinculo Servidor”, este creará un vínculo con la base de datos “BSIS_REM_AFR” en nuestro servidor de base de datos local\n\n\n03.- Ejecutamos el Scrip SQL “SPC IMPORTA”, este procedimiento almacenado es el encargado de importar los datos desde “BSIS_REM_AFR” (remuneraciones) a nuestra base de datos local.\n\n\n\f\nInstalar Ejecutable\nPara instalar el ejecutable del Sistema de Casino OffLine solo debemos crear un directorio C:\\appCasino y copiar la aplicación.\n\n\nLuego debemos crear el directorio donde se almacenarán las fotografías de los trabajadores C:\\Fotos (opcional)\n\n\n\f\nConfiguración\nLogin (Se inicia al comienzo solo la primera vez que se abre la aplicación)\n\t•\tServidor : Nombre del equipo donde instalamos la base de datos\n\t•\tBase de Datos : Nombre de la base de datos\n\t•\tEmpresa Extranjera\t: Debe estar activo solo para implementación en Perú\n\t•\tPredeterminar RUT\t: Establece el RUT o DNI para la impresión y registro de la colación\n\t•\tUsuario de Sistema\t: Usuario de la Base de Datos Local\n\t•\tContraseña : Contraseña de la Base de Datos Local\n\nImportando (Se inicia al comienzo)\nAceptamos la configuración y procederá a realizar la importación de los datos, este proceso, se demora dependiendo de la cantidad de datos y siempre se ejecuta al iniciar la aplicación\n\nRegistro\nUna vez finalizada la importación de datos nos presentará la pantalla de registro. Cuando la ejecutamos por primera vez debemos guardar los parámetros por defecto (Ctrl + S):\n\t•\tSeleccionar el Casino\n\t•\tIngresar el ID del lector de Huella dactilar (opcional)\n\t•\tSeleccionar el tipo de Colación\n\nEn esta pantalla podemos observar la siguiente información\n\t•\tIzquierda Superior\t: Indica si el lector de huellas dactilares se encuentra activo.\n\t•\tIzquierdo Inferior\t: Indica si la importación de datos se ejecutó con éxito.\n\t•\tCentro Inferior : Opciones\n\t•\tDerecha Superior\t: Versión del Sistema y Nombre de la Base de Datos en uso\n\t•\tDerecha Inferior\t: Código QR (www.verfrut.cl)\nImportar\nEsta opción nos permite actualizar la base de datos actual (también lo hace al iniciar la aplicación) y también nos permite importar las fotografías de los trabajadores siempre y cuando estén ingresadas\n\nExportación Manual (Ctrl + F8)\nLa exportación manual fue diseñada para exportar los datos al Sistema de Remuneraciones siempre y cuando el computador donde se inicia la aplicación no tenga acceso a la red de Verfrut.\n\nExportación Automática\nLa exportación automática se ejecuta cuando cerramos nuestra aplicación y nos pregunta si deseamos transmitir los datos al Sistema de Remuneraciones."
+}

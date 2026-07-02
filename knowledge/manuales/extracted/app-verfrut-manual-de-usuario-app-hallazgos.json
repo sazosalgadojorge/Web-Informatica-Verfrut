@@ -1,0 +1,22 @@
+{
+  "id": "app-verfrut-manual-de-usuario-app-hallazgos",
+  "title": "Manual de usuario App. Hallazgos",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/Manual de usuario  - App. Hallazgos.docx",
+  "relativePath": "App Verfrut/Manual de usuario  - App. Hallazgos.docx",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "docx",
+  "sizeBytes": 1097462,
+  "modifiedAt": "2021-06-07T19:57:57.827Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.710Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 2971,
+  "text": "MANUAL DE USUARIO: APLICACIÓN MOBIL – HALLAZGOS\n\nIngresar a la aplicación GRUPO VERFRUT:\n\t•\tClic en icono del Grupo Verfrut.\n1\n1\n<\n<\n\n\t•\tIngresar los datos que requiere la aplicación:\n\nEjemplo:\nEjemplo:\n\n\t•\tIngresar el nombre de usuario.\n\t•\tIngresar contraseña.\n\t•\tIngresar la empresa: Rapel / Verfrut.\n\t•\tIngresar la temporada: 2021.\n\t•\tIngresar al módulo de Remuneraciones: AppRemu.\n\nDescargar datos\n\n\t•\tSeleccionar a SI el botón que esta al costado de la etiqueta PERSONAL VERFRUT SST.\n\n<v\n<v\n\n\t•\n\t•\tClic en Guardar Información:\n\n<v\n<v\n\t•\tEsperar hasta que termine de cargar: \n\n\n\t•\tSeleccionar a SI el botón que esta al costado de la etiqueta HALLAZGOS:\n\n<v\n<v\n\n\t•\n\t•\tClic en Guardar Información: \n<v\n<v\n\n\n \n\t•\tEsperar hasta que termine de cargar: \n\n\n\t•\nIngresar al módulo de hallazgos: \n\t•\n\t•\tClic en las tres rayitas horizontales de la parte superior izquierda de la pantalla: \n<v\n<v\n\t•\tBuscar módulo de hallazgos e ingresar:  \n<v\n<v\n\n\nSe muestra la siguiente pantalla. Elegir la opción según se requiera: \n\t•\tREGISTRAR HALLAZGO\n\t•\tLISTA HALLAZGO\n\t•\tENVIAR HALLAZGO\n\n<v\n<v\n\nRegistrar hallazgo:\n\t•\tRegistrar según sea el caso.\n\t•\tSeleccionar Zona.\n\t•\tSeleccionar área.\n\t•\tSeleccionar Lugar.\n\t•\tEscoger turno.\n\t•\tEscanear fotocheck o ingresar número de DNI del responsable que reporta el hallazgo.\n\t•\tTomar foto del hallazgo.\n\t•\tIngresar descripción de hallazgo.\n\t•\tIngresar las causas del hallazgo.\n\t•\tIngresar las medidas correctivas del hallazgo.\n\t•\tIngresar las posibles consecuencias del hallazgo.\n\t•\tSeleccionar Nivel de importancia:\n\t•\tOBSERVACIÓN\n\t•\tMENOR\n\t•\tMAYOR\n\t•\tSeleccionar plazo\n\t•\tINMEDIATO\n\t•\tClic en botón REGISTRAR.\n\t•\tClic en REGISTRAR en el mensaje de comprobación.\n\t•\tIngresar correo para enviar informe generado de hallazgo y clic en botón ENVIAR. \n\t•\tEjemplo:  \n<v\n<v\n*Paso i al vi. *Paso vii al xiii. *Paso xiv.\t*Paso xv.\n\n\t•\tSi se requiere registrar otro hallazgo, clic en nuevo. \nListar hallazgos: \n\t•\tPara visualizar los hallazgos registrados en el equipo se debe realizar el paso 3 e ingresar a la siguiente sección:\n<v\n<v\n\t•\tSeleccionar No enviados y clic en botón MOSTRAR; para mostrar los hallazgos que se registraron, pero no fueron enviados por falta de conexión a internet.\n\t•\tSeleccionar Enviados y clic en botón MOSTRAR; para mostrar los hallazgos registrados y enviados.\n\n\t•\tEjemplo de lista de hallazgos:\n \n\n\nLevantar Hallazgo:\n\t•\tClic en LEVANTAR HALLAZGO: \n<v\n<v\n\t•\tIngresar medida implementada\n\t•\tIngresar alguna observación\n\t•\tTomar foto del hallazgo corregido.\n\t•\n\t•\tClic en Levantar Hallazgo \n\n\n\t•\tClic en REGISTRAR en el mensaje de comprobación.\n\n\n\t•\tIngresar correo para enviar informe generado de hallazgo y clic en botón ENVIAR. \n\n\n\t•\tVolver a realizar el paso 3 para actualizar la lista de hallazgos.\n\nGenerar Informe:\n\t•\n\t•\tClic en Generar informe: Si se desea volver a generar informe de hallazgo y enviarlo a un correo especifico. \n<v\n<v\n\t•\tIngresar correo a enviar informe de hallazgo levantado.\n\t•\tClic en enviar."
+}

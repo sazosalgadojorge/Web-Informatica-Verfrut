@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-cambios-en-remuneraciones-para-adaptacaion-peru",
+  "title": "Cambios en Remuneraciones para adaptacaion Peru",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Cambios en Remuneraciones para adaptacaion Peru.docx",
+  "relativePath": "Remuneraciones/Cambios en Remuneraciones para adaptacaion Peru.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 8205544,
+  "modifiedAt": "2018-06-20T17:05:33.991Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.020Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 526,
+  "text": "1.-Ficha Trabajador\n\t•\tdatos Trabajador\n\n\n\t•\tContratos\n\n\n\t•\tcargas familiares\n\n\n\t•\tOtros Antecedentes\n\n\n\t•\tResumen Liquidaciones\n\n\n\t•\tOtros procesos\n\n\n\t•\tImportar Exportar AFP\n\n\n\t•\tExportar Importar Prorrogas\n\n\t•\tExportar T-Registro\n\n\t•\tExportar Importar Cuentas bancos\n\n\n\t•\tReporte Finiquitos\n\n\t•\tExportar Plame\n\n\n\t•\tResumen Contratos\n\n\n\t•\tExportar Cargas familiares\n\n\t•\tImportar zona labores\n\n\t•\tImportar Chip Tarjetas de Identificación\n\n\n\t•\tImportar Trabajadores\n\n\n\t•\tImportar Cargas\n\n\n2.-Registro actividades por cuadrilla"
+}

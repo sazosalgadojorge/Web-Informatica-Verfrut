@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-registros-log-de-envios-acepta",
+  "title": "Registros Log de envíos Acepta",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Registros Log de envíos Acepta.docx",
+  "relativePath": "Remuneraciones/Registros Log de envíos Acepta.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 36915,
+  "modifiedAt": "2019-09-04T13:08:15.168Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.151Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 0,
+  "text": ""
+}

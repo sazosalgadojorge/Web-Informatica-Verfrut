@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-3-manual-app-materiales",
+  "title": "3. Manual App Materiales",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/3. Manual App Materiales.pptx",
+  "relativePath": "App Verfrut/3. Manual App Materiales.pptx",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pptx",
+  "sizeBytes": 15179260,
+  "modifiedAt": "2021-08-04T20:28:39.000Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.438Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .pptx"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

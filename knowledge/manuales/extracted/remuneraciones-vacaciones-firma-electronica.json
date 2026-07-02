@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-vacaciones-firma-electronica",
+  "title": "VACACIONES FIRMA ELECTRONICA",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/VACACIONES - FIRMA ELECTRONICA.docx",
+  "relativePath": "Remuneraciones/VACACIONES - FIRMA ELECTRONICA.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 102379,
+  "modifiedAt": "2019-02-28T20:20:41.495Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.188Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 0,
+  "text": ""
+}

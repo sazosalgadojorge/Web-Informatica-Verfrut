@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-instructivo-capacitaciones",
+  "title": "Instructivo capacitaciones",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Instructivo capacitaciones.docx",
+  "relativePath": "Remuneraciones/Instructivo capacitaciones.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 124444,
+  "modifiedAt": "2018-10-31T15:54:33.663Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.313Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 249,
+  "text": "1.- Asignar la agrupación de remuneraciones que es equivalente al sector. “consultar con remuneraciones”\n\n\n2.- Asignar temas a las distintas areas..\n\n\n\f\n3.- Excel Comparativo para trabajadores que no poseen capacitación en las distintas areas/temas."
+}

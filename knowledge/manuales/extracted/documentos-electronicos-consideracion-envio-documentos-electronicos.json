@@ -1,0 +1,22 @@
+{
+  "id": "documentos-electronicos-consideracion-envio-documentos-electronicos",
+  "title": "Consideración envío documentos electrónicos",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Documentos Electrónicos/Consideración envío documentos electrónicos.docx",
+  "relativePath": "Documentos Electrónicos/Consideración envío documentos electrónicos.docx",
+  "sourceFolder": "Documentos Electrónicos",
+  "system": "ERP",
+  "module": "Documentos Electrónicos",
+  "extension": "docx",
+  "sizeBytes": 21078,
+  "modifiedAt": "2019-06-25T15:10:39.324Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.713Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1311,
+  "text": "Consideración envío documentos electrónicos\n\nContratos y Anexos\n\nEsta opción utiliza una plantilla DEC y campos dinámicos\n\n\t•\tFirmantes y Roles:\n\t•\tJefe de Recursos Humanos (JRRHH)\n\t•\tAdministrador (ADM_PREDIO)\n\t•\tTrabajador\n\t•\tCampos o Columnas :\n\t•\tLos campos que utiliza el documento electrónico, deben estar ingresados en el Mantenedor de Campos en el sistema de Remuneraciones.\n\t•\tLos nombre de los campos dinámicos del documento deben ser iguales a las columnas del procedimiento almacenado (SPC_CONTRATOS_TRABAJADORES_JSON)\n\t•\tTodos los campos dinámicos del documento debe ser con letra mayúscula, al igual que los campos del procedimiento almacenado.\n\t•\tRoles no firmantes:\n\t•\tMINTRA (compartido)\n\t•\tEMISOR (visar)\n\nLiquidaciones\n\nEsta opción sube un archivo PDF que convierte la app de la liquidación de sueldo del trabajador (en formato de texto) y lo hace uno a uno.\n\n\t•\tFirmantes y Roles:\n\t•\tTrabajador (Firmante)\n\t•\tEmisor (Visar)\n\t•\tMINTRA (Compartido)\n\nFormulario de Vacaciones\n\nEsta opción sube un archivo PDF generado por Remuneraciones de un formato Excel\n\n\t•\tFirmantes y Roles:\n\t•\tTrabajador, Firmante.\n\t•\tJefe de Recursos Humanos (JRRHH), Firmante.\n\t•\tGerente de Administración y Finanzas (GE_ADM_FIN), Firmante.\n\t•\tJefe Directo (JDIRECTO), Firmante.\n\t•\tEmisor, Visar.\n\t•\tMINTRA, Compartido."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "materiales-consumo-de-combustible",
+  "title": "Consumo de Combustible",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/Consumo de Combustible.docx",
+  "relativePath": "Materiales/Consumo de Combustible.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 267577,
+  "modifiedAt": "2022-04-20T16:03:04.604Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.559Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 843,
+  "text": "Consumo de Combustible\nUbicación en el menú\n\nMENÚ\nMENÚ\nACTUALIZA ODOMETRO EN CASO DE ERROR\nACTUALIZA ODOMETRO EN CASO DE ERROR\nDETALLES DEL DESPACHO\nDETALLES DEL DESPACHO\nRESUMEN DE CONSUMOS\nRESUMEN DE CONSUMOS\nDETALLE DEL CONSUMO\nDETALLE DEL CONSUMO\nENCABEZADO\nENCABEZADO\nLa aplicación de uno o más consumos de combustible genera un despacho de material, este despacho es la suma del o los materiales.\n\n\nÍcono\nDescripción\n\nNuevo, este botón limpia el formulario y genera un nuevo número de planilla\n\nBorrar, este botón elimina un elemento del resumen de consumos\n\nEliminar, este botón elimina la planilla completa\n\nExcel, este botón genera un Archivo Excel Dinámico\n\nImprimir, este botón genera un informe con el detalle de la planilla\n\nImportar, este botón muestra las planillas disponibles para importar desde dispositivos móviles (Android)"
+}

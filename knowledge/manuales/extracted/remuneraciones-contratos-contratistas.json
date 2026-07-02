@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-contratos-contratistas",
+  "title": "Contratos Contratistas",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Contratos Contratistas.docx",
+  "relativePath": "Remuneraciones/Contratos Contratistas.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 234793,
+  "modifiedAt": "2021-01-07T20:27:00.000Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.152Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 2510,
+  "text": "Ubicación en el Menú Menú >> Control Contratistas >> Contratos\n\n\nFormulario de creación de Contratos\n\n\n\f\nSelección de Contratista\n\nSe debe seleccionar un contratista buscándolo con el botón al costado de la caja de texto de Id de Contratista\n\nSi el contrato amerita depósito bancario debe seleccionar el check de depósito bancario, si no aparecen datos en las casillas de depósito debe ingresar al mantenedor (tablas del sistema – contratistas) y registrar una cuenta bancaria.\n\nEl contrato debe tener una fecha de inicio y fecha de término opcional, al finalizar el contrato se debe ingresar una fecha de Cese para identificar si el contrato esta activo o no.\n\n\n\f\nRepresentante Legal y Personería\n\nPara el caso de que el contratista sea una empresa, se debe indicar los datos de quien la representa y la personería que representa.\n\nIngreso de Actividades\n\nPara el ingreso de las actividades debe seleccionar la actividad, la labor (especie y variedad son opcionales) y el valor por cada unidad de medida de la labor.\n\f\nIngreso de colaciones\n\nPara esta opción debe seleccionar el casino (si no está registrado su predio colocar el Porvenir), el tipo de colación, la colación y el valor saldrá en automático siempre y cuando este registrada, de no estarlo lo podrá ingresar manualmente.\n\nHistorial de Contratos\n\nEn esta parte el sistema mostrara todos los contratos que se hayan creados, pudiendo filtrar por contratos vigentes, finalizados o todos.\n\n\nGuardar y actualizar\n\n\nUna vez que el contrato ya está guardado y vuelves a presionar en guardar, te preguntara si deseas crear un nuevo contrato con los mismos datos que ya guardaste anteriormente, de no querer crear otro contrato solo debemos presionar no en el recuadro\n\n\nRecuerda que antes de imprimir o enviar un documento lo primero es guardar todos los detalles del contrato.\n\f\nSeleccionar Plantilla, vista previa y envió a DEC\n\nUna vez guardado el contrato procedemos a general el archivo Word para pre visualizar, para ello debemos seleccionar la Plantilla Word\n\n\f\nEn la ruta H:\\TemporalSDT\\Reportes\\Contratos\\CONTRATOS DEC\\CONTRATISTASpodremos seleccionar la plantilla que se desee utilizar.\n\nUna vez seleccionada la plantilla podemos pinchar en el botón de vista previa\n\n\f\nWord, vista previa y envío\n\nUna vez generado el archivo Word, debemos corroborar la información y una vez verificado enviamos el documento a la plataforma de Acepta 5 DEC, para ello solo debemos volver al sistema, seleccionar el documento a enviar y pinchar el botón de envío"
+}

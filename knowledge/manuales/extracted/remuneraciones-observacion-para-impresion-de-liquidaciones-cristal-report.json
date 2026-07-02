@@ -1,0 +1,24 @@
+{
+  "id": "remuneraciones-observacion-para-impresion-de-liquidaciones-cristal-report",
+  "title": "Observacion para Impresión de liquidaciones Cristal Report",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Observacion para Impresión de liquidaciones Cristal Report.pdf",
+  "relativePath": "Remuneraciones/Observacion para Impresión de liquidaciones Cristal Report.pdf",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "pdf",
+  "sizeBytes": 404911,
+  "modifiedAt": "2019-08-07T13:26:56.723Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.110Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

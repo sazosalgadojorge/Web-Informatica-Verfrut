@@ -1,0 +1,22 @@
+{
+  "id": "contabilidad-manual-solicitud-drawback",
+  "title": "Manual Solicitud Drawback",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/Manual Solicitud Drawback.docx",
+  "relativePath": "Contabilidad/Manual Solicitud Drawback.docx",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "docx",
+  "sizeBytes": 790123,
+  "modifiedAt": "2020-06-30T13:47:56.144Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.438Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 2925,
+  "text": "SISTEMATIZACIÓN DE SOLICITUD DE DRAWBACK\n\n\t•\tOBJETIVO: Optimizar los tiempos de preparación y presentación de las solicitudes de restitución de derechos arancelarios (Drawbak) que permitan a la empresa la disposición oportuna de los flujos de efectivo que estas solicitudes representan.\n\n\t•\tALCANCE: La utilización de esta herramienta es de competencia del área de contabilidad de la empresa.\n\n\t•\tRESPONSABLES\nÁrea solicitante: Julissa Paz García\nContabilidad Rapel\n\nÁrea ejecutora del desarrollo: Miguel Angel Vargas Cornejo\n Gerencia Tecnología Información – Grupo Verfrut\n\n\t•\tDEFINICIÓN\n\t•\tRestitución de Derechos Arancelarios – Drawback: Permite obtener como consecuencia de la exportación, la devolución de un porcentaje del valor FOB del bien exportado, en razón a que el costo de producción se ha visto incrementado por los derechos arancelarios que gravan la importación de insumos incorporados o consumidos en la producción del bien exportado.\n\n\t•\tDAM: Declaración Aduanera de Mercancía\n\n\t•\tSolicitud: Solicitud Electrónica de Restitución\n\n\t•\tInsumo Importado: El que va a ser incorporado o consumido en el bien exportado, que puede ser: materias primas, productos intermedios, partes y piezas.\n\n\t•\tINSTRUCTIVO PARA LA OPERATIVIDAD DEL DESARROLLO\n\t•\tEn el módulo de contabilidad, se agrega la opción Solicitud de Drawback en el Contabilizador\n\n\n\t•\tSe ingresa la información de cabecera que solicita la imagen siguiente, tales como: Temporada, Fecha solicitud, DUA del insumo importado, Código Material Importado, Cantidad Importada, Unidad Medida, Cantidad Utilizada, % del FOB a solicitar.\n\n\n\t•\tSe procede a cargar los datos.\nEl proceso de carga de datos implica que visualicemos en pantalla los datos de las facturas de exportación que previamente han sido ingresadas en el sistema:\n\t•\tSerie, factura, nave, recibidor, cajas, monto, fecha de emisión: Estos datos se ingresan previamente al momento que el área comercial genera las respectivas facturas de exportación mediante el módulo de cuentas corrientes.\n\t•\tN° DUS, los nros de DUAS de exportación son ingresados por el área de contabilidad, a través del módulo de cuentas corrientes.\n\n\n\t•\tSe procede a seleccionar las facturas por las cuales se va a solicitar drawback.\nEl desarrollo implica que por cada factura seleccionada se calcule el FOB a solicitar, además de la cantidad de insumo utilizado.\n\n\n\t•\tSe guardan los datos, y luego se generan los archivos txt que serán enviados a SUNAT, a través de la clave SOL de la empresa.\n\n\n\t•\tSe indica la ruta dónde serán grabados los archivos txt.\n\n\n\t•\tSe procede a exportar el archivo txt\n\n\n\t•\tEl sistema genera el archivo txt con el nombre y la forma que SUNAT requiere.\nRUC/AÑOSOLICITUD/10/NRO.PLANILLA\n\n\nPiura, 26 de junio de 2020.\n\n\nPreparado por Revisado por Aprobado Por\nJulissa Paz García Miguel Angel Vargas Cornejo Daniel Eyheralde Munita\nContador General Gerente TI Gerente de Administración\n Y Finanzas"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "contabilidad-recepcion-de-documentos-facturas-desde-materiales-y-remuneraciones",
+  "title": "Recepcion de Documentos (Facturas) desde Materiales y Remuneraciones",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/Recepcion de Documentos (Facturas) desde Materiales y Remuneraciones.docx",
+  "relativePath": "Contabilidad/Recepcion de Documentos (Facturas) desde Materiales y Remuneraciones.docx",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "docx",
+  "sizeBytes": 121229,
+  "modifiedAt": "2019-10-08T15:57:03.426Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.519Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 0,
+  "text": ""
+}

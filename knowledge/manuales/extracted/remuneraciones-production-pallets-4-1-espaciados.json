@@ -1,0 +1,24 @@
+{
+  "id": "remuneraciones-production-pallets-4-1-espaciados",
+  "title": "Production Pallets (4) (1) espaciados",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Production_Pallets (4) (1)_espaciados.xls",
+  "relativePath": "Remuneraciones/Production_Pallets (4) (1)_espaciados.xls",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "xls",
+  "sizeBytes": 214528,
+  "modifiedAt": "2019-10-29T14:14:19.596Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.110Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .xls"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

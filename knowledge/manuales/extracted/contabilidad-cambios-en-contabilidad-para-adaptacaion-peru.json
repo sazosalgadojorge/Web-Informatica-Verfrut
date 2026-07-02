@@ -1,0 +1,22 @@
+{
+  "id": "contabilidad-cambios-en-contabilidad-para-adaptacaion-peru",
+  "title": "Cambios en Contabilidad para adaptacaion Peru",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/Cambios en Contabilidad para adaptacaion Peru.docx",
+  "relativePath": "Contabilidad/Cambios en Contabilidad para adaptacaion Peru.docx",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "docx",
+  "sizeBytes": 3754611,
+  "modifiedAt": "2018-02-07T21:24:45.129Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.214Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 3043,
+  "text": "1.-Compras\nEn donde la Serie es un campo Alfanumérico de 4 dígitos. (Debe ser parte de la llave en la tabla ya que un proveedor puede tener un mismo nro de documento con distintas series)\n\nNro factura Exp (f2)\nEsto es para documentos no domiciliados (facturas de compras de Exportación)\nToda compra en el extranjero debe pagar IGV, para esto Sunat emite un documento el cual se digita en las compras.\nLa factura de exportación se digita al igual que en chile con un comprobante manual.\nY al momento de digitar el documento no domiciliado de debe indicar en que voucher manual esta digitada la factura. (el usuario solo digita el rut y documento, el folio y el neto lo trae automático)\n\n\nEste es el mantenedor de Bienes y servicios\n\nMantenedor de Tipos de detracción\n\n\nPara las detracciones:\nGeneramos un txt con los documentos previamente digitados ( te lo adjunto en el correo)\nEste se sube a Sunat,el cual devuelve un csv, que luego importamos al sistema (también lo adjunto)\n\n\nOperación : (no hicimos mantenedor ya q solo son estas 4 opciones)\n\"1 ADQUISICIONES GRAVADAS DESTINADAS A OPERACIONES GRAVADAS Y/O DE EXPORTACIÓN\"\n\"2 ADQUISICIONES GRAVADAS DESTINADAS A OPERACIONES GRAVADAS Y/O DE EXPORTACIÓN Y A OPERACIONES NO GRAVADAS\"\n\"3 ADQUISICIONES GRAVADAS DESTINADAS A OPERACIONES NO GRAVADAS\"\n\"4 ADQUISICIONES NO GRAVADAS\"\n\n\nFolio Sunat: es como el folio mensual pero este va a nivel de agrupación de documentos (se indica en el mantenedor de tipos de documentos)\n\n\n2.-Ventas\n\tPara toda emisión de documentos en todos los sistemas se agrego Serie (mantenedor)\nOjo que a diferencia de chile en Perú emiten documentos en Soles y Dolares.\n\n\nMantenedor de Series.\n\n\nMantenedor de Tipos de detracción\n\tMismo que en las compras\n\n\nLos tipos de Operación sistema\nSon los mismos que estaban en Duro en FrmEventosDocumentos y los pasamos a una tabla\n\n\n3.-Boletas\n\tIgual q en Ventas\n\n\n4.-Contabilizador Manual\n\nEn donde la Serie es un campo Alfanumérico de 4 dígitos.\n\nMantenedor tipos de Renta\n\n\n5.-Mantenedor Ctas Ctbles:\n\n\nSe agregaron\n\t• SW para identificar la Cuenta Impuesto de retención IGV .\n Se detalla su uso en Tesorería (para egresos y comprobantes de retención)\n\n\n\t•\tEl SW de Provisión de Recepciones\n\tEsta toma todas las recepciones de Materiales e insumos que no has sido en enlazadas\npara ser provisionadas en Contabilidad ( se detallara en el sistema de Materiales)\n\n\nEl Sw_Costo Producción para Identificar la Sub Familia que agrupa los Costos de Producción ( Todas las cuentas que comienzan con ‘0992’).\nEsto para generar el Voucher de traspaso de Costos.\n\n\nMantenedor Ítems balance\n\n\nEste se usa para una presentación especial del balance en la imagen se muestra el resumido\nEl Detallado es lo mismo pero se abre por cuentas.\n\n\n\t•\tLas cuentas de Cargos y abonos\n\t•\tEstas se activan solo para las cuentas con el atributo de Centro Costo\n\t•\tPara esto se hiso Función compartida en VB que se gatilla cada vez que se graba en contabilidad\nErp_GeneraVoucherAutomaticoCtasRel(BaseDatosErp As ADODB.Connection, COD_EMP, COD_FOLIO, ANO)"
+}

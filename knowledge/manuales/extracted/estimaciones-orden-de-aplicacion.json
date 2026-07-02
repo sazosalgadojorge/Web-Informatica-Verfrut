@@ -1,0 +1,22 @@
+{
+  "id": "estimaciones-orden-de-aplicacion",
+  "title": "Orden de Aplicación",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Estimaciones/Orden de Aplicación.docx",
+  "relativePath": "Estimaciones/Orden de Aplicación.docx",
+  "sourceFolder": "Estimaciones",
+  "system": "ERP",
+  "module": "Estimaciones",
+  "extension": "docx",
+  "sizeBytes": 121718,
+  "modifiedAt": "2019-08-27T18:11:37.421Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.949Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 284,
+  "text": "Para agregar un nuevo producto se debe presionar la tecla “Insert”, además el campo Dosis aplicada permite edición en el caso que se requiera modificar.\n \nSe desplegará un frame que permite buscar el producto, debe especificar la unidad de medida y sí es necesario modificar la Dosis."
+}

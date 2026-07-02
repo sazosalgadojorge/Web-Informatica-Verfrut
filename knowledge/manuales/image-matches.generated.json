@@ -1,0 +1,188 @@
+{
+  "generatedAt": "2026-07-02T20:21:16.810Z",
+  "model": "gpt-5.5",
+  "sourceManualIndexFile": "/Users/desarrolloverfrut/Web-Informatica-Verfrut/src/search/manualIndex.js",
+  "sourceImagesIndexFile": "/Users/desarrolloverfrut/Web-Informatica-Verfrut/public/manuales-assets/index.json",
+  "totalProceduresAvailable": 15,
+  "offset": 0,
+  "limit": 3,
+  "maxImagesPerProcedure": 8,
+  "analyses": [
+    {
+      "procedureId": "manual-activo-fijo-definir-proyectos-de-inversion-y-registrar-gastos-asociados",
+      "slug": "activo-fijo-definir-proyectos-de-inversion-y-registrar-gastos-asociados",
+      "hasUsefulImages": true,
+      "matches": [
+        {
+          "imageId": "activo-fijo-instructivo-de-activo-fijo-image-0006",
+          "publicPath": "manuales-assets/activo-fijo-instructivo-de-activo-fijo/0006-image8.png",
+          "relevance": "directa",
+          "confidence": "alta",
+          "matchedStepIndexes": [
+            1,
+            2
+          ],
+          "caption": "Mantenedor Tipos de Inversión con código, descripción, grupo de inversiones, presupuesto de proyecto y cuenta contable.",
+          "reason": "La pantalla corresponde al mantenimiento de tipos/proyectos de inversión y muestra campos usados para definir una inversión, incluyendo presupuesto y grupo de inversiones."
+        },
+        {
+          "imageId": "activo-fijo-instructivo-de-activo-fijo-image-0001",
+          "publicPath": "manuales-assets/activo-fijo-instructivo-de-activo-fijo/0001-image9.png",
+          "relevance": "directa",
+          "confidence": "alta",
+          "matchedStepIndexes": [
+            3
+          ],
+          "caption": "Pantalla Grupo Inversiones con campos de código y descripción.",
+          "reason": "Muestra específicamente la pantalla para definir grupos de inversiones, que el procedimiento menciona para reportes dinámicos de control."
+        },
+        {
+          "imageId": "activo-fijo-instructivo-de-activo-fijo-image-0002",
+          "publicPath": "manuales-assets/activo-fijo-instructivo-de-activo-fijo/0002-image10.png",
+          "relevance": "directa",
+          "confidence": "alta",
+          "matchedStepIndexes": [
+            4,
+            7
+          ],
+          "caption": "Mantenedor Tipos de Gastos con código, descripción y agrupación.",
+          "reason": "La imagen muestra el mantenimiento de tipos de gastos y un ejemplo de tipo de gasto, relacionado con la definición y selección del gasto."
+        },
+        {
+          "imageId": "activo-fijo-instructivo-de-activo-fijo-image-0003",
+          "publicPath": "manuales-assets/activo-fijo-instructivo-de-activo-fijo/0003-image11.png",
+          "relevance": "directa",
+          "confidence": "alta",
+          "matchedStepIndexes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "caption": "Ficha de Inversión con datos de documento, proveedor, tipo de gasto, ubicación, centro de costo, etapa, cantidad y valor activo.",
+          "reason": "La pantalla contiene los campos indicados para registrar gastos asociados al proyecto de inversión: número de documento, proveedor, tipo de gasto, ubicación, CC/SCC, etapa, cantidad y valor."
+        }
+      ],
+      "warnings": [],
+      "notes": "Se descartaron capturas de ficha de activos y evento contable porque no evidencian con suficiente claridad los pasos principales de definición de proyectos de inversión y registro de gastos asociados."
+    },
+    {
+      "procedureId": "manual-app-verfrut-generar-informe-de-hallazgo",
+      "slug": "app-verfrut-generar-informe-de-hallazgo",
+      "hasUsefulImages": true,
+      "matches": [
+        {
+          "imageId": "app-verfrut-manual-de-usuario-app-hallazgos-image-0002",
+          "publicPath": "manuales-assets/app-verfrut-manual-de-usuario-app-hallazgos/0002-image21.jpeg",
+          "relevance": "directa",
+          "confidence": "alta",
+          "matchedStepIndexes": [
+            2,
+            3
+          ],
+          "caption": "Ventana para ingresar correo a enviar con botón Enviar.",
+          "reason": "La captura muestra un cuadro titulado \"INGRESAR CORREO A ENVIAR\", un campo \"Correo\" y el botón \"ENVIAR\", correspondientes a ingresar el correo y confirmar el envío."
+        }
+      ],
+      "warnings": [],
+      "notes": "No se asocian las demás capturas porque muestran inicio de sesión, menú, registro de hallazgo u otras pantallas que no evidencian la generación/envío del informe."
+    },
+    {
+      "procedureId": "manual-activo-fijo-registrar-ficha-de-activo-fijo",
+      "slug": "activo-fijo-registrar-ficha-de-activo-fijo",
+      "hasUsefulImages": true,
+      "matches": [
+        {
+          "imageId": "activo-fijo-instructivo-de-activo-fijo-image-0008",
+          "publicPath": "manuales-assets/activo-fijo-instructivo-de-activo-fijo/0008-image6.png",
+          "relevance": "directa",
+          "confidence": "alta",
+          "matchedStepIndexes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "caption": "Pantalla Ficha de Activos con datos generales, valores, IFRS, proveedor, ubicación, centro de costo y grupo del activo.",
+          "reason": "La imagen muestra claramente la pantalla “Ficha de Activos” y los campos usados para registrar la ficha: tipo, nombre, adquisición, valor activo, número de factura, depreciación, datos IFRS, proveedor, ubicación, centro de costo, subcentro y grupo.",
+          "clickTargets": [
+            {
+              "xPercent": 37,
+              "yPercent": 12,
+              "label": "Tipo Activo",
+              "description": "Seleccionar el tipo de activo desde el desplegable."
+            },
+            {
+              "xPercent": 54,
+              "yPercent": 27,
+              "label": "Adquisicion",
+              "description": "Marcar Adquisicion cuando corresponda a un activo nuevo."
+            },
+            {
+              "xPercent": 25,
+              "yPercent": 33,
+              "label": "Valor Activo",
+              "description": "Ingresar o revisar el valor activo actualizado."
+            },
+            {
+              "xPercent": 24,
+              "yPercent": 43,
+              "label": "Num Fact",
+              "description": "Ingresar el numero de factura de la adquisicion."
+            },
+            {
+              "xPercent": 70,
+              "yPercent": 59,
+              "label": "Proveedor",
+              "description": "Buscar o asociar el proveedor de la factura."
+            },
+            {
+              "xPercent": 59,
+              "yPercent": 64,
+              "label": "Ubicacion",
+              "description": "Seleccionar la ubicacion fisica del activo."
+            }
+          ]
+        },
+        {
+          "imageId": "activo-fijo-instructivo-de-activo-fijo-image-0007",
+          "publicPath": "manuales-assets/activo-fijo-instructivo-de-activo-fijo/0007-image7.png",
+          "relevance": "directa",
+          "confidence": "media",
+          "matchedStepIndexes": [
+            1,
+            2,
+            10
+          ],
+          "caption": "Encabezado de la pantalla Ficha de Activos con campos de tipo y nombre del activo y opción Dinámica Ficha.",
+          "reason": "La captura muestra el encabezado de “Ficha de Activos”, los campos Tipo Activo y Nombre Ficha, y la opción “Dinámica Ficha”, relacionada con el reporte dinámico del procedimiento.",
+          "clickTargets": [
+            {
+              "xPercent": 69,
+              "yPercent": 56,
+              "label": "Tipo Activo",
+              "description": "Seleccionar el tipo de activo desde el encabezado de Ficha de Activos."
+            },
+            {
+              "xPercent": 26,
+              "yPercent": 39,
+              "label": "Dinamica Ficha",
+              "description": "Usar la opcion Dinamica Ficha para emitir el reporte dinamico."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "notes": "Asociacion ajustada manualmente tras separar el procedimiento mixto. Se removieron imagenes contextuales de inversiones/eventos contables porque no corresponden al registro de ficha de activo fijo."
+    }
+  ],
+  "errors": []
+}

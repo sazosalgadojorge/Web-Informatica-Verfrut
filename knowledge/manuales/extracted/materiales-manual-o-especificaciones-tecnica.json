@@ -1,0 +1,22 @@
+{
+  "id": "materiales-manual-o-especificaciones-tecnica",
+  "title": "MANUAL O ESPECIFICACIONES TÉCNICA",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/MANUAL O ESPECIFICACIONES TÉCNICA.docx",
+  "relativePath": "Materiales/MANUAL O ESPECIFICACIONES TÉCNICA.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 130369,
+  "modifiedAt": "2019-07-25T13:34:28.000Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.807Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 340,
+  "text": "MANUAL O ESPECIFICACIONES TÉCNICA MATERIALES\n\n\nSe agregó en un botón para ver el manual en formato PDF Solo se habilita sí existe el archivo\n\n\nLos manuales deben quedar en el siguiente directorio: H:\\TemporalSDT\\Reportes\\EspTecnicas El nombre del manual debe ser con el código de la empresa + el código del material, siempre en formato PDF."
+}

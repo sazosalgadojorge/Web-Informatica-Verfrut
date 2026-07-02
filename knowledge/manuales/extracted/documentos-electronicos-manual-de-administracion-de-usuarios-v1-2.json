@@ -1,0 +1,24 @@
+{
+  "id": "documentos-electronicos-manual-de-administracion-de-usuarios-v1-2",
+  "title": "Manual de Administracion de Usuarios v1.2",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Documentos Electrónicos/Manual de Administracion de Usuarios v1.2.pdf",
+  "relativePath": "Documentos Electrónicos/Manual de Administracion de Usuarios v1.2.pdf",
+  "sourceFolder": "Documentos Electrónicos",
+  "system": "ERP",
+  "module": "Documentos Electrónicos",
+  "extension": "pdf",
+  "sizeBytes": 1032075,
+  "modifiedAt": "2020-02-19T20:15:00.000Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.750Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

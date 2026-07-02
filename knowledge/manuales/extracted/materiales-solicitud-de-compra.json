@@ -1,0 +1,22 @@
+{
+  "id": "materiales-solicitud-de-compra",
+  "title": "SOLICITUD DE COMPRA",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/SOLICITUD DE COMPRA.docx",
+  "relativePath": "Materiales/SOLICITUD DE COMPRA.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 276136,
+  "modifiedAt": "2019-08-05T18:14:44.715Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.891Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 2147,
+  "text": "SOLICITUD DE COMPRA (Normal y General)\n\nBotones\n\n\t•\tNuevo: Limpia el formulario y trae el último folio\n\t•\tGrabar: Graba la información ingresada\n\t•\tModificar: Modifica el detalle del material\n\t•\tEliminar: Elimina la línea o el formulario¿\n\t•\tImprimir:\n\t•\tImprime un formato de solicitud\n\t•\tGenera un Excel dinámico\n\t•\tCarga desde otra solicitud\n\t•\tEnviar solicitud vía mail\n\t•\tSalir: Cierra el formulario\n\nEncabezado\n\t•\tResponsable: Es el encargado de hacer la solicitud.\n\t•\tFecha: Fecha de solicitud de materiales\n\t•\tObservación General: Observación general de la solicitud\n\t•\tGerente Prod.: Gerente de Producción o de Zona\n\t•\tEmisor Responsable: Es el responsable de la emisión del documento\nIngreso de Material Normal\n\n\t•\tCódigo: Código del material o Subitem\n\t•\tDxHa: Dosis por hectárea (solo sí corresponde)\n\t•\tCantidad: Cantidad de material a solicitar\n\t•\tPorciones (opcional): Para el caso de ser en porciones\n\t•\tTipo de Programa (opcional): Para el caso que se utilice programa\n\t•\tCentro de Costo (opcional): Centro de costo donde de cargaran los materiales\n\t•\tSubC. Costo (opcional): Sub Centro de Costo donde se cargarán los materiales, depende del contro de costo.\n\t•\tObservación (opcional): Observación especifica del material\nIngreso de Material General\n\n\t•\tDetalle: Nombre del material o servicio\n\t•\tObservación: Observación del material o servicio\n\t•\tCant.: Cantidad de material o servicio\n\t•\tValor: Precio del material o servicio\n\t•\tMoneda: Moneda de pago del material o servicio\n\t•\tUnid. Medida: Unidad de medida del material o servicio\n\t•\tMaquinaria: Para el caso que el material o servicio se asocie con una maquinaria\n\t•\tTipo:\n\t•\t1 Muestra (Muestra de material o servicio)\n\t•\t2 Servicio (Servicio a contratar)\n\t•\t3 Sin Código (Material sin código)\n\f\nAprobación solicitud de compra\n\n\t•\tN° Solicitud: Llama la solicitud de compra creada previamente\n\t•\tAprobación: Chequeando la casilla se aprueba el material\n\t•\tCantidad: La cantidad se puede modificar\n\nLlamar a las solicitudes de compra aprobadas\n\n\n\t•\tHaciendo doble click en el material seleccionado, este se carga en la sección de ingreso de materiales.\n\t•\tSección de Filtros"
+}

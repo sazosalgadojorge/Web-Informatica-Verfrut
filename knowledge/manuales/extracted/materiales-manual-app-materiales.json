@@ -1,0 +1,24 @@
+{
+  "id": "materiales-manual-app-materiales",
+  "title": "Manual App Materiales",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/Manual App Materiales.pptx",
+  "relativePath": "Materiales/Manual App Materiales.pptx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "pptx",
+  "sizeBytes": 2309085,
+  "modifiedAt": "2021-04-08T12:46:25.862Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.765Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .pptx"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

@@ -1,0 +1,22 @@
+{
+  "id": "activo-fijo-instructivo-de-activo-fijo-inversiones",
+  "title": "Instructivo de Activo Fijo (Inversiones)",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Activo Fijo/Instructivo de Activo Fijo (Inversiones).docx",
+  "relativePath": "Activo Fijo/Instructivo de Activo Fijo (Inversiones).docx",
+  "sourceFolder": "Activo Fijo",
+  "system": "ERP",
+  "module": "Activo Fijo",
+  "extension": "docx",
+  "sizeBytes": 130192,
+  "modifiedAt": "2019-02-21T11:36:15.541Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.354Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 0,
+  "text": ""
+}

@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-contrato-en-pdf-para-subir-a-dec",
+  "title": "Contrato en PDF para subir a DEC",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Contrato en PDF para subir a DEC.docx",
+  "relativePath": "Remuneraciones/Contrato en PDF para subir a DEC.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 191140,
+  "modifiedAt": "2019-09-04T13:07:29.301Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.101Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 433,
+  "text": "Para subir a la plataforma DEC un Contrato realizado con una planilla Word primero debemos seleccionar un documento que permita subir un PDF (Contrato PDF, transformará el formato Doc a PDF), luego seleccionar la ubicación donde guardaremos nuestro PDF, después seleccionamos nuestra planilla de contrato en formato Word, verificamos que la fecha de emisión sea la que necesitamos y presionamos en iniciar Emisión Masiva de Contratos"
+}

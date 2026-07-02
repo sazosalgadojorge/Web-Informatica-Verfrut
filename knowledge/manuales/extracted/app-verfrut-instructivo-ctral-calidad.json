@@ -1,0 +1,22 @@
+{
+  "id": "app-verfrut-instructivo-ctral-calidad",
+  "title": "Instructivo Ctral calidad",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/Instructivo Ctral calidad.docx",
+  "relativePath": "App Verfrut/Instructivo Ctral calidad.docx",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "docx",
+  "sizeBytes": 759845,
+  "modifiedAt": "2020-10-02T15:45:51.528Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.539Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 0,
+  "text": ""
+}

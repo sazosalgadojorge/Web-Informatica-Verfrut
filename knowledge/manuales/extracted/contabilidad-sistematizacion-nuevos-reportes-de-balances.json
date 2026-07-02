@@ -1,0 +1,24 @@
+{
+  "id": "contabilidad-sistematizacion-nuevos-reportes-de-balances",
+  "title": "Sistematización Nuevos Reportes de Balances",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/Sistematización Nuevos Reportes de Balances.pdf",
+  "relativePath": "Contabilidad/Sistematización Nuevos Reportes de Balances.pdf",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "pdf",
+  "sizeBytes": 670995,
+  "modifiedAt": "2024-10-18T13:51:48.415Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.593Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

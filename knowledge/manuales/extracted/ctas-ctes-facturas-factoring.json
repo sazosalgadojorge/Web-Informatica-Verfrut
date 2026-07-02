@@ -1,0 +1,22 @@
+{
+  "id": "ctas-ctes-facturas-factoring",
+  "title": "Facturas Factoring",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Ctas Ctes/Facturas Factoring.docx",
+  "relativePath": "Ctas Ctes/Facturas Factoring.docx",
+  "sourceFolder": "Ctas Ctes",
+  "system": "ERP",
+  "module": "Ctas Ctes",
+  "extension": "docx",
+  "sizeBytes": 142626,
+  "modifiedAt": "2019-09-02T18:39:20.955Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.672Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1587,
+  "text": "Se agregó botón para abrir frame de facturas a factoring\n\n\t•\tEl Id Factoring permite identificar la selección de facturas.\n\t•\tEl contribuyente es la selección del Factoring (mostrará solo los contribuyentes marcamos como Factoring)\n\t•\tEn la selección de facturas se debe ingresar la fecha de vencimiento del factoring (solo en las chequeadas)\n\t•\tEn la zona de filtros, mostrará el tipo, nave y recibidor solo que tengas alguna factura ingresada.\nEstructura de las tablas\nCREATE TABLE FACTURACION_PROFORMA_FACTORING(\n\tCOD_EMP\tNVARCHAR (4)\tNOT NULL,\n\tCOD_TEM\tNVARCHAR (2)\tNOT NULL,\n\tRUT_CONTR\tINT NOT NULL,\n\tDV_CONTR\tNVARCHAR (1)\tNOT NULL,\n\tIDFACTORING INT NOT NULL,\n\tFECHA DATE NOT NULL,\n\tCONSTRAINT PK_FACTURACION_PROFORMA_FACTORING\n\tPRIMARY KEY (COD_EMP, COD_TEM, IDFACTORING),\n\tCONSTRAINT FK_FACTURACION_PROFORMA_FACTORING_CONTRIBUYENTE_CONT\n\tFOREIGN KEY (COD_EMP, RUT_CONTR)\n\tREFERENCES CONTRIBUYENTE_CONT (COD_EMP, RUT_CONTR)\n)\nGO\n\n\nCREATE TABLE FACTURACION_PROFORMA_FACTORING_DETALLE(\n\tCOD_EMP NVARCHAR (4)\tNOT NULL,\n\tCOD_TEM NVARCHAR (2)\tNOT NULL,\n\tIDFACTORING INT NOT NULL,\n\tNUM_FAC INT NOT NULL,\n\tFECHA_VENCIMIENTO DATE NOT NULL,\n\tCONSTRAINT PK_FACTURACION_PROFORMA_FACTORING_DETALLE\n\tPRIMARY KEY (COD_EMP, COD_TEM, IDFACTORING, NUM_FAC),\n\tCONSTRAINT FK_FACTURACION_PROFORMA_FACTORING_FACTURACION_PROFORMA\n\tFOREIGN KEY (COD_EMP, COD_TEM, NUM_FAC)\n\tREFERENCES FACTURACION_PROFORMA (COD_EMP, COD_TEM, NUM_FAC),\n\tCONSTRAINT FK_FACTURACION_PROFORMA_FACTORING\n\tFOREIGN KEY (COD_EMP, COD_TEM, IDFACTORING)\n\tREFERENCES FACTURACION_PROFORMA_FACTORING (COD_EMP, COD_TEM, IDFACTORING)\n)\nGO"
+}

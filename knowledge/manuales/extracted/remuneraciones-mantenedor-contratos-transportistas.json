@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-mantenedor-contratos-transportistas",
+  "title": "Mantenedor Contratos Transportistas",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Mantenedor Contratos Transportistas.docx",
+  "relativePath": "Remuneraciones/Mantenedor Contratos Transportistas.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 231689,
+  "modifiedAt": "2019-08-22T21:54:37.414Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:56.388Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 584,
+  "text": "CREATE TABLE CONTRATOS_TRANSPORTISTA(\n\tID INT IDENTITY(1,1)\tNOT NULL,\n\tIDEMPRESA\tINT NOT NULL,\n\tCOD_EMP\tNVARCHAR(4) NOT NULL,\n\tCOD_TEM\tNVARCHAR(2) NOT NULL,\n\tCOD_TRP\tNVARCHAR(4) NOT NULL,\n\tID_CONTRATO\tNVARCHAR(8) NULL,\n\tFECHA_INI\tDATE NOT NULL,\n\tFECHA_TER\tDATE NOT NULL,\n\tFECHA_CES\tDATE NULL,\n\tCONSTRAINT PK_CONTRATOS_TRANSPORTISTA\n\tPRIMARY KEY (ID, IDEMPRESA, COD_TRP),\n\t--CONSTRAINT FK_CONTRATOS_TRANSPORTISTA_TRANSPORTISTA\n\t--FOREIGN KEY (COD_EMP, COD_TEM, COD_TRP)\n\t--REFERENCES ERPFRUSYS.dbo.TRANSPORTISTAS(COD_EMP, COD_TEM, COD_TRP)\n\t--ON UPDATE CASCADE\n\t--ON DELETE NO ACTION\n)"
+}

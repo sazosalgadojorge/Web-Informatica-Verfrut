@@ -1,0 +1,22 @@
+{
+  "id": "remuneraciones-manual-generacion-de-excel-para-impresion-de-tarjetas",
+  "title": "Manual Generacion de Excel para Impresion de Tarjetas",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Remuneraciones/Manual_Generacion de Excel para Impresion de Tarjetas.docx",
+  "relativePath": "Remuneraciones/Manual_Generacion de Excel para Impresion de Tarjetas.docx",
+  "sourceFolder": "Remuneraciones",
+  "system": "ERP",
+  "module": "Remuneraciones",
+  "extension": "docx",
+  "sizeBytes": 485729,
+  "modifiedAt": "2020-11-27T14:13:12.094Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.073Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 3374,
+  "text": "Departamento de Informática Soporte – Rodrigo Palominos. \n\n\nMANUAL PARA GENERACION DE ARCHIVO EXCEL PARA IMPRESIÓN DE TARJETAS DE IDENTIFICACION\n\n\n\f\nAntes de Empezar\nLa realización de los siguientes pasos debe ser realizado por personal de remuneraciones con el menú correspondiente habilitado para ello. El menú necesario para este ejercicio es:\nContratos\\Impresión de tarjetas\n\nSi no dispone del acceso a esta opción, debe solicitar el mismo mediante un ticket/incidencia en la mesa de ayuda con el fin de mantener actualizado y a modo de registro para auditorías a la empresa.\nFotos de Trabajadores\nLas fotos de los trabajadores deben ser guardadas en la carpeta Fotos cada una con el rut correspondiente al trabajador correspondiente en proporción de foto de carnet, de lo contrario la imagen se deformara al momento de la impresión, como nombre de archivo en el formato .JPG y con formato de nombre 12345678-9 la cual se encuentra en la siguiente dirección:\nShare(H)\\TemporalSDT\\Reportes\\Fotos\nMAL\nMAL\nBIEN\nBIEN\nGeneración de Archivo Excel para impresión de tarjetas de identificación.\n1 – Ingrese con su usuario y contraseña a la aplicación de remuneraciones, cuidando siempre de seleccionar la empresa correspondiente y la temporada actual.\n\n2 – Una vez realizado el ingreso a la aplicación, diríjase al menú Contratos y seleccione el sub menú Impresión de Tarjetas.\n\n3 – Realizado el paso anterior, se nos cargara una ventana donde podremos visualizar la empresa y zonas a las que el usuario tiene acceso para la generación del archivo.\n\n4 – Presionaremos sobre el icono de + en la zona que corresponda al usuario y luego el departamento o sección correspondiente al o los trabajadores que deben recibir su tarjeta de identificación y marcaremos con un tick en ellos.\n\n5 – Una vez seleccionados los trabajadores correspondientes, presionaremos el botón Excel para que el sistema nos genere el archivo que necesitamos para la impresión de las identificaciones.\n\n6 – Realizado lo anterior, el sistema nos pedirá confirmar la acción, presionaremos sobre el botón Sí para continuar.\n\n\f\n7 – El sistema deberá generar un archivo Excel como el de la imagen\n\nImportante: Antes de guardar el archivo, debemos realizar lo siguiente para no tener problemas con el programa para impresión de tarjetas:\n8 – Haga doble click en la zona marcado en rojo para seleccionar todas las celdas, deben quedar como en la imagen.\n\n\f\n9 – En el tipo de celda, seleccione la opción Texto de la siguiente manera:\n\n10 – Para finalizar, guarde el archivo en un lugar donde le sea fácil ubicarlo en formato Libro de Excel 97-2003 (*.xls)\n\n\nRealizados los pasos anteriores, tendrá el archivo Excel necesario para la impresión de tarjetas de identificación. Debe enviar este archivo a la persona encargada de la impresión de dichas tarjetas.\n\f\nRESOLUCION DE PROBLEMAS\nTrabajador no aparece para impresión de Tarjeta\nEn el caso de un trabajador no salga para impresión de tarjeta puede deberse a los siguientes motivos:\n\t•\tYa recibió tarjeta.\n\t•\tYa se generó el archivo de impresión de tarjeta.\n\t•\tSe marcó la opción de Trabajador Obtuvo su Tarjeta en su Ficha de Trabajador.\n\t•\tEl trabajador no corresponde a la zona a cargo del personal de remuneraciones.\nPara resolver este problema, debe cargar la ficha del trabajador correspondiente al problema y desmarcar la opción Trabajador Obtuvo su Tarjeta"
+}

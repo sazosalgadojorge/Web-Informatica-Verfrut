@@ -1,0 +1,22 @@
+{
+  "id": "materiales-instructivo-para-reemplazo-cod-material-por-otro",
+  "title": "Instructivo para reemplazo cod material por otro",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Materiales/Instructivo para reemplazo cod material por otro.docx",
+  "relativePath": "Materiales/Instructivo para reemplazo cod material por otro.docx",
+  "sourceFolder": "Materiales",
+  "system": "ERP",
+  "module": "Materiales",
+  "extension": "docx",
+  "sizeBytes": 350666,
+  "modifiedAt": "2019-02-05T13:06:10.184Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.721Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 461,
+  "text": "Se agrega Boton para Reemplazo de materailes con movimientos existentes\n\nse selecciona el material a cambiar\n\n\npara el reemplazo se puede elegir uno existente\n\no también crear uno nuevo copiando la información del antiguo, marcando el Check [Crear Nuevo], en la descripción ira indicando el ultimo código utilizado para la familia-subfamilia selecionada.\n\ntambién tiene la opción de eliminar el código antiguo, marcando el Check [elimina el código al finalizar]"
+}

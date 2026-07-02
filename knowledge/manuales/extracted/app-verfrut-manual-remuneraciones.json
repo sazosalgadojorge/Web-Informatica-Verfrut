@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-manual-remuneraciones",
+  "title": "MANUAL REMUNERACIONES",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/MANUAL REMUNERACIONES.pdf",
+  "relativePath": "App Verfrut/MANUAL REMUNERACIONES.pdf",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pdf",
+  "sizeBytes": 1355581,
+  "modifiedAt": "2021-11-08T15:49:38.955Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.051Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

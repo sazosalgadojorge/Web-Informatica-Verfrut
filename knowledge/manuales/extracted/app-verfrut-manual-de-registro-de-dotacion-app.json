@@ -1,0 +1,24 @@
+{
+  "id": "app-verfrut-manual-de-registro-de-dotacion-app",
+  "title": "Manual de Registro de Dotación APP",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/App Verfrut/Manual de Registro de Dotación - APP.pdf",
+  "relativePath": "App Verfrut/Manual de Registro de Dotación - APP.pdf",
+  "sourceFolder": "App Verfrut",
+  "system": "ERP",
+  "module": "App Verfrut",
+  "extension": "pdf",
+  "sizeBytes": 793627,
+  "modifiedAt": "2022-05-19T13:12:43.214Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:53.665Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "pdf-unavailable",
+    "warnings": [
+      "No se pudo extraer PDF. Instalar pdftotext/poppler o aplicar OCR si el PDF esta escaneado."
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

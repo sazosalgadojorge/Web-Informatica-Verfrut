@@ -1,0 +1,22 @@
+{
+  "id": "frio-packing-instructivo-distribuicion-de-servicos-campos-y-plantas",
+  "title": "Instructivo Distribuicion de Servicos Campos y Plantas",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Frio Packing/Instructivo Distribuicion de Servicos Campos y Plantas.docx",
+  "relativePath": "Frio Packing/Instructivo Distribuicion de Servicos Campos y Plantas.docx",
+  "sourceFolder": "Frio Packing",
+  "system": "ERP",
+  "module": "Frio Packing",
+  "extension": "docx",
+  "sizeBytes": 443913,
+  "modifiedAt": "2017-03-09T18:01:09.613Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.154Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 2679,
+  "text": "DISTRIBUCION DE COSTOS POR PLANTAS Y CONTABILIZAR\nEn Modulo Frio Packing\n\n\t•\tCerrar proceso de packing:\nPacking/Cierre de Procesos\nProcesos Packing: Elegir fecha de cierre, filtrar a la fecha de cierre, asignar Nave (Verfrut), Asignar, Aceptar.\nRecepciones Frio: Ídem\nTraslados: Ídem\nRepaletizaje: Ídem\n\n\n\t•\tFacturación de Servicios\nFacturación de Servicios/Configuración de Tarifas de Cobro\nSeleccionar Zona y Revisar todos los ítems de servicio.\nEn general se deben cobrar los ítems N° 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13,14, y 20.\nNOTA: El ítem 3 y 4 NO modificar ni poner precios, vienen por defecto. Si hay algún ítem que no tiene precio asignado solicitar a Pedro Vidal indicando código de embalaje y variedad.\nCaso Especial: ORO VERDE, no debe cobrar el proceso de packing por UVA N° 1, 8, 10, 11, 14 y 18.\n\n\n\t•\tCargos Manuales:\nFacturación de servicios/Cargos Manuales Servicio Facturación\nSeleccionar Zona, Frio, Packing e Ítem, filtrar por fechas y presionar botón Buscar.\nEn general hay que cargar los siguientes ítems:\n\t•\t52 Fletes\nRevisar que todos los fletes tengan precio o precio 0, no pueden haber filas vacías. Si las hay, contactarse con Alfredo Calvo para que asigne precio a la ruta.\nCuando estén todos con precio, seleccionar Precio Genérico, asignar 0 y presionar Enter.\n\t•\t54 Gastos Exportadora\nSeleccionar Precio Genérico, asignar 0,4 y presionar Enter.\n\t•\t56 Fumigación Fosfina (Manual)\nIr a Frio/Fumigación, seleccionar Zona y recorrer las planillas del mes en cierre. Ingresar valor en USD, presionar editar y luego guardar. Esto para cada planilla.\nVolver a Cargos Manuales Servicio Facturación y Seleccionar Zona, Frio, Packing e Item N° 56, filtrar por fechas y presionar botón Buscar. Revisar si cuadra número total.\nPresionar guardar y salir.\nNOTA: en algunos casos pueden existir cobros adicionales que se deben realizar a través de este modulo. Ejemplo; Sellado de Bolsas AC o Reembalaje Manual.\n\n\n\t•\tPara revisar y enviar reporte a los campos ingresar a DiscoH/TemporalSDT/Facturación/Periodo, elegir el mes respectivo y actualizar.\nCuando estén conformes con lo que se va a cobrar, pasar al paso 5.\n\n\n\t•\tGenerar Voucher Contable\nFacturación de servicios/Emisión de Factura de Servicios\nElegir empresa contable (Soc Agricola El Porvenir), seleccionar Contabilizar y Solo Distribución de Costos, indicar ultimo día del mes en F. Documento y Vencimiento Neto, Moneda Pesos, seleccionar Origen de Servicios (Verfrut), indicar rangos de fechas, Zona, Frio, Packing, Centro de Costo y Cargar Servicios.\nLuego en hoja Aprobación de Servicios, Deseleccionar los productores externos y los ítems que no se quieran cobrar, revisar y Cargar a factura."
+}

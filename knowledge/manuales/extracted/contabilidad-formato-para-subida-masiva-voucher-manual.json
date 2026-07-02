@@ -1,0 +1,24 @@
+{
+  "id": "contabilidad-formato-para-subida-masiva-voucher-manual",
+  "title": "FORMATO PARA SUBIDA MASIVA VOUCHER MANUAL",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Contabilidad/FORMATO PARA SUBIDA MASIVA VOUCHER MANUAL.xlsx",
+  "relativePath": "Contabilidad/FORMATO PARA SUBIDA MASIVA VOUCHER MANUAL.xlsx",
+  "sourceFolder": "Contabilidad",
+  "system": "ERP",
+  "module": "Contabilidad",
+  "extension": "xlsx",
+  "sizeBytes": 12144,
+  "modifiedAt": "2019-02-19T18:58:08.761Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:54.254Z",
+  "extraction": {
+    "status": "skipped",
+    "method": "unsupported",
+    "warnings": [
+      "Extractor pendiente para .xlsx"
+    ]
+  },
+  "textLength": 0,
+  "text": ""
+}

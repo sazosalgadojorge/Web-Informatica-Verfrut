@@ -1,0 +1,22 @@
+{
+  "id": "tesoreria-cambios-en-tesoreria-para-adaptacaion-peru",
+  "title": "Cambios en Tesoreria para adaptacaion Peru",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Tesoreria/Cambios en Tesoreria para adaptacaion Peru.docx",
+  "relativePath": "Tesoreria/Cambios en Tesoreria para adaptacaion Peru.docx",
+  "sourceFolder": "Tesoreria",
+  "system": "ERP",
+  "module": "Tesoreria",
+  "extension": "docx",
+  "sizeBytes": 2757687,
+  "modifiedAt": "2018-03-20T21:52:48.269Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:57.226Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 1216,
+  "text": "1.-Ingresos\n\nEn donde la Serie es un campo Alfanumérico de 4 dígitos. (Debe ser parte de la llave en la tabla ya que un proveedor puede tener un mismo nro de documento con distintas series)\n\nMantenedor Flujo efectivo\n\nInforme de Flujo efectivo\n\n\n2.Egresos\nImportar Detracciones\nEn donde la Serie es un campo Alfanumérico de 4 dígitos. (Debe ser parte de la llave en la tabla ya que un proveedor puede tener un mismo nro de documento con distintas series)\nEl usuario al ingresar los pagos de documentos, se genera automáticamente la línea de retención Por documento con los siguientes requisitos:\n\t•\tEn proveedor no tiene el Check de No Retener IGV\n\t•\tQue la empresa tenga sw_Retendor ( se agrego a la Param_sys)\n\t•\tEl tipo Documento Identidad del Proveedor debe ser del tipo 6 (RUC)\n\t•\tLa cuenta al DEBE tiene marcado el SW_proveedores\n\t•\tQue el documento no tenga pago de DETRACCIÓN (se busca en la compra)\n\t•\tLa suma de los documentos pagados debe ser mayor al Mínimo de retención\n\n\n2.Comprobantes de Retencion\n\nEn esta pantalla se genera el comprobante de retención, este se obtiene desde los egresos, este debe ser uno por proveedor, fecha y moneda., en la imagen se genero el comprobante a partir del egreso 190"
+}

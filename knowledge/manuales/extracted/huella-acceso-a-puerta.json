@@ -1,0 +1,22 @@
+{
+  "id": "huella-acceso-a-puerta",
+  "title": "Acceso a Puerta",
+  "sourcePath": "/Users/desarrolloverfrut/Documents/Manuales/Huella/Acceso a Puerta.docx",
+  "relativePath": "Huella/Acceso a Puerta.docx",
+  "sourceFolder": "Huella",
+  "system": "ERP",
+  "module": "Huella",
+  "extension": "docx",
+  "sizeBytes": 41268,
+  "modifiedAt": "2019-04-22T18:52:57.866Z",
+  "status": "pendiente_revision",
+  "notes": "",
+  "extractedAt": "2026-07-02T19:30:55.516Z",
+  "extraction": {
+    "status": "extracted",
+    "method": "textutil",
+    "warnings": []
+  },
+  "textLength": 472,
+  "text": "Acceso a Puerta\n1.- Para dejar localmente el sistema de acceso debemos instalar lo siguiente:\n\t•\tSQL SERVER EXPRESS 2012\n\t•\tMICROSOFT SQL MANAGEMENT STUDIO 2012\n2.- Ejecutar los siguientes SCRIPT\n\n3.- Ejecutar el procedimiento almacenado que importa los datos\n\n4.- Configurar o cambiar la configuración de la aplicación\n Presionando CTRL + F12 tendremos acceso a la pantalla de configuración\n\t•\tSERVIDOR: localhost\n\t•\tBASE DE DATOS: ACCESO\n\t•\tUSUARIO: sa\n\t•\tCLAVE: abc.123"
+}
